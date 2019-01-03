@@ -1,0 +1,18 @@
+{
+  "id": "212275",
+  "cmd": "../bin/snap sin1008 sin1008.out ",
+  "codename": "",
+  "username": "pakin",
+  "host": "mu0739 (x86_64_Linux)",
+  "start": "1397155139.636108",
+  "stop": "1397155187.363184",
+  "totalMemory": "",
+  "switchSend": "",
+  "state": "",
+  "group": "pakin",
+  "mpiTasks": "",
+  "wallClock": "",
+  "comm": "",
+  "totalGflopSec": "",
+  "switchRecv": ""
+}

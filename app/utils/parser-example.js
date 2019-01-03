@@ -1,13 +1,41 @@
 /* eslint-disable */
 
+// libs
 const fs = require('fs');
+const util = require('util');
 const parseString = require('xml2js').parseString;
 
+// files
+const ipmRawPath = '../../ipm_raw/';
+const ipmRawFiles = [
+  'pin1008.xml',
+  'sin1008.xml',
+  'MDFT_03.ipm.xml',
+  'MDFT_04.ipm.xml',
+  'MDFT_05.ipm.xml'
+];
+
+// constants
 const ROOT_ITEM = 'ipm_job_profile';
 
-export const parseData = (filename, callback) => {
-  parseXml(filename, result => {
-    console.log(`${filename}:`);
+// functions
+function parseXml(file, callback) {
+  fs.readFile(file, (err, data) => {
+    parseString(data, (err, result) => callback(result));
+  });
+}
+
+function saveJSONtoFile(file, json) {
+  fs.writeFile(file, JSON.stringify(json), err => {
+    if (err) console.log(err);
+  });
+}
+
+// main
+ipmRawFiles.forEach(fileName => {
+  let file = ipmRawPath + fileName;
+  parseXml(file, result => {
+    console.log(`${file}:`);
     let taskdata = result[ROOT_ITEM].task[0];
     var metadata = {};
     metadata.id = taskdata.job[0]._;
@@ -27,12 +55,6 @@ export const parseData = (filename, callback) => {
     metadata.comm = '';
     metadata.totalGflopSec = '';
     metadata.switchRecv = '';
-    callback(JSON.stringify(metadata, null, 2));
+    console.dir(metadata);
   });
-};
-
-function parseXml(file, callback) {
-  fs.readFile(file, (err, data) => {
-    parseString(data, (err, result) => callback(result));
-  });
-}
+});
