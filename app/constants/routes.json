@@ -1,4 +1,5 @@
 {
   "HOME": "/",
-  "PARSE": "/parser"
+  "PARSE": "/parser",
+  "VIEW": "/view"
 }

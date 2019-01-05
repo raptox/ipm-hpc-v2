@@ -8,13 +8,12 @@ import TextField from '@material-ui/core/TextField';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
-import { parseData } from '../utils/parser';
 
-export default class ParseXML extends Component {
+export default class ViewParsed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      parseLog: ''
+      parsedContent: ''
     };
   }
 
@@ -26,7 +25,7 @@ export default class ParseXML extends Component {
             <i className="fa fa-arrow-left fa-3x" />
           </Link>
         </div>
-        <h2>Parse XML</h2>
+        <h2>View Parsed</h2>
         <br />
         <Button
           variant="contained"
@@ -35,19 +34,6 @@ export default class ParseXML extends Component {
         >
           Select File
         </Button>
-        {this.state.parseLog && (
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => this.saveFile()}
-          >
-            Save Parsed
-          </Button>
-        )}
-        <div className={styles.textfield}>
-          Parse Log: <br />
-          {this.state.parseLog}
-        </div>
       </div>
     );
   }
@@ -55,21 +41,9 @@ export default class ParseXML extends Component {
   openFile() {
     let file = dialog.showOpenDialog({ properties: ['openFile'] });
     if (file) {
-      parseData(file[0], data => {
-        this.setState({ parseLog: data });
-      });
-    }
-  }
-
-  saveFile() {
-    const options = {
-      title: 'Where to save?',
-      message: 'Where to save?'
-    };
-    let file = dialog.showSaveDialog(options);
-    if (file) {
-      fs.writeFile(file, this.state.parseLog, err => {
-        console.log(err);
+      fs.readFile(file[0], (err, data) => {
+        this.setState({ parsedContent: JSON.parse(data) });
+        console.log(this.state.parsedContent);
       });
     }
   }
