@@ -1,18 +1,466 @@
 {
-  "id": "212275",
-  "cmd": "../bin/snap sin1008 sin1008.out ",
-  "codename": "",
-  "username": "pakin",
-  "host": "mu0739 (x86_64_Linux)",
-  "start": "1397155139.636108",
-  "stop": "1397155187.363184",
-  "totalMemory": "",
-  "switchSend": "",
-  "state": "",
-  "group": "pakin",
-  "mpiTasks": "",
-  "wallClock": "",
-  "comm": "",
-  "totalGflopSec": "",
-  "switchRecv": ""
+  "hosts": [
+    {
+      "name": "mu0739",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "mu0740",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "name": "mu0741",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "mu0742",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "mu0743",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "16",
+        "17",
+        "18",
+        "19"
+      ]
+    },
+    {
+      "name": "mu0764",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "20",
+        "21",
+        "22",
+        "23"
+      ]
+    },
+    {
+      "name": "mu0765",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "24",
+        "25",
+        "26",
+        "27"
+      ]
+    },
+    {
+      "name": "mu0766",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "28",
+        "29",
+        "30",
+        "31"
+      ]
+    },
+    {
+      "name": "mu0767",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "32",
+        "33",
+        "34",
+        "35"
+      ]
+    },
+    {
+      "name": "mu0768",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "36",
+        "37",
+        "38",
+        "39"
+      ]
+    },
+    {
+      "name": "mu0774",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "40",
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    {
+      "name": "mu0775",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "44",
+        "45",
+        "46",
+        "47"
+      ]
+    },
+    {
+      "name": "mu0776",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "48",
+        "49",
+        "50",
+        "51"
+      ]
+    },
+    {
+      "name": "mu0777",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "52",
+        "53",
+        "54",
+        "55"
+      ]
+    },
+    {
+      "name": "mu0778",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "56",
+        "57",
+        "58",
+        "59"
+      ]
+    },
+    {
+      "name": "mu0779",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "60",
+        "61",
+        "62",
+        "63"
+      ]
+    },
+    {
+      "name": "mu0780",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "64",
+        "65",
+        "66",
+        "67"
+      ]
+    },
+    {
+      "name": "mu0781",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "68",
+        "69",
+        "70",
+        "71"
+      ]
+    },
+    {
+      "name": "mu0782",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "72",
+        "73",
+        "74",
+        "75"
+      ]
+    },
+    {
+      "name": "mu0783",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "76",
+        "77",
+        "78",
+        "79"
+      ]
+    },
+    {
+      "name": "mu0784",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "80",
+        "81",
+        "82",
+        "83"
+      ]
+    },
+    {
+      "name": "mu0785",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "84",
+        "85",
+        "86",
+        "87"
+      ]
+    },
+    {
+      "name": "mu0786",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "88",
+        "89",
+        "90",
+        "91"
+      ]
+    },
+    {
+      "name": "mu0787",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "92",
+        "93",
+        "94",
+        "95"
+      ]
+    },
+    {
+      "name": "mu0788",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "96",
+        "97",
+        "98",
+        "99"
+      ]
+    },
+    {
+      "name": "mu0789",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "100",
+        "101",
+        "102",
+        "103"
+      ]
+    },
+    {
+      "name": "mu0790",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "104",
+        "105",
+        "106",
+        "107"
+      ]
+    },
+    {
+      "name": "mu0791",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "108",
+        "109",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "mu0792",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "112",
+        "113",
+        "114",
+        "115"
+      ]
+    },
+    {
+      "name": "mu0793",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "116",
+        "117",
+        "118",
+        "119"
+      ]
+    },
+    {
+      "name": "mu0794",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "120",
+        "121",
+        "122",
+        "123"
+      ]
+    },
+    {
+      "name": "mu0795",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "124",
+        "125",
+        "126",
+        "127"
+      ]
+    },
+    {
+      "name": "mu0796",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "128",
+        "129",
+        "130",
+        "131"
+      ]
+    },
+    {
+      "name": "mu0797",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "132",
+        "133",
+        "134",
+        "135"
+      ]
+    },
+    {
+      "name": "mu0798",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "136",
+        "137",
+        "138",
+        "139"
+      ]
+    },
+    {
+      "name": "mu0799",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "140",
+        "141",
+        "142",
+        "143"
+      ]
+    },
+    {
+      "name": "mu0800",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "144",
+        "145",
+        "146",
+        "147"
+      ]
+    },
+    {
+      "name": "mu0801",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "148",
+        "149",
+        "150",
+        "151"
+      ]
+    },
+    {
+      "name": "mu0802",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "152",
+        "153",
+        "154",
+        "155"
+      ]
+    },
+    {
+      "name": "mu0803",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "156",
+        "157",
+        "158",
+        "159"
+      ]
+    },
+    {
+      "name": "mu0809",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "160",
+        "161",
+        "162",
+        "163"
+      ]
+    },
+    {
+      "name": "mu1133",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": [
+        "164",
+        "165",
+        "166",
+        "167"
+      ]
+    }
+  ]
 }

@@ -5,6 +5,11 @@ import routes from '../constants/routes';
 import styles from './Home.css';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -18,6 +23,8 @@ export default class ViewParsed extends Component {
   }
 
   render() {
+    let content = this.state.parsedContent;
+
     return (
       <div>
         <div className={styles.backButton} data-tid="backButton">
@@ -34,6 +41,7 @@ export default class ViewParsed extends Component {
         >
           Select File
         </Button>
+        {content && <div>{JSON.stringify(content, null, 2)}</div>}
       </div>
     );
   }

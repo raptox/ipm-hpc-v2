@@ -5,6 +5,8 @@ use File::Basename;
 use FileHandle;
 use Data::Dumper;
 
+use feature say;
+
 #graph format
 $gfmt = "png";
 
@@ -79,7 +81,6 @@ while(defined($line = <FH>)) {
   dat => "$u[3]"};
 }
 close(FH);
-
 
 #foreach $call (sort byidv keys %mpi_call) {
 # print "$call - $mpi_call{$call}{idl} - $mpi_call{$call}{dat}\n";
