@@ -13,10 +13,18 @@ export const parseData = (filename, callback) => {
     fs.writeFile('log.json', JSON.stringify(result, null, 2), err => {
       console.log(err);
     });
-    // data.metadata = getMetadata(taskdata);
+    data.metadata = getMetadata(taskdata[0]);
     data.hosts = getHosts(taskdata);
     callback(JSON.stringify(data, null, 2));
   });
+};
+
+const getMetadata = firstTask => {
+  let metadata = {};
+  metadata.username = firstTask.$.username;
+  metadata.start = firstTask.$.stamp_init;
+  metadata.stop = firstTask.$.stamp_final;
+  return metadata;
 };
 
 const getHosts = taskdata => {
@@ -41,28 +49,6 @@ const newHost = task => {
   host.tasks = [task.$.mpi_rank];
   return host;
 };
-
-// function getMetadata(taskdata) {
-//     let metadata = {};
-//     metadata.id = taskdata.job[0]._;
-//     metadata.cmd = taskdata.cmdline[0]._;
-//     metadata.codename = '';
-//     metadata.username = taskdata.$.username;
-//     metadata.host =
-//       taskdata.host[0]._ + ' (' + taskdata.host[0].$.mach_info + ')';
-//     metadata.start = taskdata.$.stamp_init;
-//     metadata.stop = taskdata.$.stamp_final;
-//     metadata.totalMemory = '';
-//     metadata.switchSend = '';
-//     metadata.state = '';
-//     metadata.group = taskdata.$.groupname;
-//     metadata.mpiTasks = '';
-//     metadata.wallClock = '';
-//     metadata.comm = '';
-//     metadata.totalGflopSec = '';
-//     metadata.switchRecv = '';
-//     return metadata
-// }
 
 function parseXml(file, callback) {
   fs.readFile(file, (err, data) => {

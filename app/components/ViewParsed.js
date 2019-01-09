@@ -5,6 +5,7 @@ import routes from '../constants/routes';
 import styles from './Home.css';
 import Button from '@material-ui/core/Button';
 import ReactTable from 'react-table';
+import moment from 'moment';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -37,35 +38,54 @@ export default class ViewParsed extends Component {
           Select File
         </Button>
         {content && (
-          <ReactTable
-            data={content.hosts}
-            columns={[
-              {
-                Header: 'Hosts',
-                columns: [
-                  {
-                    Header: 'Name',
-                    accessor: 'name'
-                  },
-                  {
-                    Header: 'Mach Name',
-                    accessor: 'mach_name'
-                  },
-                  {
-                    Header: 'Mach Info',
-                    accessor: 'mach_info'
-                  },
-                  {
-                    Header: 'Tasks',
-                    id: 'tasks',
-                    accessor: d => d.tasks.join(', ')
-                  }
-                ]
-              }
-            ]}
-            defaultPageSize={10}
-            className="-striped -highlight"
-          />
+          <div>
+            <div>
+              user: {content.metadata.username} <br />
+              start:{' '}
+              {moment
+                .unix(content.metadata.start)
+                .format('MMMM Do YYYY, h:mm:ss a')}{' '}
+              <br />
+              stop:{' '}
+              {moment
+                .unix(content.metadata.stop)
+                .format('MMMM Do YYYY, h:mm:ss a')}{' '}
+              <br />
+              walltime:{' '}
+              {(content.metadata.stop - content.metadata.start).toFixed(6)}{' '}
+              seconds <br />
+              comm: missing
+            </div>
+            <ReactTable
+              data={content.hosts}
+              columns={[
+                {
+                  Header: 'Hosts',
+                  columns: [
+                    {
+                      Header: 'Name',
+                      accessor: 'name'
+                    },
+                    {
+                      Header: 'Mach Name',
+                      accessor: 'mach_name'
+                    },
+                    {
+                      Header: 'Mach Info',
+                      accessor: 'mach_info'
+                    },
+                    {
+                      Header: 'Tasks',
+                      id: 'tasks',
+                      accessor: d => d.tasks.join(', ')
+                    }
+                  ]
+                }
+              ]}
+              defaultPageSize={10}
+              className="-striped -highlight"
+            />
+          </div>
         )}
       </div>
     );
