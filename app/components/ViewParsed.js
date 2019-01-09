@@ -4,12 +4,7 @@ import { Link } from 'react-router-dom';
 import routes from '../constants/routes';
 import styles from './Home.css';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+import ReactTable from 'react-table';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -41,7 +36,37 @@ export default class ViewParsed extends Component {
         >
           Select File
         </Button>
-        {content && <div>{JSON.stringify(content, null, 2)}</div>}
+        {content && (
+          <ReactTable
+            data={content.hosts}
+            columns={[
+              {
+                Header: 'Hosts',
+                columns: [
+                  {
+                    Header: 'Name',
+                    accessor: 'name'
+                  },
+                  {
+                    Header: 'Mach Name',
+                    accessor: 'mach_name'
+                  },
+                  {
+                    Header: 'Mach Info',
+                    accessor: 'mach_info'
+                  },
+                  {
+                    Header: 'Tasks',
+                    id: 'tasks',
+                    accessor: d => d.tasks.join(', ')
+                  }
+                ]
+              }
+            ]}
+            defaultPageSize={10}
+            className="-striped -highlight"
+          />
+        )}
       </div>
     );
   }
