@@ -15,8 +15,51 @@ export const parseData = (filename, callback) => {
     });
     data.metadata = getMetadata(taskdata[0]);
     data.hosts = getHosts(taskdata);
+    data.mpiData = getMpiData(taskdata);
     callback(JSON.stringify(data, null, 2));
   });
+};
+
+const getMpiData = taskdata => {
+  let mpiCalls = [];
+  let mpiAnalysis = {
+    totalTime: 0.0,
+    totalCount: 0
+  };
+  for (let taskKey in taskdata) {
+    let task = taskdata[taskKey];
+    let hentdata = task.hash[0].hent;
+    for (let hentKey in hentdata) {
+      let hent = hentdata[hentKey];
+      let mpiCallExists = mpiCalls.find(entry => entry.call === hent.$.call);
+      if (mpiCallExists) {
+        let values = hent._.match(/(.*) (.*) (.*)/);
+        let ttot = parseFloat(values[1]);
+        let tmin = parseFloat(values[2]);
+        let tmax = parseFloat(values[3]);
+        let bytes = parseInt(hent.$.bytes);
+        let count = parseInt(hent.$.count);
+
+        mpiCallExists.ttot += ttot;
+        mpiCallExists.tmin += tmin;
+        mpiCallExists.tmax += tmax;
+        mpiCallExists.bytes += bytes;
+        mpiCallExists.count += count;
+        mpiAnalysis.totalTime += ttot;
+        mpiAnalysis.totalCount += count;
+      } else {
+        let mpiCall = {};
+        mpiCall.call = hent.$.call;
+        mpiCall.ttot = 0.0;
+        mpiCall.tmin = 0.0;
+        mpiCall.tmax = 0.0;
+        mpiCall.bytes = 0;
+        mpiCall.count = 0;
+        mpiCalls.push(mpiCall);
+      }
+    }
+  }
+  return { mpiCalls, mpiAnalysis };
 };
 
 const getMetadata = firstTask => {
