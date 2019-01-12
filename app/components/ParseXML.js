@@ -5,6 +5,7 @@ import routes from '../constants/routes';
 import styles from './Home.css';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import ReactJson from 'react-json-view';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -19,6 +20,8 @@ export default class ParseXML extends Component {
   }
 
   render() {
+    let data = this.state.parseLog;
+
     return (
       <div>
         <div className={styles.backButton} data-tid="backButton">
@@ -35,7 +38,7 @@ export default class ParseXML extends Component {
         >
           Select File
         </Button>
-        {this.state.parseLog && (
+        {data && (
           <Button
             variant="contained"
             color="secondary"
@@ -44,10 +47,15 @@ export default class ParseXML extends Component {
             Save Parsed
           </Button>
         )}
-        <div className={styles.textfield}>
-          Parse Log: <br />
-          {this.state.parseLog}
-        </div>
+        {data && (
+          <div className={styles.textfield}>
+            Parse Log: <br />
+            <ReactJson
+              src={data ? JSON.parse(data) : { empty: true }}
+              collapsed={true}
+            />
+          </div>
+        )}
       </div>
     );
   }

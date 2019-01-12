@@ -6,6 +6,7 @@ import styles from './Home.css';
 import Button from '@material-ui/core/Button';
 import ReactTable from 'react-table';
 import moment from 'moment';
+import { Pie } from 'react-chartjs-2';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -39,6 +40,7 @@ export default class ViewParsed extends Component {
         </Button>
         {content && (
           <div>
+            <h3>Metadata</h3>
             <div>
               user: {content.metadata.username} <br />
               start:{' '}
@@ -56,6 +58,7 @@ export default class ViewParsed extends Component {
               seconds <br />
               comm: missing
             </div>
+            <h3>{content.hosts.length} Hosts</h3>
             <ReactTable
               data={content.hosts}
               columns={[
@@ -82,9 +85,14 @@ export default class ViewParsed extends Component {
                   ]
                 }
               ]}
-              defaultPageSize={10}
+              pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
+              defaultPageSize={2}
               className="-striped -highlight"
             />
+            <h3>MPI %</h3>
+            <Pie data={content.mpiPies.mpiPercent} />
+            <h3>MPI % Wall</h3>
+            <Pie data={content.mpiPies.mpiWall} />
           </div>
         )}
       </div>
