@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "username": "pakin",
+    "start": 1397169030.370309,
+    "stop": 1397169062.097576
+  },
+  "hosts": [
+    {
+      "name": "mu0716",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["0", "1", "2", "3"]
+    },
+    {
+      "name": "mu0717",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["4", "5", "6", "7"]
+    },
+    {
+      "name": "mu0718",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["8", "9", "10", "11"]
+    },
+    {
+      "name": "mu0737",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["12", "13", "14", "15"]
+    },
+    {
+      "name": "mu0738",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["16", "17", "18", "19"]
+    },
+    {
+      "name": "mu0805",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["20", "21", "22", "23"]
+    },
+    {
+      "name": "mu0807",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["24", "25", "26", "27"]
+    },
+    {
+      "name": "mu0808",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["28", "29", "30", "31"]
+    },
+    {
+      "name": "mu0987",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["32", "33", "34", "35"]
+    },
+    {
+      "name": "mu0988",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["36", "37", "38", "39"]
+    },
+    {
+      "name": "mu0989",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["40", "41", "42", "43"]
+    },
+    {
+      "name": "mu0990",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["44", "45", "46", "47"]
+    },
+    {
+      "name": "mu0991",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["48", "49", "50", "51"]
+    },
+    {
+      "name": "mu0992",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["52", "53", "54", "55"]
+    },
+    {
+      "name": "mu0993",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["56", "57", "58", "59"]
+    },
+    {
+      "name": "mu0995",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["60", "61", "62", "63"]
+    },
+    {
+      "name": "mu0996",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["64", "65", "66", "67"]
+    },
+    {
+      "name": "mu0997",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["68", "69", "70", "71"]
+    },
+    {
+      "name": "mu0998",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["72", "73", "74", "75"]
+    },
+    {
+      "name": "mu1000",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["76", "77", "78", "79"]
+    },
+    {
+      "name": "mu1001",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["80", "81", "82", "83"]
+    },
+    {
+      "name": "mu1002",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["84", "85", "86", "87"]
+    },
+    {
+      "name": "mu1003",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["88", "89", "90", "91"]
+    },
+    {
+      "name": "mu1004",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["92", "93", "94", "95"]
+    },
+    {
+      "name": "mu1005",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["96", "97", "98", "99"]
+    },
+    {
+      "name": "mu1006",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["100", "101", "102", "103"]
+    },
+    {
+      "name": "mu1007",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["104", "105", "106", "107"]
+    },
+    {
+      "name": "mu1008",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["108", "109", "110", "111"]
+    },
+    {
+      "name": "mu1009",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["112", "113", "114", "115"]
+    },
+    {
+      "name": "mu1446",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["116", "117", "118", "119"]
+    },
+    {
+      "name": "mu1447",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["120", "121", "122", "123"]
+    },
+    {
+      "name": "mu1448",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["124", "125", "126", "127"]
+    },
+    {
+      "name": "mu1450",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["128", "129", "130", "131"]
+    },
+    {
+      "name": "mu1452",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["132", "133", "134", "135"]
+    },
+    {
+      "name": "mu1455",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["136", "137", "138", "139"]
+    },
+    {
+      "name": "mu1456",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["140", "141", "142", "143"]
+    },
+    {
+      "name": "mu1457",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["144", "145", "146", "147"]
+    },
+    {
+      "name": "mu1458",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["148", "149", "150", "151"]
+    },
+    {
+      "name": "mu1460",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["152", "153", "154", "155"]
+    },
+    {
+      "name": "mu1461",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["156", "157", "158", "159"]
+    },
+    {
+      "name": "mu1462",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["160", "161", "162", "163"]
+    },
+    {
+      "name": "mu1464",
+      "mach_name": "unknown",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["164", "165", "166", "167"]
+    }
+  ],
+  "mpiData": {
+    "mpiCalls": [
+      {
+        "call": "MPI_Send",
+        "ttot": 627.1616853799998,
+        "tmin": 0.0048138233599999995,
+        "tmax": 4.379095029699998,
+        "bytes": 7641304,
+        "count": 30033290
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 1584.8621644000018,
+        "tmin": 0.12234630960000009,
+        "tmax": 88.61644630500007,
+        "bytes": 7637276,
+        "count": 30033290
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 249.01646581242096,
+        "tmin": 0.119030127,
+        "tmax": 46.841055003020124,
+        "bytes": 4003632,
+        "count": 79631
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 397.11705441499976,
+        "tmin": 2.2884166990000034,
+        "tmax": 103.62457241900005,
+        "bytes": 2138972,
+        "count": 41286
+      },
+      {
+        "call": "MPI_Barrier",
+        "ttot": 0.07691993000000004,
+        "tmin": 0.011749422999999995,
+        "tmax": 0.06517053000000003,
+        "bytes": 0,
+        "count": 334
+      },
+      {
+        "call": "MPI_Comm_rank",
+        "ttot": 0.0000959971000000001,
+        "tmin": 0.00003858183000000001,
+        "tmax": 0.000057415280000000004,
+        "bytes": 0,
+        "count": 334
+      },
+      {
+        "call": "MPI_Comm_size",
+        "ttot": 0.000053449779999999996,
+        "tmin": 0.000053449779999999996,
+        "tmax": 0.000053449779999999996,
+        "bytes": 0,
+        "count": 167
+      }
+    ],
+    "mpiAnalysis": {
+      "totalTime": 2858.234439384302,
+      "totalCount": 60188332
+    }
+  },
+  "mpiPies": {
+    "mpiPercent": {
+      "datasets": [
+        {
+          "data": ["21.94", "55.45", "8.71", "13.89", "0.00", "0.00", "0.00"],
+          "backgroundColor": [
+            "rgb(110, 69, 190)",
+            "rgb(82, 15, 56)",
+            "rgb(1, 190, 41)",
+            "rgb(20, 110, 143)",
+            "rgb(63, 172, 17)",
+            "rgb(119, 140, 143)",
+            "rgb(41, 41, 32)"
+          ],
+          "hoverBackgroundColor": [
+            "rgb(130, 89, 210)",
+            "rgb(102, 35, 76)",
+            "rgb(21, 210, 61)",
+            "rgb(40, 130, 163)",
+            "rgb(83, 192, 37)",
+            "rgb(139, 160, 163)",
+            "rgb(61, 61, 52)"
+          ]
+        }
+      ],
+      "labels": [
+        "MPI_Send",
+        "MPI_Recv",
+        "MPI_Bcast",
+        "MPI_Allreduce",
+        "MPI_Barrier",
+        "MPI_Comm_rank",
+        "MPI_Comm_size"
+      ]
+    },
+    "mpiWall": {
+      "datasets": [
+        {
+          "data": [
+            "1.98",
+            "5.00",
+            "0.78",
+            "1.25",
+            "0.00",
+            "0.00",
+            "0.00",
+            "90.99"
+          ],
+          "backgroundColor": [
+            "rgb(110, 69, 190)",
+            "rgb(82, 15, 56)",
+            "rgb(1, 190, 41)",
+            "rgb(20, 110, 143)",
+            "rgb(63, 172, 17)",
+            "rgb(119, 140, 143)",
+            "rgb(41, 41, 32)",
+            "rgb(197, 189, 162)"
+          ],
+          "hoverBackgroundColor": [
+            "rgb(130, 89, 210)",
+            "rgb(102, 35, 76)",
+            "rgb(21, 210, 61)",
+            "rgb(40, 130, 163)",
+            "rgb(83, 192, 37)",
+            "rgb(139, 160, 163)",
+            "rgb(61, 61, 52)",
+            "rgb(217, 209, 182)"
+          ]
+        }
+      ],
+      "labels": [
+        "MPI_Send",
+        "MPI_Recv",
+        "MPI_Bcast",
+        "MPI_Allreduce",
+        "MPI_Barrier",
+        "MPI_Comm_rank",
+        "MPI_Comm_size",
+        "Apllication"
+      ]
+    }
+  }
+}

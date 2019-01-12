@@ -1,0 +1,166 @@
+100..
+##IPMv0.983#####################################################################
+# 
+# command : ../bin/snap sin1008 sin1008.out  (running)
+# host    : mu0739                         mpi_tasks : 168 on 42 nodes
+# start   : 04/10/14/21:38:59              wallclock : 47.727100 sec
+# stop    : 04/10/14/21:39:47              %comm     : 66.67 
+# gbytes  : 1.31151e+02 total              gflop/sec : 4.08482e+02 total
+#
+#                           [total]         <avg>           min           max
+# wallclock                  8018.13        47.727       47.7269       47.7271
+# user                       45112.5       268.527       265.877       271.465
+# system                      1812.9       10.7911         7.785         13.46
+# mpi                        5345.45       31.8181       21.0193        40.728
+# %comm                                    66.6668       44.0407       85.3355
+# gflop/sec                  408.482       2.43144       1.85913       2.96664
+# gbytes                     131.151      0.780663       0.77739      0.800053
+#
+# (null)                           0             0             0             0
+# PAPI_FP_OPS             2.8149e+12   1.67553e+10   1.65297e+10   1.73174e+10
+# PAPI_L2_TCM            1.42176e+10   8.46287e+07    6.2825e+07   1.92815e+08
+# PAPI_TOT_INS           1.94957e+13   1.16046e+11   8.87311e+10   1.41589e+11
+#
+#                            [time]       [calls]        <%mpi>      <%wall>
+# MPI_Recv                   2902.47   3.92241e+07         54.30        36.20
+# MPI_Send                   2150.59   3.92241e+07         40.23        26.82
+# MPI_Allreduce              183.039         11928          3.42         2.28
+# MPI_Bcast                  109.251          1680          2.04         1.36
+###############################################################################
+# region : ipm_noregion        [ntasks] = 168
+#
+#                           [total]         <avg>           min           max
+# entries                        336             2             2             2
+# wallclock                  8018.53       47.7294        47.727        47.734
+# user                       45112.5       268.527        265.88        271.46
+# system                      1812.8       10.7905        7.7848        13.456
+# mpi                        5345.45       31.8181        21.019        40.728
+# %comm                                    66.6637       44.0391       85.3353
+# gflop/sec                  2.43132     0.0144721       0.01106       0.01765
+#
+# (null)                           0             0             0             0
+# PAPI_FP_OPS             2.8149e+12   1.67553e+10   1.65297e+10   1.73174e+10
+# PAPI_L2_TCM            1.42176e+10   8.46287e+07    6.2825e+07   1.92815e+08
+# PAPI_TOT_INS           1.94957e+13   1.16046e+11   8.87311e+10   1.41589e+11
+#
+#                            [time]       [calls]        <%mpi>      <%wall>
+# MPI_Recv                   2902.47   3.92241e+07         54.30        36.20
+# MPI_Send                   2150.59   3.92241e+07         40.23        26.82
+# MPI_Allreduce              183.039         11928          3.42         2.28
+# MPI_Bcast                  109.251          1680          2.04         1.36
+###############################################################################
+# data_acquire    = 0 sec
+# data_workup     = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  mpi_pie        = 0 sec
+#  task_data      = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  load_bal       = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  time_stack     = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  mpi_stack      = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  mpi_buff       = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  switch+mem     = 0 sec
+#  topo_tables    = 1 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  topo_data      = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+#  topo_time      = 0 sec
+# html_all        = 1 sec
+# html_regions    = 0 sec
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+pl {-input <file>} {-output <file>}
+	Reads ASCII PL from stdin (or file if -input specified)
+	and writes ASCII PL to stdout (or file if -output)
+	NOTE: binary serialization is no longer supported
+# html_nonregion  = 0 sec

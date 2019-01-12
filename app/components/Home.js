@@ -1,10 +1,12 @@
 // @flow
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../constants/routes';
-import styles from './Home.css';
+import styles from './Basic.css';
 
 type Props = {};
+const remote = require('electron').remote;
 
 export default class Home extends Component<Props> {
   props: Props;
@@ -17,6 +19,9 @@ export default class Home extends Component<Props> {
           <Link to={routes.PARSE}>Parse XML</Link> <br />
           <Link to={routes.VIEW}>View Parsed</Link>
         </div>
+        <a href="#" onClick={() => remote.getCurrentWindow().close()}>
+          Close Application
+        </a>
       </div>
     );
   }

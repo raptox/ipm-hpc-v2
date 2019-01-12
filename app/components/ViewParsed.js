@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../constants/routes';
-import styles from './Home.css';
+import styles from './Basic.css';
 import Button from '@material-ui/core/Button';
 import ReactTable from 'react-table';
 import moment from 'moment';
@@ -26,7 +26,7 @@ export default class ViewParsed extends Component {
       <div>
         <div className={styles.backButton} data-tid="backButton">
           <Link to={routes.HOME}>
-            <i className="fa fa-arrow-left fa-3x" />
+            <i className="fa fa-arrow-left fa-2x" />
           </Link>
         </div>
         <h2>View Parsed</h2>
@@ -90,9 +90,13 @@ export default class ViewParsed extends Component {
               className="-striped -highlight"
             />
             <h3>MPI %</h3>
-            <Pie data={content.mpiPies.mpiPercent} />
+            <div className={styles.pieDiv}>
+              <Pie data={content.mpiPies.mpiPercent} />
+            </div>
             <h3>MPI % Wall</h3>
-            <Pie data={content.mpiPies.mpiWall} />
+            <div className={styles.pieDiv}>
+              <Pie data={content.mpiPies.mpiWall} />
+            </div>
           </div>
         )}
       </div>
@@ -100,11 +104,16 @@ export default class ViewParsed extends Component {
   }
 
   openFile() {
-    let file = dialog.showOpenDialog({ properties: ['openFile'] });
+    let file = dialog.showOpenDialog({
+      properties: ['openFile'],
+      filters: [
+        { name: 'JSON Files', extensions: ['json'] },
+        { name: 'All Files', extensions: ['*'] }
+      ]
+    });
     if (file) {
       fs.readFile(file[0], (err, data) => {
         this.setState({ parsedContent: JSON.parse(data) });
-        console.log(this.state.parsedContent);
       });
     }
   }

@@ -2,20 +2,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../constants/routes';
-import styles from './Home.css';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import ReactJson from 'react-json-view';
+import { ClipLoader } from 'react-spinners';
+import styles from './Basic.css';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
 import { parseData } from '../utils/parser';
 
+const buttonStyle = {
+  marginRight: '10px'
+};
+
 export default class ParseXML extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      parseLog: ''
+      selectedFile: '',
+      parseLog: '',
+      parsing: false
     };
   }
 
@@ -26,7 +33,7 @@ export default class ParseXML extends Component {
       <div>
         <div className={styles.backButton} data-tid="backButton">
           <Link to={routes.HOME}>
-            <i className="fa fa-arrow-left fa-3x" />
+            <i className="fa fa-arrow-left fa-2x" />
           </Link>
         </div>
         <h2>Parse XML</h2>
@@ -35,6 +42,7 @@ export default class ParseXML extends Component {
           variant="contained"
           color="primary"
           onClick={() => this.openFile()}
+          style={buttonStyle}
         >
           Select File
         </Button>
@@ -43,13 +51,22 @@ export default class ParseXML extends Component {
             variant="contained"
             color="secondary"
             onClick={() => this.saveFile()}
+            style={buttonStyle}
           >
-            Save Parsed
+            Save Parsed Data
           </Button>
         )}
+        <div>
+          {this.state.selectedFile && (
+            <h3>Selected File: {this.state.selectedFile}</h3>
+          )}
+          <div>
+            <ClipLoader loading={this.state.parsing} />
+          </div>
+        </div>
         {data && (
-          <div className={styles.textfield}>
-            Parse Log: <br />
+          <div>
+            View Parsed Data: <br />
             <ReactJson
               src={data ? JSON.parse(data) : { empty: true }}
               collapsed={true}
@@ -61,10 +78,18 @@ export default class ParseXML extends Component {
   }
 
   openFile() {
-    let file = dialog.showOpenDialog({ properties: ['openFile'] });
+    let file = dialog.showOpenDialog({
+      properties: ['openFile'],
+      filters: [
+        { name: 'XML Files', extensions: ['xml'] },
+        { name: 'All Files', extensions: ['*'] }
+      ]
+    });
     if (file) {
+      this.setState({});
+      this.setState({ parsing: true, selectedFile: file, parseLog: '' });
       parseData(file[0], data => {
-        this.setState({ parseLog: data });
+        this.setState({ parseLog: data, parsing: false });
       });
     }
   }
@@ -72,7 +97,12 @@ export default class ParseXML extends Component {
   saveFile() {
     const options = {
       title: 'Where to save?',
-      message: 'Where to save?'
+      message: 'Where to save?',
+      defaultPath: 'parsed.json',
+      filters: [
+        { name: 'JSON Files', extensions: ['json'] },
+        { name: 'All Files', extensions: ['*'] }
+      ]
     };
     let file = dialog.showSaveDialog(options);
     if (file) {
