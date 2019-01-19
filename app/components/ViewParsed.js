@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import ReactTable from 'react-table';
 import moment from 'moment';
 import { Pie } from 'react-chartjs-2';
+import tuLogo from './TU-Signet.png';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -24,6 +25,17 @@ export default class ViewParsed extends Component {
 
     return (
       <div>
+        <img
+          alt="TU Logo"
+          src={tuLogo}
+          style={{
+            position: 'fixed',
+            width: '50px',
+            height: '50px',
+            right: '3px',
+            top: '3px'
+          }}
+        />
         <div className={styles.backButton} data-tid="backButton">
           <Link to={routes.HOME}>
             <i className="fa fa-arrow-left fa-2x" />

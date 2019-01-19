@@ -1,8 +1,8 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.17.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "name": "ipm-hpc-v2",
+  "productName": "IPM-HPC-v2",
+  "version": "0.5.0",
+  "description": "Interactive Visualization of MPI Performance Data (Bachelor Thesis)",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -57,7 +57,7 @@
   },
   "main": "./app/main.prod.js",
   "build": {
-    "productName": "ElectronReact",
+    "productName": "IPM-HPC-v2",
     "appId": "org.develar.ElectronReact",
     "files": [
       "app/dist/",
@@ -111,22 +111,10 @@
     "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
   },
   "author": {
-    "name": "Electron React Boilerplte Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
+    "name": "Alexander Tornoreanu",
+    "email": "alex@tornoreanu.at",
+    "url": "http://www.alextornoreanu.at/"
   },
-  "contributors": [
-    {
-      "name": "Vikram Rangaraj",
-      "email": "vikr01@icloud.com",
-      "url": "https://github.com/vikr01"
-    },
-    {
-      "name": "Amila Welihinda",
-      "email": "amilajack@gmail.com",
-      "url": "https://github.com/amilajack"
-    }
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"

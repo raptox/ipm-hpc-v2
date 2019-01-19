@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import ReactJson from 'react-json-view';
 import { ClipLoader } from 'react-spinners';
 import styles from './Basic.css';
+import tuLogo from './TU-Signet.png';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -31,6 +32,17 @@ export default class ParseXML extends Component {
 
     return (
       <div>
+        <img
+          alt="TU Logo"
+          src={tuLogo}
+          style={{
+            position: 'fixed',
+            width: '50px',
+            height: '50px',
+            right: '3px',
+            top: '3px'
+          }}
+        />
         <div className={styles.backButton} data-tid="backButton">
           <Link to={routes.HOME}>
             <i className="fa fa-arrow-left fa-2x" />
