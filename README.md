@@ -2,9 +2,15 @@
 
 Interactive Visualization of MPI Performance Data (Bachelor Thesis)
 
-## Usage
+## Developer Information
 
-//TODO
+To setup your dev environment, or build the app yourself, you first need to install [NodeJS](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/en/docs/install).
+
+Run `yarn` to install all dependencies and `yarn dev`to launch the app in dev mode. (hot reload on code changes)
+
+To build the app for your OS, run `yarn package`.
+
+For more information, check out the boilerplate project on top of which this app is built. [Electron + ReactJS Boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate)
 
 ## Context
 
