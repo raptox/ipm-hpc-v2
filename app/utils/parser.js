@@ -10,12 +10,6 @@ export const parseData = (filename, callback) => {
     console.log(`${filename}:`);
     let taskdata = result[ROOT_ITEM].task;
     let data = {};
-    fs.writeFile('log.json', JSON.stringify(result, null, 2), err => {
-      if (err) {
-        console.log(err);
-        process.exit(1);
-      }
-    });
     data.metadata = getMetadata(taskdata[0]);
     data.hosts = getHosts(taskdata);
     data.mpiData = getMpiData(taskdata);
