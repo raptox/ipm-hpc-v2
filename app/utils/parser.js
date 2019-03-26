@@ -13,8 +13,15 @@ export const parseData = (filename, callback) => {
     data.metadata = getMetadata(taskdata[0]);
     data.hosts = getHosts(taskdata);
     data.mpiData = getMpiData(taskdata);
-    let totalWallTime = (data.metadata.stop - data.metadata.start) * 1000;
-    data.mpiPies = getMpiPieCharts(data.mpiData, totalWallTime);
+    data.mpiPies = getMpiPieCharts(data.mpiData, data.metadata.totalWallTime);
+    // save raw parsed JSON to file
+    //
+    // fs.writeFile('log.json', JSON.stringify(result, null, 2), err => {
+    //   if (err) {
+    //     console.log(err);
+    //     process.exit(1);
+    //   }
+    // });
     callback(JSON.stringify(data, null, 2));
   });
 };
@@ -135,6 +142,10 @@ const getMetadata = firstTask => {
   metadata.username = firstTask.$.username;
   metadata.start = parseFloat(firstTask.$.stamp_init);
   metadata.stop = parseFloat(firstTask.$.stamp_final);
+  metadata.walltime = (metadata.stop - metadata.start).toFixed(6);
+  metadata.ntasks = parseInt(firstTask.job[0].$.ntasks);
+  metadata.nhosts = parseInt(firstTask.job[0].$.nhosts);
+  metadata.totalWallTime = metadata.walltime * metadata.ntasks;
   return metadata;
 };
 

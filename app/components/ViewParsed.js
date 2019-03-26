@@ -65,10 +65,19 @@ export default class ViewParsed extends Component {
                 .unix(content.metadata.stop)
                 .format('MMMM Do YYYY, h:mm:ss a')}{' '}
               <br />
-              walltime:{' '}
-              {(content.metadata.stop - content.metadata.start).toFixed(6)}{' '}
-              seconds <br />
-              comm: missing
+              walltime: {content.metadata.walltime} seconds <br />
+              mpi tasks:
+              {' ' +
+                content.metadata.ntasks +
+                ' on ' +
+                content.metadata.nhosts +
+                ' hosts'}
+              <br />
+              %comm:
+              {' ' +
+                (content.mpiData.mpiAnalysis.totalTime /
+                  content.metadata.totalWallTime) *
+                  100}
             </div>
             <h3>{content.hosts.length} Hosts</h3>
             <ReactTable
