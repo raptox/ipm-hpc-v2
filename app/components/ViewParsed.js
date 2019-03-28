@@ -110,13 +110,59 @@ export default class ViewParsed extends Component {
               defaultPageSize={2}
               className="-striped -highlight"
             />
-            <h3>MPI %</h3>
-            <div className={styles.pieDiv}>
-              <Pie data={content.mpiPies.mpiPercent} />
+            <div className={styles.pieCharts}>
+              <div className={styles.floatLeft}>
+                <h3>Summarized MPI Time in %</h3>
+                <div>
+                  <Pie data={content.mpiPies.mpiPercent} />
+                </div>
+              </div>
+              <div className={styles.floatRight}>
+                <h3>MPI Time in % of total Wall Time</h3>
+                <div>
+                  <Pie data={content.mpiPies.mpiWall} />
+                </div>
+              </div>
             </div>
-            <h3>MPI % Wall</h3>
-            <div className={styles.pieDiv}>
-              <Pie data={content.mpiPies.mpiWall} />
+            <div>
+              <h3>All MPI Calls</h3>
+              <ReactTable
+                data={content.mpiData.mpiCalls}
+                columns={[
+                  {
+                    Header: 'MPI Calls',
+                    columns: [
+                      {
+                        Header: 'Call',
+                        accessor: 'call'
+                      },
+                      {
+                        Header: 'Buffer Size',
+                        accessor: 'bytes'
+                      },
+                      {
+                        Header: '# Calls',
+                        accessor: 'count'
+                      },
+                      {
+                        Header: 'Total Time',
+                        accessor: 'ttot'
+                      },
+                      {
+                        Header: 'Min Time',
+                        accessor: 'tmin'
+                      },
+                      {
+                        Header: 'Max Time',
+                        accessor: 'tmax'
+                      }
+                    ]
+                  }
+                ]}
+                pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
+                defaultPageSize={10}
+                className="-striped -highlight"
+              />
             </div>
           </div>
         )}

@@ -22,7 +22,16 @@
   margin-top: 4px;
 }
 
-.pieDiv {
-  width: 1000px;
-  height: 650px;
+.floatLeft {
+  float: left;
+  width: 50%;
+}
+
+.floatRight {
+  float: right;
+  width: 50%;
+}
+
+.pieCharts {
+  width: 100%;
 }

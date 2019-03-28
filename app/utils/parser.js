@@ -50,8 +50,8 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
     }
   };
 
-  for (let mpiCallKey in mpiData.mpiCalls) {
-    let mpiCall = mpiData.mpiCalls[mpiCallKey];
+  for (let mpiCallKey in mpiData.mpiCallsSummarized) {
+    let mpiCall = mpiData.mpiCallsSummarized[mpiCallKey];
 
     // mpi percent pie
     let value = ((mpiCall.ttot / mpiData.mpiAnalysis.totalTime) * 100).toFixed(
@@ -92,7 +92,10 @@ const getRandomColors = () => {
   let b = Math.floor(Math.random() * 200);
   let color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
   let hover = 'rgb(' + (r + 20) + ', ' + (g + 20) + ', ' + (b + 20) + ')';
-  return { color, hover };
+  return {
+    color,
+    hover
+  };
 };
 
 const getMpiData = taskdata => {
@@ -101,40 +104,74 @@ const getMpiData = taskdata => {
     totalTime: 0.0,
     totalCount: 0
   };
+  let mpiCallsSummarized = [];
+
   for (let taskKey in taskdata) {
     let task = taskdata[taskKey];
     let hentdata = task.hash[0].hent;
     for (let hentKey in hentdata) {
+      // extract values
       let hent = hentdata[hentKey];
-      let mpiCallExists = mpiCalls.find(entry => entry.call === hent.$.call);
-      if (mpiCallExists) {
-        let values = hent._.match(/(.*) (.*) (.*)/);
-        let ttot = parseFloat(values[1]);
-        let tmin = parseFloat(values[2]);
-        let tmax = parseFloat(values[3]);
-        let bytes = parseInt(hent.$.bytes);
-        let count = parseInt(hent.$.count);
+      let values = hent._.match(/(.*) (.*) (.*)/);
+      let ttot = parseFloat(values[1]);
+      let tmin = parseFloat(values[2]);
+      let tmax = parseFloat(values[3]);
+      let bytes = parseInt(hent.$.bytes);
+      let count = parseInt(hent.$.count);
 
+      // MPI calls separated by bytes size
+      let mpiCallExists = mpiCalls.find(
+        entry =>
+          entry.call === hent.$.call && entry.bytes === parseInt(hent.$.bytes)
+      );
+      if (mpiCallExists) {
+        // add to existing call
         mpiCallExists.ttot += ttot;
-        mpiCallExists.tmin += tmin;
-        mpiCallExists.tmax += tmax;
-        mpiCallExists.bytes += bytes;
         mpiCallExists.count += count;
-        mpiAnalysis.totalTime += ttot;
-        mpiAnalysis.totalCount += count;
       } else {
+        // create new mpi call
         let mpiCall = {};
         mpiCall.call = hent.$.call;
-        mpiCall.ttot = 0.0;
-        mpiCall.tmin = 0.0;
-        mpiCall.tmax = 0.0;
-        mpiCall.bytes = 0;
-        mpiCall.count = 0;
+        mpiCall.ttot = ttot;
+        mpiCall.tmin = tmin;
+        mpiCall.tmax = tmax;
+        mpiCall.bytes = bytes;
+        mpiCall.count = count;
         mpiCalls.push(mpiCall);
       }
+
+      // MPI calls summarized
+      let mpiCallSummarizedExists = mpiCallsSummarized.find(
+        entry => entry.call === hent.$.call
+      );
+      if (mpiCallSummarizedExists) {
+        // add to existing call
+        mpiCallSummarizedExists.ttot += ttot;
+        mpiCallSummarizedExists.count += count;
+      } else {
+        // create new mpi call
+        let mpiCall = {};
+        mpiCall.call = hent.$.call;
+        mpiCall.ttot = ttot;
+        mpiCall.count = count;
+        mpiCallsSummarized.push(mpiCall);
+      }
+
+      // add to general counter and time
+      mpiAnalysis.totalTime += ttot;
+      mpiAnalysis.totalCount += count;
     }
   }
-  return { mpiCalls, mpiAnalysis };
+
+  // sort descending after total time
+  mpiCalls.sort((callA, callB) => callB.ttot - callA.ttot);
+  mpiCallsSummarized.sort((callA, callB) => callB.ttot - callA.ttot);
+
+  return {
+    mpiCalls,
+    mpiCallsSummarized,
+    mpiAnalysis
+  };
 };
 
 const getMetadata = firstTask => {
