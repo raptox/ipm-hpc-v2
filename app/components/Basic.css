@@ -34,4 +34,9 @@
 
 .pieCharts {
   width: 100%;
+  overflow: auto;
+}
+
+.tableInfo {
+  margin-top: 20px;
 }

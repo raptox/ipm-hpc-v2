@@ -79,37 +79,6 @@ export default class ViewParsed extends Component {
                   content.metadata.totalWallTime) *
                   100}
             </div>
-            <h3>{content.hosts.length} Hosts</h3>
-            <ReactTable
-              data={content.hosts}
-              columns={[
-                {
-                  Header: 'Hosts',
-                  columns: [
-                    {
-                      Header: 'Name',
-                      accessor: 'name'
-                    },
-                    {
-                      Header: 'Mach Name',
-                      accessor: 'mach_name'
-                    },
-                    {
-                      Header: 'Mach Info',
-                      accessor: 'mach_info'
-                    },
-                    {
-                      Header: 'Tasks',
-                      id: 'tasks',
-                      accessor: d => d.tasks.join(', ')
-                    }
-                  ]
-                }
-              ]}
-              pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
-              defaultPageSize={2}
-              className="-striped -highlight"
-            />
             <div className={styles.pieCharts}>
               <div className={styles.floatLeft}>
                 <h3>Summarized MPI Time in %</h3>
@@ -124,13 +93,12 @@ export default class ViewParsed extends Component {
                 </div>
               </div>
             </div>
-            <div>
-              <h3>All MPI Calls</h3>
+            <div className={styles.tableInfo}>
               <ReactTable
                 data={content.mpiData.mpiCalls}
                 columns={[
                   {
-                    Header: 'MPI Calls',
+                    Header: 'All MPI Calls',
                     columns: [
                       {
                         Header: 'Call',
@@ -155,6 +123,38 @@ export default class ViewParsed extends Component {
                       {
                         Header: 'Max Time',
                         accessor: 'tmax'
+                      }
+                    ]
+                  }
+                ]}
+                pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
+                defaultPageSize={10}
+                className="-striped -highlight"
+              />
+            </div>
+            <div className={styles.tableInfo}>
+              <ReactTable
+                data={content.hosts}
+                columns={[
+                  {
+                    Header: 'All Hosts',
+                    columns: [
+                      {
+                        Header: 'Name',
+                        accessor: 'name'
+                      },
+                      {
+                        Header: 'Mach Name',
+                        accessor: 'mach_name'
+                      },
+                      {
+                        Header: 'Mach Info',
+                        accessor: 'mach_info'
+                      },
+                      {
+                        Header: 'Tasks',
+                        id: 'tasks',
+                        accessor: d => d.tasks.join(', ')
                       }
                     ]
                   }
