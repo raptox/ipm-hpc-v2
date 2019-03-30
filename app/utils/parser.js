@@ -34,6 +34,7 @@ export const parseData = (filename, callback) => {
     data.hosts = getHosts(taskdata);
     data.mpiData = getMpiData(taskdata);
     data.mpiPies = getMpiPieCharts(data.mpiData, data.metadata.totalWallTime);
+    data.hpmData = getHpmData(taskdata);
     // save raw parsed JSON to file
     //
     // fs.writeFile('log.json', JSON.stringify(result, null, 2), err => {
@@ -44,6 +45,43 @@ export const parseData = (filename, callback) => {
     // });
     callback(JSON.stringify(data, null, 2));
   });
+};
+
+const getHpmData = taskdata => {
+  let hpmData = [];
+  for (let taskKey in taskdata) {
+    let task = taskdata[taskKey];
+    let hpm = task.regions[0].region[0].hpm[0].counter;
+    for (let index in hpm) {
+      let name = hpm[index].$.name;
+      let counter = parseInt(hpm[index]._);
+      let hpmFound = hpmData.find(data => data.name === name);
+      if (hpmFound) {
+        hpmFound.counter += counter;
+        hpmFound.ncalls += 1;
+        // get min
+        if (counter < hpmFound.min) {
+          hpmFound.min = counter;
+        }
+        // get max
+        if (counter > hpmFound.max) {
+          hpmFound.max = counter;
+        }
+      } else {
+        let newHpmData = {
+          name: name,
+          counter: counter,
+          min: counter,
+          max: counter,
+          ncalls: 1
+        };
+        hpmData.push(newHpmData);
+      }
+    }
+  }
+
+  hpmData.sort((a, b) => b.counter - a.counter);
+  return hpmData;
 };
 
 const getMpiPieCharts = (mpiData, totalWallTime) => {

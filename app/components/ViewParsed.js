@@ -147,6 +147,42 @@ export default class ViewParsed extends Component {
             </div>
             <div className={styles.tableInfo}>
               <ReactTable
+                data={content.hpmData}
+                columns={[
+                  {
+                    Header: 'HPM Counter Statistics',
+                    columns: [
+                      {
+                        Header: 'Event',
+                        accessor: 'name'
+                      },
+                      {
+                        Header: 'Total Count',
+                        accessor: 'counter'
+                      },
+                      {
+                        Header: 'Avg',
+                        accessor: d => (d.counter / d.ncalls).toFixed(2),
+                        id: 'avg'
+                      },
+                      {
+                        Header: 'Min',
+                        accessor: 'min'
+                      },
+                      {
+                        Header: 'Max',
+                        accessor: 'max'
+                      }
+                    ]
+                  }
+                ]}
+                pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
+                defaultPageSize={10}
+                className="-striped -highlight"
+              />
+            </div>
+            <div className={styles.tableInfo}>
+              <ReactTable
                 data={content.hosts}
                 columns={[
                   {
