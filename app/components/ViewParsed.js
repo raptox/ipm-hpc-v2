@@ -123,6 +123,19 @@ export default class ViewParsed extends Component {
                       {
                         Header: 'Max Time',
                         accessor: 'tmax'
+                      },
+                      {
+                        Header: '%MPI',
+                        accessor: d =>
+                          (d.ttot / content.mpiData.mpiAnalysis.totalTime) *
+                          100,
+                        id: 'percentMpi'
+                      },
+                      {
+                        Header: '%Wall',
+                        accessor: d =>
+                          (d.ttot / content.metadata.totalWallTime) * 100,
+                        id: 'percentWall'
                       }
                     ]
                   }
