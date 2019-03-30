@@ -4,10 +4,30 @@ const fs = require('fs');
 const parseString = require('xml2js').parseString;
 
 const ROOT_ITEM = 'ipm_job_profile';
+const colors = [
+  [114, 147, 203],
+  [225, 151, 76],
+  [132, 186, 91],
+  [211, 94, 96],
+  [128, 133, 133],
+  [144, 103, 167],
+  [171, 104, 87],
+  [204, 194, 16],
+  [57, 106, 177],
+  [218, 124, 48],
+  [62, 150, 81],
+  [204, 37, 41],
+  [83, 81, 84],
+  [107, 76, 154],
+  [146, 36, 40],
+  [148, 139, 61]
+];
+let colorsIndex = 0;
 
 export const parseData = (filename, callback) => {
   parseXml(filename, result => {
-    console.log(`${filename}:`);
+    let colorsIndex = 0;
+    //console.log(`${filename}:`);
     let taskdata = result[ROOT_ITEM].task;
     let data = {};
     data.metadata = getMetadata(taskdata[0]);
@@ -52,16 +72,20 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
 
   let othersData = 0.0;
   let othersSummarizedData = 0.0;
+  let colors = null;
 
   for (let mpiCallKey in mpiData.mpiCallsSummarized) {
     let mpiCall = mpiData.mpiCallsSummarized[mpiCallKey];
-    let colors = getRandomColors();
+    colors = null;
 
     // mpi percent pie
     let value = ((mpiCall.ttot / mpiData.mpiAnalysis.totalTime) * 100).toFixed(
       2
     );
     if (value >= 1) {
+      if (!colors) {
+        colors = getRandomColors();
+      }
       mpiPieCharts.mpiPercent.datasets[0].data.push(value);
       mpiPieCharts.mpiPercent.labels.push(mpiCall.call);
       mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(colors.color);
@@ -75,6 +99,9 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
     // mpi wall time pie
     let value2 = ((mpiCall.ttot / totalWallTime) * 100).toFixed(2);
     if (value2 >= 1) {
+      if (!colors) {
+        colors = getRandomColors();
+      }
       mpiPieCharts.mpiWall.datasets[0].data.push(value2);
       mpiPieCharts.mpiWall.labels.push(mpiCall.call);
       mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
@@ -85,9 +112,12 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
   }
 
   // add others to pie chart
-  let colors = getRandomColors();
+  colors = null;
 
   if (othersData != 0) {
+    if (!colors) {
+      colors = getRandomColors();
+    }
     mpiPieCharts.mpiPercent.datasets[0].data.push(othersData.toFixed(2));
     mpiPieCharts.mpiPercent.labels.push('others');
     mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(colors.color);
@@ -95,6 +125,9 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
   }
 
   if (othersSummarizedData != 0) {
+    if (!colors) {
+      colors = getRandomColors();
+    }
     mpiPieCharts.mpiWall.datasets[0].data.push(othersSummarizedData.toFixed(2));
     mpiPieCharts.mpiWall.labels.push('others');
     mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
@@ -116,12 +149,16 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
 };
 
 const getRandomColors = () => {
+  let r = colors[colorsIndex][0];
+  let g = colors[colorsIndex][1];
+  let b = colors[colorsIndex][2];
   // set random colors
-  let r = Math.floor(Math.random() * 200);
-  let g = Math.floor(Math.random() * 200);
-  let b = Math.floor(Math.random() * 200);
+  // let r = Math.floor(Math.random() * 200);
+  // let g = Math.floor(Math.random() * 200);
+  // let b = Math.floor(Math.random() * 200);
   let color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
   let hover = 'rgb(' + (r + 20) + ', ' + (g + 20) + ', ' + (b + 20) + ')';
+  colorsIndex = (colorsIndex + 1) % colors.length;
   return {
     color,
     hover

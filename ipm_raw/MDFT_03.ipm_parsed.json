@@ -2,7 +2,11 @@
   "metadata": {
     "username": "baustin",
     "start": 1396463276.160871,
-    "stop": 1396463288.83518
+    "stop": 1396463288.83518,
+    "walltime": "12.674309",
+    "ntasks": 9,
+    "nhosts": 1,
+    "totalWallTime": 114.06878099999999
   },
   "hosts": [
     {
@@ -15,124 +19,1732 @@
   "mpiData": {
     "mpiCalls": [
       {
-        "call": "MPI_Recv",
-        "ttot": 0.15252155343000043,
-        "tmin": 0.028159840580000022,
-        "tmax": 0.0718291765799997,
-        "bytes": 11978696,
-        "count": 15637
-      },
-      {
-        "call": "MPI_Bcast",
-        "ttot": 0.3399650445700003,
-        "tmin": 0.06386875770999968,
-        "tmax": 0.15305612992000053,
-        "bytes": 20345988,
-        "count": 17984
-      },
-      {
-        "call": "MPI_Send",
-        "ttot": 0.013986337239999988,
-        "tmin": 0.004133942410000002,
-        "tmax": 0.006551741470000005,
-        "bytes": 6313608,
-        "count": 9997
-      },
-      {
-        "call": "MPI_Rsend",
-        "ttot": 0.00018525200000000003,
-        "tmin": 0,
-        "tmax": 0.0000083447,
-        "bytes": 112,
-        "count": 828
-      },
-      {
-        "call": "MPI_Allreduce",
-        "ttot": 0.05034094630000002,
-        "tmin": 0.015879012999999994,
-        "tmax": 0.028033579100000004,
-        "bytes": 3128452,
-        "count": 2922
-      },
-      {
-        "call": "MPI_Testall",
-        "ttot": 0.002813342,
-        "tmin": 0,
-        "tmax": 0.0000562668,
-        "bytes": 0,
-        "count": 5931
-      },
-      {
         "call": "MPI_Alltoallv",
-        "ttot": 2.888834799999999,
-        "tmin": 0.08449774999999998,
-        "tmax": 0.11773288000000003,
-        "bytes": 9945088,
-        "count": 10028
-      },
-      {
-        "call": "MPI_Sendrecv_replace",
-        "ttot": 0.030488677999999984,
-        "tmin": 0.0049004634,
-        "tmax": 0.0120623,
-        "bytes": 11960320,
-        "count": 480
-      },
-      {
-        "call": "MPI_Reduce",
-        "ttot": 0.07078792165,
-        "tmin": 0.03456820000000001,
-        "tmax": 0.04761486789000002,
-        "bytes": 16605328,
-        "count": 458
-      },
-      {
-        "call": "MPI_Waitall",
-        "ttot": 0.0034186850000000003,
-        "tmin": 0.0000066756900000000005,
-        "tmax": 0.0000686649,
-        "bytes": 128,
-        "count": 12640
-      },
-      {
-        "call": "MPI_Isend",
-        "ttot": 0.003051752140000007,
-        "tmin": 0.00023937161999999947,
-        "tmax": 0.0005304808200000004,
-        "bytes": 6237568,
-        "count": 5639
-      },
-      {
-        "call": "MPI_Comm_size",
-        "ttot": 0.000313284,
-        "tmin": 0,
-        "tmax": 0.0000925063,
-        "bytes": 0,
-        "count": 824
-      },
-      {
-        "call": "MPI_Comm_rank",
-        "ttot": 0.0004389289999999999,
-        "tmin": 0,
-        "tmax": 0.000030040899999999992,
-        "bytes": 0,
-        "count": 1296
-      },
-      {
-        "call": "MPI_Finalize",
-        "ttot": 0,
-        "tmin": 0,
-        "tmax": 0,
-        "bytes": 0,
-        "count": 8
+        "ttot": 2.55121,
+        "tmin": 0.00018501,
+        "tmax": 0.00062895,
+        "bytes": 65536,
+        "count": 9488
       },
       {
         "call": "MPI_Barrier",
-        "ttot": 2.0555169999999996,
-        "tmin": 0.0000355237,
-        "tmax": 0.19699189999999997,
+        "ttot": 2.081123,
+        "tmin": 0.000002861,
+        "tmax": 0.002667,
         "bytes": 0,
-        "count": 15449
+        "count": 16281
+      },
+      {
+        "call": "MPI_Alltoallv",
+        "ttot": 0.32781,
+        "tmin": 0.00018787,
+        "tmax": 0.00063014,
+        "bytes": 57344,
+        "count": 1186
+      },
+      {
+        "call": "MPI_Alltoallv",
+        "ttot": 0.1478129,
+        "tmin": 0.0014839,
+        "tmax": 0.002892,
+        "bytes": 229376,
+        "count": 72
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.07940318189999998,
+        "tmin": 0.0000011921,
+        "tmax": 0.0000021458,
+        "bytes": 1536,
+        "count": 1404
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.062875979,
+        "tmin": 0,
+        "tmax": 0.0000059605,
+        "bytes": 1024,
+        "count": 2895
+      },
+      {
+        "call": "MPI_Alltoallv",
+        "ttot": 0.042992800000000005,
+        "tmin": 0.0034399,
+        "tmax": 0.0034399,
+        "bytes": 196608,
+        "count": 18
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.02965345789000001,
+        "tmin": 0,
+        "tmax": 0.000002861,
+        "bytes": 768,
+        "count": 789
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.02833608300000001,
+        "tmin": 0.00051403,
+        "tmax": 0.00051403,
+        "bytes": 81920,
+        "count": 186
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.026899809999999996,
+        "tmin": 0.0013759,
+        "tmax": 0.0013759,
+        "bytes": 163840,
+        "count": 72
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.02641153985,
+        "tmin": 0,
+        "tmax": 0.0000030994,
+        "bytes": 512,
+        "count": 840
+      },
+      {
+        "call": "MPI_Alltoallv",
+        "ttot": 0.0263691,
+        "tmin": 0.00079989,
+        "tmax": 0.0013471,
+        "bytes": 131072,
+        "count": 18
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.022916080000000002,
+        "tmin": 0.00048685,
+        "tmax": 0.001456,
+        "bytes": 4,
+        "count": 54
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.021682999040000008,
+        "tmin": 0.000002861,
+        "tmax": 0.000002861,
+        "bytes": 1536,
+        "count": 2981
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.01920014147,
+        "tmin": 0,
+        "tmax": 0.000030994,
+        "bytes": 1024,
+        "count": 4346
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.017818446699999997,
+        "tmin": 0.0000019073,
+        "tmax": 0.000002861,
+        "bytes": 2560,
+        "count": 36
+      },
+      {
+        "call": "MPI_Sendrecv_replace",
+        "ttot": 0.016163069999999998,
+        "tmin": 0.000063896,
+        "tmax": 0.00015116,
+        "bytes": 163840,
+        "count": 162
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.016062474,
+        "tmin": 0.00032687,
+        "tmax": 0.00032687,
+        "bytes": 163840,
+        "count": 45
+      },
+      {
+        "call": "MPI_Sendrecv_replace",
+        "ttot": 0.014953838,
+        "tmin": 0.000025034,
+        "tmax": 0.00006485,
+        "bytes": 81920,
+        "count": 324
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.014639157000000002,
+        "tmin": 0.0001812,
+        "tmax": 0.00090504,
+        "bytes": 163840,
+        "count": 39
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.009991426000000001,
+        "tmin": 0.000073195,
+        "tmax": 0.00048518,
+        "bytes": 81920,
+        "count": 80
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.0095957,
+        "tmin": 0.0011139,
+        "tmax": 0.0011139,
+        "bytes": 163840,
+        "count": 9
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.00928877,
+        "tmin": 0.0000038147,
+        "tmax": 0.00062418,
+        "bytes": 1536,
+        "count": 972
+      },
+      {
+        "call": "MPI_Alltoall",
+        "ttot": 0.00881477,
+        "tmin": 0.00045991,
+        "tmax": 0.00045991,
+        "bytes": 4,
+        "count": 9
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.008151769300000002,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 4,
+        "count": 2340
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.007959380000000002,
+        "tmin": 0.00019312,
+        "tmax": 0.00019312,
+        "bytes": 81920,
+        "count": 45
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.007955869,
+        "tmin": 0,
+        "tmax": 0.0000030994,
+        "bytes": 640,
+        "count": 720
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.00743079,
+        "tmin": 0.000002861,
+        "tmax": 0.00018597,
+        "bytes": 1024,
+        "count": 1296
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.007411074439999999,
+        "tmin": 0,
+        "tmax": 0.000010014,
+        "bytes": 16,
+        "count": 2085
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.007353098000000001,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 896,
+        "count": 720
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.007275185869999999,
+        "tmin": 0,
+        "tmax": 0.0000019073,
+        "bytes": 16,
+        "count": 3114
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.00671173,
+        "tmin": 0.00009799,
+        "tmax": 0.00058007,
+        "bytes": 57344,
+        "count": 27
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.006607062,
+        "tmin": 0.000494,
+        "tmax": 0.000494,
+        "bytes": 65536,
+        "count": 18
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0064601942999999995,
+        "tmin": 0.000016928,
+        "tmax": 0.000080109,
+        "bytes": 16384,
+        "count": 112
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.006324526999999998,
+        "tmin": 0.0002079,
+        "tmax": 0.0002079,
+        "bytes": 65536,
+        "count": 45
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.00614143,
+        "tmin": 0.00016594,
+        "tmax": 0.00030494,
+        "bytes": 81920,
+        "count": 27
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0059514289,
+        "tmin": 0.00011206,
+        "tmax": 0.00043797,
+        "bytes": 0,
+        "count": 112
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0056586399999999995,
+        "tmin": 0,
+        "tmax": 0.0000030994,
+        "bytes": 1280,
+        "count": 480
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0048627730000000025,
+        "tmin": 0.00011992,
+        "tmax": 0.00011992,
+        "bytes": 20480,
+        "count": 81
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0048163054,
+        "tmin": 0.0000059605,
+        "tmax": 0.00060105,
+        "bytes": 32768,
+        "count": 48
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.004567626,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 320,
+        "count": 675
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.00441338,
+        "tmin": 0.000049114,
+        "tmax": 0.000061035,
+        "bytes": 20480,
+        "count": 108
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.004411945,
+        "tmin": 0.0000019073,
+        "tmax": 0.00011301,
+        "bytes": 8,
+        "count": 234
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.004395499,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 256,
+        "count": 360
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.00433945,
+        "tmin": 0.00050998,
+        "tmax": 0.00050998,
+        "bytes": 229376,
+        "count": 9
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.004235284,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000019073,
+        "bytes": 384,
+        "count": 360
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.004202133,
+        "tmin": 0.000078917,
+        "tmax": 0.000078917,
+        "bytes": 40960,
+        "count": 54
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.004168272000000001,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 448,
+        "count": 360
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0038080219000000003,
+        "tmin": 0.000036001,
+        "tmax": 0.000036001,
+        "bytes": 24576,
+        "count": 69
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0037529605000000002,
+        "tmin": 0.001868,
+        "tmax": 0.001868,
+        "bytes": 5120,
+        "count": 3
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0036358349999999996,
+        "tmin": 0.0000090599,
+        "tmax": 0.001349,
+        "bytes": 49152,
+        "count": 19
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00342132,
+        "tmin": 0.00057888,
+        "tmax": 0.00057888,
+        "bytes": 65536,
+        "count": 8
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.003089883,
+        "tmin": 0.000002861,
+        "tmax": 0.000087023,
+        "bytes": 4,
+        "count": 270
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0029387516999999997,
+        "tmin": 0.00073481,
+        "tmax": 0.00073481,
+        "bytes": 3072,
+        "count": 6
+      },
+      {
+        "call": "MPI_Testall",
+        "ttot": 0.002825025,
+        "tmin": 0,
+        "tmax": 0.0000040531,
+        "bytes": 0,
+        "count": 5951
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0027737614500000013,
+        "tmin": 0,
+        "tmax": 0.0000090599,
+        "bytes": 768,
+        "count": 873
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0026910297499999993,
+        "tmin": 0,
+        "tmax": 0.0000090599,
+        "bytes": 512,
+        "count": 930
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.0024676129999999996,
+        "tmin": 0.000053883,
+        "tmax": 0.000082016,
+        "bytes": 40960,
+        "count": 36
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0022390049999999996,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 128,
+        "count": 180
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.002219198,
+        "tmin": 0,
+        "tmax": 0.0000019073,
+        "bytes": 160,
+        "count": 189
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.00220633,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000069141,
+        "bytes": 16,
+        "count": 1008
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0022003676999999998,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 192,
+        "count": 180
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.00217699968,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 224,
+        "count": 189
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.002001274,
+        "tmin": 0.00036883,
+        "tmax": 0.00036883,
+        "bytes": 32768,
+        "count": 12
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0018882748400000002,
+        "tmin": 0,
+        "tmax": 0.000010014,
+        "bytes": 896,
+        "count": 561
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0018775521900000003,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 1280,
+        "count": 382
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0018720660999999997,
+        "tmin": 0.00001812,
+        "tmax": 0.000021935,
+        "bytes": 8192,
+        "count": 33
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.0018567899999999999,
+        "tmin": 0.0000050068,
+        "tmax": 0.000041962,
+        "bytes": 29360128,
+        "count": 48
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00183224,
+        "tmin": 0.00005722,
+        "tmax": 0.00005722,
+        "bytes": 163840,
+        "count": 20
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0018289169000000002,
+        "tmin": 0.000028133,
+        "tmax": 0.000028133,
+        "bytes": 10240,
+        "count": 51
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0018169750000000002,
+        "tmin": 0.000014782,
+        "tmax": 0.000014782,
+        "bytes": 6144,
+        "count": 25
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0017831415999999998,
+        "tmin": 0.000010014,
+        "tmax": 0.000036001,
+        "bytes": 20480,
+        "count": 48
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.001769774,
+        "tmin": 0.000054836,
+        "tmax": 0.000054836,
+        "bytes": 81920,
+        "count": 36
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.0017626200000000001,
+        "tmin": 0.00020719,
+        "tmax": 0.00020719,
+        "bytes": 16384,
+        "count": 9
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0017402103699999997,
+        "tmin": 0,
+        "tmax": 0.000010014,
+        "bytes": 640,
+        "count": 553
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.00173618,
+        "tmin": 0.00020099,
+        "tmax": 0.00020099,
+        "bytes": 32768,
+        "count": 9
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0017342521000000002,
+        "tmin": 0,
+        "tmax": 0.0000019073,
+        "bytes": 96,
+        "count": 198
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.0015969301000000001,
+        "tmin": 0.000020027,
+        "tmax": 0.000071049,
+        "bytes": 16384,
+        "count": 78
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0014369544000000002,
+        "tmin": 0,
+        "tmax": 0.0000030994,
+        "bytes": 48,
+        "count": 180
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0012741238999999997,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 8,
+        "count": 909
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0012385766,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000021458,
+        "bytes": 80,
+        "count": 189
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.0012378660000000002,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 0,
+        "count": 11988
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0012240434,
+        "tmin": 0.000002861,
+        "tmax": 0.000020027,
+        "bytes": 14336,
+        "count": 27
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.00116968281,
+        "tmin": 0,
+        "tmax": 0.0000019073,
+        "bytes": 32,
+        "count": 99
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0011634898,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000011921,
+        "bytes": 64,
+        "count": 90
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0011329525000000002,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000021458,
+        "bytes": 112,
+        "count": 90
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00110053957,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 1024,
+        "count": 2870
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.0010609600000000001,
+        "tmin": 0.000030041,
+        "tmax": 0.00009799,
+        "bytes": 32768,
+        "count": 22
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0010316183,
+        "tmin": 0.0000021458,
+        "tmax": 0.0000021458,
+        "bytes": 4096,
+        "count": 19
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0010266350999999997,
+        "tmin": 0.00020504,
+        "tmax": 0.00020504,
+        "bytes": 2048,
+        "count": 18
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.0009088539,
+        "tmin": 0.0000090599,
+        "tmax": 0.000026941,
+        "bytes": 24576,
+        "count": 54
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.000901938,
+        "tmin": 0.00010204,
+        "tmax": 0.00010204,
+        "bytes": 5120,
+        "count": 12
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000898123,
+        "tmin": 0.000044107,
+        "tmax": 0.00019407,
+        "bytes": 49152,
+        "count": 10
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0008957395000000001,
+        "tmin": 0.0000081062,
+        "tmax": 0.000034094,
+        "bytes": 40960,
+        "count": 29
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00089311924,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 1536,
+        "count": 1940
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.00086189,
+        "tmin": 0.00020003,
+        "tmax": 0.00020003,
+        "bytes": 10240,
+        "count": 6
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0007376677099999999,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 1024,
+        "count": 1476
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0007204989000000001,
+        "tmin": 0,
+        "tmax": 0.0000081062,
+        "bytes": 320,
+        "count": 278
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0007166805699999999,
+        "tmin": 0,
+        "tmax": 0.0000090599,
+        "bytes": 448,
+        "count": 278
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0006969000800000001,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 16,
+        "count": 1023
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00068378527,
+        "tmin": 0,
+        "tmax": 0.0000088215,
+        "bytes": 384,
+        "count": 276
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00062513524,
+        "tmin": 0,
+        "tmax": 0.0000081062,
+        "bytes": 256,
+        "count": 276
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0006179835000000001,
+        "tmin": 0.000025988,
+        "tmax": 0.000025988,
+        "bytes": 12288,
+        "count": 19
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00058960342,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 1536,
+        "count": 1041
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.0005767296500000001,
+        "tmin": 0.000032902,
+        "tmax": 0.000032902,
+        "bytes": 8,
+        "count": 27
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.0005230909999999999,
+        "tmin": 0.000014067,
+        "tmax": 0.000014067,
+        "bytes": 3584,
+        "count": 9
+      },
+      {
+        "call": "MPI_Comm_rank",
+        "ttot": 0.0004549029999999999,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 0,
+        "count": 1359
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.00044059700000000004,
+        "tmin": 0.000013828,
+        "tmax": 0.000020981,
+        "bytes": 768,
+        "count": 27
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00043988200000000006,
+        "tmin": 0.000030041,
+        "tmax": 0.000038862,
+        "bytes": 57344,
+        "count": 9
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00043010690000000007,
+        "tmin": 0.0000071526,
+        "tmax": 0.0000071526,
+        "bytes": 10240,
+        "count": 38
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00038123095,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000011921,
+        "bytes": 16,
+        "count": 1062
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00037384000000000007,
+        "tmin": 0.000038862,
+        "tmax": 0.000038862,
+        "bytes": 65536,
+        "count": 8
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.0003726474,
+        "tmin": 0.0000078678,
+        "tmax": 0.0000078678,
+        "bytes": 8192,
+        "count": 22
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00036717,
+        "tmin": 0.000041008,
+        "tmax": 0.000064135,
+        "bytes": 114688,
+        "count": 6
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.000359059,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 16,
+        "count": 1008
+      },
+      {
+        "call": "MPI_Comm_size",
+        "ttot": 0.000330212,
+        "tmin": 0,
+        "tmax": 0.0000050068,
+        "bytes": 0,
+        "count": 873
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00032305797000000005,
+        "tmin": 0,
+        "tmax": 0.0000081062,
+        "bytes": 160,
+        "count": 138
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0003216267100000001,
+        "tmin": 0,
+        "tmax": 0.000014067,
+        "bytes": 224,
+        "count": 138
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00031924589999999994,
+        "tmin": 0.000017881,
+        "tmax": 0.000017881,
+        "bytes": 20480,
+        "count": 14
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00031542821000000006,
+        "tmin": 0,
+        "tmax": 0.00001502,
+        "bytes": 192,
+        "count": 138
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00030827647000000003,
+        "tmin": 0,
+        "tmax": 0.000010014,
+        "bytes": 128,
+        "count": 138
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.000285864,
+        "tmin": 0.00024581,
+        "tmax": 0.00024581,
+        "bytes": 1792,
+        "count": 3
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.0002603531,
+        "tmin": 0.0000088215,
+        "tmax": 0.000011921,
+        "bytes": 16,
+        "count": 27
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00025295707,
+        "tmin": 0.000040054,
+        "tmax": 0.000040054,
+        "bytes": 3584,
+        "count": 11
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00024366290000000002,
+        "tmin": 0.00001502,
+        "tmax": 0.00001502,
+        "bytes": 14336,
+        "count": 20
+      },
+      {
+        "call": "MPI_Rsend",
+        "ttot": 0.000208855,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 16,
+        "count": 1008
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00019359497,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 768,
+        "count": 440
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00018572776999999994,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 512,
+        "count": 490
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00017356807000000005,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 896,
+        "count": 432
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00016808447999999994,
+        "tmin": 0,
+        "tmax": 0.000010014,
+        "bytes": 48,
+        "count": 69
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.0001602169,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 640,
+        "count": 432
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00015974125,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 512,
+        "count": 440
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00015902534999999996,
+        "tmin": 9.5367e-7,
+        "tmax": 0.000010014,
+        "bytes": 96,
+        "count": 69
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00015664072000000001,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 768,
+        "count": 433
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000156164,
+        "tmin": 0.000029087,
+        "tmax": 0.000029087,
+        "bytes": 40960,
+        "count": 4
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00015616390999999993,
+        "tmin": 0,
+        "tmax": 0.000014067,
+        "bytes": 64,
+        "count": 69
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00015473347999999998,
+        "tmin": 0,
+        "tmax": 0.000010014,
+        "bytes": 32,
+        "count": 69
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00015378010999999995,
+        "tmin": 0,
+        "tmax": 0.000010014,
+        "bytes": 80,
+        "count": 69
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00015330391,
+        "tmin": 0,
+        "tmax": 0.0000090599,
+        "bytes": 112,
+        "count": 69
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.0001478188,
+        "tmin": 0.000025988,
+        "tmax": 0.000025988,
+        "bytes": 1280,
+        "count": 6
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.000142098,
+        "tmin": 0.000035048,
+        "tmax": 0.000035048,
+        "bytes": 5120,
+        "count": 8
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00012969970000000001,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 1280,
+        "count": 288
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00010108980000000001,
+        "tmin": 0.000002861,
+        "tmax": 0.000002861,
+        "bytes": 12288,
+        "count": 10
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.0000824942,
+        "tmin": 0.0000050068,
+        "tmax": 0.0000050068,
+        "bytes": 32,
+        "count": 9
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.000082494,
+        "tmin": 0.000010014,
+        "tmax": 0.000010014,
+        "bytes": 12,
+        "count": 9
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00007700910999999999,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 448,
+        "count": 218
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00007462478000000001,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 384,
+        "count": 216
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00007462466999999999,
+        "tmin": 0.0000021458,
+        "tmax": 0.0000030994,
+        "bytes": 6144,
+        "count": 24
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00007438642000000002,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 320,
+        "count": 218
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00007343281999999999,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 256,
+        "count": 216
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00006651887999999998,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 896,
+        "count": 129
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00006151225000000001,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 1280,
+        "count": 94
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00005722004,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 640,
+        "count": 121
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000045299070000000006,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000030994,
+        "bytes": 81920,
+        "count": 44
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.000044584300000000006,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000011921,
+        "bytes": 24,
+        "count": 54
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00004291528,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 2048,
+        "count": 9
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00004100785,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 192,
+        "count": 108
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00003886185000000001,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 224,
+        "count": 108
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000036239479999999996,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 4,
+        "count": 54
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00003457031,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 20480,
+        "count": 34
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00003123321,
+        "tmin": 0.0000061989,
+        "tmax": 0.0000061989,
+        "bytes": 2560,
+        "count": 8
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000030517469999999995,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 384,
+        "count": 60
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000030040549999999998,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 160,
+        "count": 108
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00002980207,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 448,
+        "count": 60
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.0000290868,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 128,
+        "count": 108
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00002789488,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 4096,
+        "count": 14
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000026702809999999995,
+        "tmin": 0.0000078678,
+        "tmax": 0.0000078678,
+        "bytes": 3584,
+        "count": 10
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.00002670274,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 3072,
+        "count": 6
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000023841709999999996,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 320,
+        "count": 60
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.000022887869999999996,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 40,
+        "count": 27
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000022649699999999994,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 16384,
+        "count": 34
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0000226493,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 0,
+        "count": 94
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0000214577,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 256,
+        "count": 60
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000020503849999999992,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 40960,
+        "count": 25
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001883501,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 4096,
+        "count": 5
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00001811972,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 48,
+        "count": 54
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001764287,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000019073,
+        "bytes": 163840,
+        "count": 19
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001716605,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 32768,
+        "count": 26
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00001716602,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 32,
+        "count": 54
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000015974069999999998,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 5120,
+        "count": 6
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00001597402,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 64,
+        "count": 54
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000015020310000000002,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 160,
+        "count": 30
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.000013351099999999998,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 12,
+        "count": 18
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001311298,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 192,
+        "count": 30
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000013112960000000002,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 80,
+        "count": 54
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001263631,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 128,
+        "count": 30
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00001263618,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 96,
+        "count": 54
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000011920950000000001,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 2048,
+        "count": 7
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001192093,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 10240,
+        "count": 13
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000011920890000000002,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 224,
+        "count": 30
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001144415,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 24576,
+        "count": 15
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00001096724,
+        "tmin": 0.0000078678,
+        "tmax": 0.0000078678,
+        "bytes": 3072,
+        "count": 4
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000953658,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 64,
+        "count": 15
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00000929831,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 112,
+        "count": 54
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0000090599,
+        "tmin": 0.0000090599,
+        "tmax": 0.0000090599,
+        "bytes": 6144,
+        "count": 1
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000905988,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 80,
+        "count": 15
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.000009059769999999999,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 0,
+        "count": 18
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000810625,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 8192,
+        "count": 11
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.000007152610000000001,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 112,
+        "count": 15
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000715258,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 48,
+        "count": 15
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000667565,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 96,
+        "count": 15
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00000596047,
+        "tmin": 0.0000050068,
+        "tmax": 0.0000050068,
+        "bytes": 3072,
+        "count": 2
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00000596047,
+        "tmin": 0.0000050068,
+        "tmax": 0.0000050068,
+        "bytes": 2048,
+        "count": 2
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000524521,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 12288,
+        "count": 9
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0000050068,
+        "tmin": 0.0000050068,
+        "tmax": 0.0000050068,
+        "bytes": 7168,
+        "count": 1
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000476835,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 14336,
+        "count": 7
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000476834,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 49152,
+        "count": 9
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.0000040531,
+        "tmin": 0.0000040531,
+        "tmax": 0.0000040531,
+        "bytes": 7168,
+        "count": 1
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000381468,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 32,
+        "count": 15
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.00000381468,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 2560,
+        "count": 4
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0000030994399999999998,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 2560,
+        "count": 4
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000286101,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 57344,
+        "count": 9
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000286101,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 114688,
+        "count": 6
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000286097,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 5120,
+        "count": 2
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0000021458,
+        "tmin": 0.0000021458,
+        "tmax": 0.0000021458,
+        "bytes": 3584,
+        "count": 1
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.00000190734,
+        "tmin": 0,
+        "tmax": 9.5367e-7,
+        "bytes": 1792,
+        "count": 3
       },
       {
         "call": "MPI_Init",
@@ -140,222 +1752,170 @@
         "tmin": 0,
         "tmax": 0,
         "bytes": 0,
-        "count": 8
+        "count": 9
+      },
+      {
+        "call": "MPI_Finalize",
+        "ttot": 0,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 0,
+        "count": 9
+      }
+    ],
+    "mpiCallsSummarized": [
+      {
+        "call": "MPI_Alltoallv",
+        "ttot": 3.0961947999999992,
+        "count": 10782
+      },
+      {
+        "call": "MPI_Barrier",
+        "ttot": 2.081123,
+        "count": 16281
+      },
+      {
+        "call": "MPI_Bcast",
+        "ttot": 0.33998244957000023,
+        "count": 18000
+      },
+      {
+        "call": "MPI_Recv",
+        "ttot": 0.15252775233000043,
+        "count": 15638
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.07130195165,
+        "count": 459
+      },
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 0.05103498630000001,
+        "count": 2925
+      },
+      {
+        "call": "MPI_Sendrecv_replace",
+        "ttot": 0.031116907999999985,
+        "count": 486
+      },
+      {
+        "call": "MPI_Send",
+        "ttot": 0.013986337239999988,
+        "count": 9998
       },
       {
         "call": "MPI_Alltoall",
-        "ttot": 0.00835486,
-        "tmin": 0.00835486,
-        "tmax": 0.00835486,
-        "bytes": 32,
-        "count": 8
+        "ttot": 0.00881477,
+        "count": 9
       },
       {
         "call": "MPI_Wait",
-        "ttot": 0.003568406800000001,
-        "tmin": 0.0018425088999999993,
-        "tmax": 0.0022084818000000003,
-        "bytes": 235001344,
-        "count": 71
+        "ttot": 0.0037684368000000003,
+        "count": 72
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.0034441960000000005,
+        "count": 12996
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.003051752140000007,
+        "count": 5640
+      },
+      {
+        "call": "MPI_Testall",
+        "ttot": 0.002825025,
+        "count": 5951
+      },
+      {
+        "call": "MPI_Comm_rank",
+        "ttot": 0.0004549029999999999,
+        "count": 1359
       },
       {
         "call": "MPI_Irecv",
-        "ttot": 0.000336648,
-        "tmin": 0,
-        "tmax": 0.0000090599,
-        "bytes": 112,
-        "count": 936
+        "ttot": 0.000359059,
+        "count": 1008
+      },
+      {
+        "call": "MPI_Comm_size",
+        "ttot": 0.000330212,
+        "count": 873
+      },
+      {
+        "call": "MPI_Rsend",
+        "ttot": 0.000208855,
+        "count": 1008
+      },
+      {
+        "call": "MPI_Finalize",
+        "ttot": 0,
+        "count": 9
+      },
+      {
+        "call": "MPI_Init",
+        "ttot": 0,
+        "count": 9
       }
     ],
     "mpiAnalysis": {
-      "totalTime": 5.624923440129985,
-      "totalCount": 101144
+      "totalTime": 5.860525394029983,
+      "totalCount": 103503
     }
   },
   "mpiPies": {
     "mpiPercent": {
       "datasets": [
         {
-          "data": [
-            "2.71",
-            "6.04",
-            "0.25",
-            "0.00",
-            "0.89",
-            "0.05",
-            "51.36",
-            "0.54",
-            "1.26",
-            "0.06",
-            "0.05",
-            "0.01",
-            "0.01",
-            "0.00",
-            "36.54",
-            "0.00",
-            "0.15",
-            "0.06",
-            "0.01"
-          ],
+          "data": ["52.83", "35.51", "5.80", "2.60", "1.22", "2.04"],
           "backgroundColor": [
-            "rgb(41, 150, 179)",
-            "rgb(82, 134, 138)",
-            "rgb(117, 28, 194)",
-            "rgb(175, 151, 72)",
-            "rgb(110, 173, 125)",
-            "rgb(196, 95, 146)",
-            "rgb(19, 30, 148)",
-            "rgb(178, 2, 87)",
-            "rgb(53, 11, 149)",
-            "rgb(83, 8, 162)",
-            "rgb(161, 70, 87)",
-            "rgb(139, 6, 28)",
-            "rgb(114, 158, 64)",
-            "rgb(78, 26, 30)",
-            "rgb(82, 177, 48)",
-            "rgb(90, 97, 127)",
-            "rgb(82, 78, 76)",
-            "rgb(119, 90, 97)",
-            "rgb(156, 102, 90)"
+            "rgb(114, 147, 203)",
+            "rgb(225, 151, 76)",
+            "rgb(132, 186, 91)",
+            "rgb(211, 94, 96)",
+            "rgb(128, 133, 133)",
+            "rgb(144, 103, 167)"
           ],
           "hoverBackgroundColor": [
-            "rgb(61, 170, 199)",
-            "rgb(102, 154, 158)",
-            "rgb(137, 48, 214)",
-            "rgb(195, 171, 92)",
-            "rgb(130, 193, 145)",
-            "rgb(216, 115, 166)",
-            "rgb(39, 50, 168)",
-            "rgb(198, 22, 107)",
-            "rgb(73, 31, 169)",
-            "rgb(103, 28, 182)",
-            "rgb(181, 90, 107)",
-            "rgb(159, 26, 48)",
-            "rgb(134, 178, 84)",
-            "rgb(98, 46, 50)",
-            "rgb(102, 197, 68)",
-            "rgb(110, 117, 147)",
-            "rgb(102, 98, 96)",
-            "rgb(139, 110, 117)",
-            "rgb(176, 122, 110)"
+            "rgb(134, 167, 223)",
+            "rgb(245, 171, 96)",
+            "rgb(152, 206, 111)",
+            "rgb(231, 114, 116)",
+            "rgb(148, 153, 153)",
+            "rgb(164, 123, 187)"
           ]
         }
       ],
       "labels": [
-        "MPI_Recv",
-        "MPI_Bcast",
-        "MPI_Send",
-        "MPI_Rsend",
-        "MPI_Allreduce",
-        "MPI_Testall",
         "MPI_Alltoallv",
-        "MPI_Sendrecv_replace",
-        "MPI_Reduce",
-        "MPI_Waitall",
-        "MPI_Isend",
-        "MPI_Comm_size",
-        "MPI_Comm_rank",
-        "MPI_Finalize",
         "MPI_Barrier",
-        "MPI_Init",
-        "MPI_Alltoall",
-        "MPI_Wait",
-        "MPI_Irecv"
+        "MPI_Bcast",
+        "MPI_Recv",
+        "MPI_Reduce",
+        "others"
       ]
     },
     "mpiWall": {
       "datasets": [
         {
-          "data": [
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.02",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.02",
-            "0.00",
-            "0.00",
-            "0.00",
-            "0.00",
-            "99.96"
-          ],
+          "data": ["2.71", "1.82", "0.58", "94.86"],
           "backgroundColor": [
-            "rgb(41, 150, 179)",
-            "rgb(82, 134, 138)",
-            "rgb(117, 28, 194)",
-            "rgb(175, 151, 72)",
-            "rgb(110, 173, 125)",
-            "rgb(196, 95, 146)",
-            "rgb(19, 30, 148)",
-            "rgb(178, 2, 87)",
-            "rgb(53, 11, 149)",
-            "rgb(83, 8, 162)",
-            "rgb(161, 70, 87)",
-            "rgb(139, 6, 28)",
-            "rgb(114, 158, 64)",
-            "rgb(78, 26, 30)",
-            "rgb(82, 177, 48)",
-            "rgb(90, 97, 127)",
-            "rgb(82, 78, 76)",
-            "rgb(119, 90, 97)",
-            "rgb(156, 102, 90)",
-            "rgb(178, 146, 189)"
+            "rgb(114, 147, 203)",
+            "rgb(225, 151, 76)",
+            "rgb(144, 103, 167)",
+            "rgb(171, 104, 87)"
           ],
           "hoverBackgroundColor": [
-            "rgb(61, 170, 199)",
-            "rgb(102, 154, 158)",
-            "rgb(137, 48, 214)",
-            "rgb(195, 171, 92)",
-            "rgb(130, 193, 145)",
-            "rgb(216, 115, 166)",
-            "rgb(39, 50, 168)",
-            "rgb(198, 22, 107)",
-            "rgb(73, 31, 169)",
-            "rgb(103, 28, 182)",
-            "rgb(181, 90, 107)",
-            "rgb(159, 26, 48)",
-            "rgb(134, 178, 84)",
-            "rgb(98, 46, 50)",
-            "rgb(102, 197, 68)",
-            "rgb(110, 117, 147)",
-            "rgb(102, 98, 96)",
-            "rgb(139, 110, 117)",
-            "rgb(176, 122, 110)",
-            "rgb(198, 166, 209)"
+            "rgb(134, 167, 223)",
+            "rgb(245, 171, 96)",
+            "rgb(164, 123, 187)",
+            "rgb(191, 124, 107)"
           ]
         }
       ],
-      "labels": [
-        "MPI_Recv",
-        "MPI_Bcast",
-        "MPI_Send",
-        "MPI_Rsend",
-        "MPI_Allreduce",
-        "MPI_Testall",
-        "MPI_Alltoallv",
-        "MPI_Sendrecv_replace",
-        "MPI_Reduce",
-        "MPI_Waitall",
-        "MPI_Isend",
-        "MPI_Comm_size",
-        "MPI_Comm_rank",
-        "MPI_Finalize",
-        "MPI_Barrier",
-        "MPI_Init",
-        "MPI_Alltoall",
-        "MPI_Wait",
-        "MPI_Irecv",
-        "Apllication"
-      ]
+      "labels": ["MPI_Alltoallv", "MPI_Barrier", "others", "Apllication"]
     }
   }
 }
