@@ -50,23 +50,53 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
     }
   };
 
+  let othersData = 0.0;
+  let othersSummarizedData = 0.0;
+
   for (let mpiCallKey in mpiData.mpiCallsSummarized) {
     let mpiCall = mpiData.mpiCallsSummarized[mpiCallKey];
+    let colors = getRandomColors();
 
     // mpi percent pie
     let value = ((mpiCall.ttot / mpiData.mpiAnalysis.totalTime) * 100).toFixed(
       2
     );
-    mpiPieCharts.mpiPercent.datasets[0].data.push(value);
-    mpiPieCharts.mpiPercent.labels.push(mpiCall.call);
-    let colors = getRandomColors();
-    mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(colors.color);
-    mpiPieCharts.mpiPercent.datasets[0].hoverBackgroundColor.push(colors.hover);
+    if (value >= 1) {
+      mpiPieCharts.mpiPercent.datasets[0].data.push(value);
+      mpiPieCharts.mpiPercent.labels.push(mpiCall.call);
+      mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(colors.color);
+      mpiPieCharts.mpiPercent.datasets[0].hoverBackgroundColor.push(
+        colors.hover
+      );
+    } else {
+      othersData += parseFloat(value);
+    }
 
     // mpi wall time pie
     let value2 = ((mpiCall.ttot / totalWallTime) * 100).toFixed(2);
-    mpiPieCharts.mpiWall.datasets[0].data.push(value2);
-    mpiPieCharts.mpiWall.labels.push(mpiCall.call);
+    if (value2 >= 1) {
+      mpiPieCharts.mpiWall.datasets[0].data.push(value2);
+      mpiPieCharts.mpiWall.labels.push(mpiCall.call);
+      mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
+      mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(colors.hover);
+    } else {
+      othersSummarizedData += parseFloat(value2);
+    }
+  }
+
+  // add others to pie chart
+  let colors = getRandomColors();
+
+  if (othersData != 0) {
+    mpiPieCharts.mpiPercent.datasets[0].data.push(othersData.toFixed(2));
+    mpiPieCharts.mpiPercent.labels.push('others');
+    mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(colors.color);
+    mpiPieCharts.mpiPercent.datasets[0].hoverBackgroundColor.push(colors.hover);
+  }
+
+  if (othersSummarizedData != 0) {
+    mpiPieCharts.mpiWall.datasets[0].data.push(othersSummarizedData.toFixed(2));
+    mpiPieCharts.mpiWall.labels.push('others');
     mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
     mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(colors.hover);
   }
@@ -76,7 +106,7 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
     ((totalWallTime - mpiData.mpiAnalysis.totalTime) / totalWallTime) *
     100
   ).toFixed(2);
-  let colors = getRandomColors();
+  colors = getRandomColors();
   mpiPieCharts.mpiWall.datasets[0].data.push(appTimeValue);
   mpiPieCharts.mpiWall.labels.push('Apllication');
   mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
