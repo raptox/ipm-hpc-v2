@@ -8,6 +8,7 @@ import ReactTable from 'react-table';
 import moment from 'moment';
 import { Pie } from 'react-chartjs-2';
 import tuLogo from './TU-Signet.png';
+import ReactJson from 'react-json-view';
 
 const { dialog } = require('electron').remote;
 const fs = require('fs');
@@ -54,30 +55,38 @@ export default class ViewParsed extends Component {
           <div>
             <h3>Metadata</h3>
             <div>
-              user: {content.metadata.username} <br />
-              start:{' '}
+              <strong>user:</strong> {content.metadata.username} <br />
+              <strong>start:</strong>{' '}
               {moment
                 .unix(content.metadata.start)
                 .format('MMMM Do YYYY, h:mm:ss a')}{' '}
               <br />
-              stop:{' '}
+              <strong>stop:</strong>{' '}
               {moment
                 .unix(content.metadata.stop)
                 .format('MMMM Do YYYY, h:mm:ss a')}{' '}
               <br />
-              walltime: {content.metadata.walltime} seconds <br />
-              mpi tasks:
+              <strong>walltime:</strong> {content.metadata.walltime} seconds{' '}
+              <br />
+              <strong>mpi tasks:</strong>
               {' ' +
                 content.metadata.ntasks +
                 ' on ' +
                 content.metadata.nhosts +
                 ' hosts'}
               <br />
-              %comm:
+              <strong>%comm:</strong>
               {' ' +
-                (content.mpiData.mpiAnalysis.totalTime /
-                  content.metadata.totalWallTime) *
-                  100}
+                (
+                  (content.mpiData.mpiAnalysis.totalTime /
+                    content.metadata.totalWallTime) *
+                  100
+                ).toFixed(2)}
+              <ReactJson
+                name="env"
+                src={content.metadata.env}
+                collapsed={true}
+              />
             </div>
             <div className={styles.pieCharts}>
               <div className={styles.floatLeft}>

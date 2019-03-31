@@ -1,7 +1,7 @@
 {
   "name": "ipm-hpc-v2",
   "productName": "IPM-HPC-v2",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Interactive Visualization of MPI Performance Data (Bachelor Thesis)",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
