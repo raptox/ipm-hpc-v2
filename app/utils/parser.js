@@ -288,6 +288,7 @@ const getMetadata = firstTask => {
   metadata.ntasks = parseInt(firstTask.job[0].$.ntasks);
   metadata.nhosts = parseInt(firstTask.job[0].$.nhosts);
   metadata.totalWallTime = metadata.walltime * metadata.ntasks;
+  metadata.env = firstTask.env;
   return metadata;
 };
 
