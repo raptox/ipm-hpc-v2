@@ -6,7 +6,7 @@ import styles from './Basic.css';
 import Button from '@material-ui/core/Button';
 import ReactTable from 'react-table';
 import moment from 'moment';
-import { Pie } from 'react-chartjs-2';
+import { Pie, Line } from 'react-chartjs-2';
 import tuLogo from './TU-Signet.png';
 import ReactJson from 'react-json-view';
 
@@ -102,6 +102,12 @@ export default class ViewParsed extends Component {
                 </div>
               </div>
             </div>
+
+            <div>
+              <h3>Communication balance by task (sorted by MPI time)</h3>
+              <Line data={content.lineData} />
+            </div>
+
             <div className={styles.tableInfo}>
               <ReactTable
                 data={content.mpiData.mpiCalls}

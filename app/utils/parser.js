@@ -35,6 +35,7 @@ export const parseData = (filename, callback) => {
     data.mpiData = getMpiData(taskdata);
     data.mpiPies = getMpiPieCharts(data.mpiData, data.metadata.totalWallTime);
     data.hpmData = getHpmData(taskdata);
+    data.lineData = generateLineChartData(data.mpiData.mpiCallsByTask);
     // save raw parsed JSON to file
     //
     // fs.writeFile('log.json', JSON.stringify(result, null, 2), err => {
@@ -45,6 +46,42 @@ export const parseData = (filename, callback) => {
     // });
     callback(JSON.stringify(data, null, 2));
   });
+};
+
+const generateLineChartData = mpiCallsByTask => {
+  let colors = getRandomColors();
+  let lineData = {
+    labels: mpiCallsByTask
+      .map(task => task.nr)
+      .sort((callA, callB) => callA - callB),
+    datasets: [
+      {
+        label: 'Total Time',
+        fill: false,
+        backgroundColor: colors.color,
+        borderColor: colors.color,
+        pointHoverBackgroundColor: colors.hover,
+        data: mpiCallsByTask.map(task => task.ttot)
+      }
+    ]
+  };
+
+  for (let mpiCallKey in mpiCallsByTask[0].mpiCalls) {
+    colors = getRandomColors();
+    let dataset = mpiCallsByTask
+      .map(task => task.mpiCalls[mpiCallKey].ttot)
+      .sort((callA, callB) => callB - callA);
+    lineData.datasets.push({
+      label: mpiCallsByTask[0].mpiCalls[mpiCallKey].call,
+      fill: false,
+      backgroundColor: colors.color,
+      borderColor: colors.color,
+      pointHoverBackgroundColor: colors.hover,
+      data: dataset
+    });
+  }
+
+  return lineData;
 };
 
 const getHpmData = taskdata => {
@@ -210,6 +247,7 @@ const getMpiData = taskdata => {
     totalCount: 0
   };
   let mpiCallsSummarized = [];
+  let mpiCallsByTask = [];
 
   for (let taskKey in taskdata) {
     let task = taskdata[taskKey];
@@ -255,11 +293,36 @@ const getMpiData = taskdata => {
         mpiCallSummarizedExists.count += count;
       } else {
         // create new mpi call
-        let mpiCall = {};
-        mpiCall.call = hent.$.call;
-        mpiCall.ttot = ttot;
-        mpiCall.count = count;
-        mpiCallsSummarized.push(mpiCall);
+        mpiCallsSummarized.push(newMpiCall(hent.$.call, ttot, count));
+      }
+
+      // MPI calls by task
+      let mpiCallsByTaskExists = mpiCallsByTask.find(
+        task => task.nr === taskKey
+      );
+      if (mpiCallsByTaskExists) {
+        mpiCallsByTaskExists.ttot += ttot;
+
+        // add mpi call to existing task
+        let mpiCallExists = mpiCallsByTaskExists.mpiCalls.find(
+          entry => entry.call === hent.$.call
+        );
+        if (mpiCallExists) {
+          mpiCallExists.ttot += ttot;
+          mpiCallExists.count += count;
+        } else {
+          mpiCallsByTaskExists.mpiCalls.push(
+            newMpiCall(hent.$.call, ttot, count)
+          );
+        }
+      } else {
+        // create new task
+        let newTask = {};
+        newTask.nr = taskKey;
+        newTask.ttot = ttot;
+        newTask.mpiCalls = [];
+        newTask.mpiCalls.push(newMpiCall(hent.$.call, ttot, count));
+        mpiCallsByTask.push(newTask);
       }
 
       // add to general counter and time
@@ -271,12 +334,22 @@ const getMpiData = taskdata => {
   // sort descending after total time
   mpiCalls.sort((callA, callB) => callB.ttot - callA.ttot);
   mpiCallsSummarized.sort((callA, callB) => callB.ttot - callA.ttot);
+  mpiCallsByTask.sort((taskA, taskB) => taskB.ttot - taskA.ttot);
 
   return {
     mpiCalls,
     mpiCallsSummarized,
-    mpiAnalysis
+    mpiAnalysis,
+    mpiCallsByTask
   };
+};
+
+const newMpiCall = (call, ttot, count) => {
+  let mpiCall = {};
+  mpiCall.call = call;
+  mpiCall.ttot = ttot;
+  mpiCall.count = count;
+  return mpiCall;
 };
 
 const getMetadata = firstTask => {
