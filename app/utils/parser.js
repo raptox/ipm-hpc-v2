@@ -23,6 +23,9 @@ const colors = [
   [148, 139, 61]
 ];
 let colorsIndex = 0;
+let associatedColors = [];
+let othersColor;
+let applicationColor;
 
 export const parseData = (filename, callback) => {
   parseXml(filename, result => {
@@ -30,9 +33,15 @@ export const parseData = (filename, callback) => {
     //console.log(`${filename}:`);
     let taskdata = result[ROOT_ITEM].task;
     let data = {};
+
+    // get raw data first
     data.metadata = getMetadata(taskdata[0]);
     data.hosts = getHosts(taskdata);
     data.mpiData = getMpiData(taskdata);
+    if (!othersColor) othersColor = getRandomColors();
+    if (!applicationColor) applicationColor = getRandomColors();
+
+    // evaluation
     data.mpiPies = getMpiPieCharts(data.mpiData, data.metadata.totalWallTime);
     data.hpmData = getHpmData(taskdata);
     data.lineData = generateLineChartData(data.mpiData.mpiCallsByTask);
@@ -49,34 +58,21 @@ export const parseData = (filename, callback) => {
 };
 
 const generateLineChartData = mpiCallsByTask => {
-  let colors = getRandomColors();
   let lineData = {
-    labels: mpiCallsByTask
-      .map(task => task.nr)
-      .sort((callA, callB) => callA - callB),
-    datasets: [
-      {
-        label: 'Total Time',
-        fill: false,
-        backgroundColor: colors.color,
-        borderColor: colors.color,
-        pointHoverBackgroundColor: colors.hover,
-        data: mpiCallsByTask.map(task => task.ttot)
-      }
-    ]
+    labels: mpiCallsByTask.map(task => task.nr),
+    datasets: []
   };
 
   for (let mpiCallKey in mpiCallsByTask[0].mpiCalls) {
-    colors = getRandomColors();
-    let dataset = mpiCallsByTask
-      .map(task => task.mpiCalls[mpiCallKey].ttot)
-      .sort((callA, callB) => callB - callA);
+    let mpiCall = mpiCallsByTask[0].mpiCalls[mpiCallKey];
+    let dataset = mpiCallsByTask.map(task => task.mpiCalls[mpiCallKey].ttot);
+    //.sort((callA, callB) => callB - callA);
     lineData.datasets.push({
-      label: mpiCallsByTask[0].mpiCalls[mpiCallKey].call,
+      label: mpiCall.call,
       fill: false,
-      backgroundColor: colors.color,
-      borderColor: colors.color,
-      pointHoverBackgroundColor: colors.hover,
+      backgroundColor: mpiCall.color,
+      borderColor: mpiCall.color,
+      pointHoverBackgroundColor: mpiCall.hoverColor,
       data: dataset
     });
   }
@@ -147,66 +143,54 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
 
   let othersData = 0.0;
   let othersSummarizedData = 0.0;
-  let colors = null;
 
   for (let mpiCallKey in mpiData.mpiCallsSummarized) {
     let mpiCall = mpiData.mpiCallsSummarized[mpiCallKey];
-    colors = null;
 
     // mpi percent pie
-    let value = ((mpiCall.ttot / mpiData.mpiAnalysis.totalTime) * 100).toFixed(
-      2
-    );
+    let value = (mpiCall.ttot / mpiData.mpiAnalysis.totalTime) * 100;
     if (value >= 1) {
-      if (!colors) {
-        colors = getRandomColors();
-      }
-      mpiPieCharts.mpiPercent.datasets[0].data.push(value);
+      mpiPieCharts.mpiPercent.datasets[0].data.push(value.toFixed(2));
       mpiPieCharts.mpiPercent.labels.push(mpiCall.call);
-      mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(colors.color);
+      mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(mpiCall.color);
       mpiPieCharts.mpiPercent.datasets[0].hoverBackgroundColor.push(
-        colors.hover
+        mpiCall.hoverColor
       );
     } else {
       othersData += parseFloat(value);
     }
 
     // mpi wall time pie
-    let value2 = ((mpiCall.ttot / totalWallTime) * 100).toFixed(2);
+    let value2 = (mpiCall.ttot / totalWallTime) * 100;
     if (value2 >= 1) {
-      if (!colors) {
-        colors = getRandomColors();
-      }
-      mpiPieCharts.mpiWall.datasets[0].data.push(value2);
+      mpiPieCharts.mpiWall.datasets[0].data.push(value2.toFixed(2));
       mpiPieCharts.mpiWall.labels.push(mpiCall.call);
-      mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
-      mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(colors.hover);
+      mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(mpiCall.color);
+      mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(
+        mpiCall.hoverColor
+      );
     } else {
       othersSummarizedData += parseFloat(value2);
     }
   }
 
   // add others to pie chart
-  colors = null;
-
   if (othersData != 0) {
-    if (!colors) {
-      colors = getRandomColors();
-    }
     mpiPieCharts.mpiPercent.datasets[0].data.push(othersData.toFixed(2));
     mpiPieCharts.mpiPercent.labels.push('others');
-    mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(colors.color);
-    mpiPieCharts.mpiPercent.datasets[0].hoverBackgroundColor.push(colors.hover);
+    mpiPieCharts.mpiPercent.datasets[0].backgroundColor.push(othersColor.color);
+    mpiPieCharts.mpiPercent.datasets[0].hoverBackgroundColor.push(
+      othersColor.hover
+    );
   }
 
   if (othersSummarizedData != 0) {
-    if (!colors) {
-      colors = getRandomColors();
-    }
     mpiPieCharts.mpiWall.datasets[0].data.push(othersSummarizedData.toFixed(2));
     mpiPieCharts.mpiWall.labels.push('others');
-    mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
-    mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(colors.hover);
+    mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(othersColor.color);
+    mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(
+      othersColor.hover
+    );
   }
 
   // also add rest of app time at mpi wall time pie
@@ -214,11 +198,12 @@ const getMpiPieCharts = (mpiData, totalWallTime) => {
     ((totalWallTime - mpiData.mpiAnalysis.totalTime) / totalWallTime) *
     100
   ).toFixed(2);
-  colors = getRandomColors();
   mpiPieCharts.mpiWall.datasets[0].data.push(appTimeValue);
   mpiPieCharts.mpiWall.labels.push('Apllication');
-  mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(colors.color);
-  mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(colors.hover);
+  mpiPieCharts.mpiWall.datasets[0].backgroundColor.push(applicationColor.color);
+  mpiPieCharts.mpiWall.datasets[0].hoverBackgroundColor.push(
+    applicationColor.hover
+  );
 
   return mpiPieCharts;
 };
@@ -349,6 +334,20 @@ const newMpiCall = (call, ttot, count) => {
   mpiCall.call = call;
   mpiCall.ttot = ttot;
   mpiCall.count = count;
+
+  let associatedColor = associatedColors.find(mpiCall => mpiCall.call === call);
+  if (!associatedColor) {
+    // assign new color to this MPI call
+    let colors = getRandomColors();
+    associatedColor = {};
+    associatedColor.call = call;
+    associatedColor.color = colors.color;
+    associatedColor.hover = colors.hover;
+    associatedColors.push(associatedColor);
+  }
+  mpiCall.color = associatedColor.color;
+  mpiCall.hoverColor = associatedColor.hover;
+
   return mpiCall;
 };
 
