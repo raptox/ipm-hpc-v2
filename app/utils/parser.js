@@ -44,7 +44,7 @@ export const parseData = (filename, callback) => {
     // evaluation
     data.mpiPies = getMpiPieCharts(data.mpiData, data.metadata.totalWallTime);
     data.hpmData = getHpmData(taskdata);
-    data.lineData = generateLineChartData(data.mpiData.mpiCallsByTask);
+    data.balanceData = generateBalanceChartData(data.mpiData.mpiCallsByTask);
     // save raw parsed JSON to file
     //
     // fs.writeFile('log.json', JSON.stringify(result, null, 2), err => {
@@ -57,8 +57,8 @@ export const parseData = (filename, callback) => {
   });
 };
 
-const generateLineChartData = mpiCallsByTask => {
-  let lineData = {
+const generateBalanceChartData = mpiCallsByTask => {
+  let balanceData = {
     labels: mpiCallsByTask.map(task => task.nr),
     datasets: []
   };
@@ -67,7 +67,7 @@ const generateLineChartData = mpiCallsByTask => {
     let mpiCall = mpiCallsByTask[0].mpiCalls[mpiCallKey];
     let dataset = mpiCallsByTask.map(task => task.mpiCalls[mpiCallKey].ttot);
     //.sort((callA, callB) => callB - callA);
-    lineData.datasets.push({
+    balanceData.datasets.push({
       label: mpiCall.call,
       fill: false,
       backgroundColor: mpiCall.color,
@@ -77,7 +77,7 @@ const generateLineChartData = mpiCallsByTask => {
     });
   }
 
-  return lineData;
+  return balanceData;
 };
 
 const getHpmData = taskdata => {

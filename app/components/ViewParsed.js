@@ -17,13 +17,87 @@ export default class ViewParsed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      parsedContent: ''
+      parsedContent: '',
+      balanceZoom: false,
+      balanceZoomIndex: 0,
+      balanceZoomPageSize: 30,
+      balanceZoomData: '',
+      balanceZoomEnd: false,
+      balanceZoomStart: true
     };
+  }
+
+  toggleBalanceZoom() {
+    this.setState({ balanceZoom: !this.state.balanceZoom });
+    this.recalculateBalanceData(0, this.state.balanceZoomPageSize);
+    this.setState({
+      balanceZoomIndex: 1,
+      balanceZoomStart: true,
+      balanceZoomEnd: false
+    });
+  }
+
+  nextPageBalance() {
+    if (this.state.balanceZoomEnd) {
+      window.alert('already on the last page');
+      return;
+    }
+    let newZoomIndex = this.state.balanceZoomIndex + 1;
+    let newRange = newZoomIndex * this.state.balanceZoomPageSize;
+    let dataSize = this.state.parsedContent.balanceData.labels.length;
+    let start = this.state.balanceZoomIndex * this.state.balanceZoomPageSize;
+    let end;
+    if (newRange > dataSize) {
+      end = dataSize;
+      this.setState({ balanceZoomEnd: true });
+    } else {
+      end = newRange;
+      this.setState({ balanceZoomIndex: newZoomIndex });
+    }
+    this.setState({ balanceZoomStart: false });
+    this.recalculateBalanceData(start, end);
+  }
+
+  previousPageBalance() {
+    if (this.state.balanceZoomStart) {
+      window.alert('already on the first page');
+      return;
+    }
+    if (this.state.balanceZoomIndex === 1) {
+      this.recalculateBalanceData(0, this.state.balanceZoomPageSize);
+      this.setState({ balanceZoomStart: true });
+      return;
+    }
+    let newZoomIndex = this.state.balanceZoomIndex - 1;
+    let start = newZoomIndex * this.state.balanceZoomPageSize;
+    let end = this.state.balanceZoomIndex * this.state.balanceZoomPageSize;
+    this.recalculateBalanceData(start, end);
+    this.setState({
+      balanceZoomIndex: newZoomIndex,
+      balanceZoomEnd: false
+    });
+  }
+
+  recalculateBalanceData(start, end) {
+    this.setState({ parsedContent: JSON.parse(this.state.rawContent) });
+    let newBalanceData = {
+      labels: this.state.parsedContent.balanceData.labels.slice(start, end),
+      datasets: this.state.parsedContent.balanceData.datasets.map(dataset => {
+        return {
+          label: dataset.label,
+          fill: dataset.fill,
+          backgroundColor: dataset.backgroundColor,
+          borderColor: dataset.borderColor,
+          pointHoverBackgroundColor: dataset.pointHoverBackgroundColor,
+          data: dataset.data.slice(start, end)
+        };
+      })
+    };
+    this.setState({ balanceZoomData: newBalanceData });
   }
 
   render() {
     let content = this.state.parsedContent;
-
     return (
       <div>
         <img
@@ -105,8 +179,37 @@ export default class ViewParsed extends Component {
 
             <div>
               <h3>Communication balance by task (sorted by MPI time)</h3>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => this.toggleBalanceZoom()}
+              >
+                Toggle Zoom
+              </Button>
+              {this.state.balanceZoom && (
+                <div>
+                  <Button
+                    variant="contained"
+                    color="default"
+                    onClick={() => this.previousPageBalance()}
+                  >
+                    Previous Page
+                  </Button>{' '}
+                  <Button
+                    variant="contained"
+                    color="default"
+                    onClick={() => this.nextPageBalance()}
+                  >
+                    Next Page
+                  </Button>
+                </div>
+              )}
               <Bar
-                data={content.lineData}
+                data={
+                  this.state.balanceZoom
+                    ? this.state.balanceZoomData
+                    : content.balanceData
+                }
                 options={{
                   scales: {
                     xAxes: [
@@ -260,7 +363,10 @@ export default class ViewParsed extends Component {
     });
     if (file) {
       fs.readFile(file[0], (err, data) => {
-        this.setState({ parsedContent: JSON.parse(data) });
+        this.setState({
+          parsedContent: JSON.parse(data),
+          rawContent: data
+        });
       });
     }
   }
