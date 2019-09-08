@@ -21,20 +21,32 @@ export default class ViewParsed extends Component {
       balanceZoom: false,
       balanceZoomIndex: 0,
       balanceZoomPageSize: 30,
-      balanceZoomData: '',
+      balanceZoomData: {},
       balanceZoomEnd: false,
       balanceZoomStart: true
     };
   }
 
   toggleBalanceZoom() {
-    this.setState({ balanceZoom: !this.state.balanceZoom });
-    this.recalculateBalanceData(0, this.state.balanceZoomPageSize);
+    this.setState({ balanceZoom: !this.state.balanceZoom }, () => {
+      if (this.state.balanceZoom) {
+        this.recalculateBalanceData(0, this.state.balanceZoomPageSize);
+      } else {
+        this.unZoomBalanceData();
+      }
+    });
     this.setState({
       balanceZoomIndex: 1,
       balanceZoomStart: true,
       balanceZoomEnd: false
     });
+  }
+
+  unZoomBalanceData() {
+    this.recalculateBalanceData(
+      0,
+      this.state.parsedContent.balanceData.labels.length
+    );
   }
 
   nextPageBalance() {
@@ -79,7 +91,6 @@ export default class ViewParsed extends Component {
   }
 
   recalculateBalanceData(start, end) {
-    this.setState({ parsedContent: JSON.parse(this.state.rawContent) });
     let newBalanceData = {
       labels: this.state.parsedContent.balanceData.labels.slice(start, end),
       datasets: this.state.parsedContent.balanceData.datasets.map(dataset => {
@@ -205,11 +216,7 @@ export default class ViewParsed extends Component {
                 </div>
               )}
               <Bar
-                data={
-                  this.state.balanceZoom
-                    ? this.state.balanceZoomData
-                    : content.balanceData
-                }
+                data={this.state.balanceZoomData}
                 options={{
                   scales: {
                     xAxes: [
@@ -363,10 +370,8 @@ export default class ViewParsed extends Component {
     });
     if (file) {
       fs.readFile(file[0], (err, data) => {
-        this.setState({
-          parsedContent: JSON.parse(data),
-          rawContent: data
-        });
+        this.setState({ parsedContent: JSON.parse(data) });
+        this.unZoomBalanceData();
       });
     }
   }
