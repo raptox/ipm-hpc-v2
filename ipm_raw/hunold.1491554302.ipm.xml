@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ipm_job_profile>
+<calltable nsections="1" >
+<section module="MPI" nentries="56" >
+<entry name="MPI_Init" />
+<entry name="MPI_Init_thread" />
+<entry name="MPI_Finalize" />
+<entry name="MPI_Comm_rank" />
+<entry name="MPI_Comm_size" />
+<entry name="MPI_Send" />
+<entry name="MPI_Ssend" />
+<entry name="MPI_Rsend" />
+<entry name="MPI_Bsend" />
+<entry name="MPI_Isend" />
+<entry name="MPI_Issend" />
+<entry name="MPI_Irsend" />
+<entry name="MPI_Ibsend" />
+<entry name="MPI_Recv" />
+<entry name="MPI_Irecv" />
+<entry name="MPI_Sendrecv" />
+<entry name="MPI_Sendrecv_replace" />
+<entry name="MPI_Wait" />
+<entry name="MPI_Waitany" />
+<entry name="MPI_Waitall" />
+<entry name="MPI_Waitsome" />
+<entry name="MPI_Probe" />
+<entry name="MPI_Iprobe" />
+<entry name="MPI_Send_init" />
+<entry name="MPI_Ssend_init" />
+<entry name="MPI_Rsend_init" />
+<entry name="MPI_Bsend_init" />
+<entry name="MPI_Recv_init" />
+<entry name="MPI_Buffer_attach" />
+<entry name="MPI_Buffer_detach" />
+<entry name="MPI_Test" />
+<entry name="MPI_Testany" />
+<entry name="MPI_Testall" />
+<entry name="MPI_Testsome" />
+<entry name="MPI_Start" />
+<entry name="MPI_Startall" />
+<entry name="MPI_Bcast" />
+<entry name="MPI_Reduce" />
+<entry name="MPI_Reduce_scatter" />
+<entry name="MPI_Barrier" />
+<entry name="MPI_Gather" />
+<entry name="MPI_Gatherv" />
+<entry name="MPI_Scatter" />
+<entry name="MPI_Scatterv" />
+<entry name="MPI_Scan" />
+<entry name="MPI_Allgather" />
+<entry name="MPI_Allgatherv" />
+<entry name="MPI_Allreduce" />
+<entry name="MPI_Alltoall" />
+<entry name="MPI_Alltoallv" />
+<entry name="MPI_Comm_group" />
+<entry name="MPI_Comm_compare" />
+<entry name="MPI_Comm_dup" />
+<entry name="MPI_Comm_create" />
+<entry name="MPI_Comm_split" />
+<entry name="MPI_Comm_free" />
+</section>
+</calltable>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="0" mpi_size="27" stamp_init="1491554302.092831" stamp_final="1491554305.423950" username="hunold" allocationname="unknown" flags="0" pid="24064" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter2</host>
+<perf wtime="3.33112e+00" utime="2.40263e+00" stime="6.83896e-01" mtime="9.50594e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600f57f1000f77ff77ff87f5c" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32162e+00" utime="2.39464e+00" stime="6.81896e-01" mtime="9.50594e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.3466e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="9327" bytes="1.3625e+07" > 2.1999e-02 </func>
+<func name="MPI_Irecv" count="15851" bytes="2.9417e+07" > 4.3783e-03 </func>
+<func name="MPI_Wait" count="15851" bytes="2.9417e+07" > 1.8753e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="1.4319e+07" > 6.9532e-03 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 8.3208e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 6.9965e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 6.5759e-01 </func>
+</region>
+</regions>
+<internal rank="0" log_i="1491554305.423950" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="1" mpi_size="27" stamp_init="1491554302.093712" stamp_final="1491554305.423017" username="hunold" allocationname="unknown" flags="0" pid="22020" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter3</host>
+<perf wtime="3.32930e+00" utime="2.50762e+00" stime="5.85911e-01" mtime="8.68801e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600c17f1000c27fc27fc37f41" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32052e+00" utime="2.50362e+00" stime="5.81911e-01" mtime="8.68801e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.5621e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="14923" bytes="2.3192e+07" > 4.2485e-02 </func>
+<func name="MPI_Irecv" count="23311" bytes="3.5211e+07" > 6.0756e-03 </func>
+<func name="MPI_Wait" count="23311" bytes="3.5211e+07" > 1.3077e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.3863e+07" > 6.1781e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.3828e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.1623e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 6.0449e-01 </func>
+</region>
+</regions>
+<internal rank="1" log_i="1491554305.423017" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="2" mpi_size="27" stamp_init="1491554302.092140" stamp_final="1491554305.423220" username="hunold" allocationname="unknown" flags="0" pid="18643" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter4</host>
+<perf wtime="3.33108e+00" utime="2.38664e+00" stime="7.10892e-01" mtime="9.80808e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600457f1000467f467f477f4a" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31951e+00" utime="2.37864e+00" stime="7.07892e-01" mtime="9.80808e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.5392e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="10259" bytes="1.8397e+07" > 3.0996e-02 </func>
+<func name="MPI_Irecv" count="14919" bytes="2.4645e+07" > 4.2288e-03 </func>
+<func name="MPI_Wait" count="14919" bytes="2.4645e+07" > 1.2971e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="1.9090e+07" > 7.1918e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.7881e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.6443e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.1596e-01 </func>
+</region>
+</regions>
+<internal rank="2" log_i="1491554305.423220" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="3" mpi_size="27" stamp_init="1491554302.072230" stamp_final="1491554305.422874" username="hunold" allocationname="unknown" flags="0" pid="18940" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter5</host>
+<perf wtime="3.35064e+00" utime="2.40663e+00" stime="6.94895e-01" mtime="1.09799e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600a77f1000a97fa97faa7f7b" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.33452e+00" utime="2.39563e+00" stime="6.90895e-01" mtime="1.09799e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.5674e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="15855" bytes="2.3669e+07" > 4.1972e-02 </func>
+<func name="MPI_Irecv" count="22379" bytes="3.4734e+07" > 6.4030e-03 </func>
+<func name="MPI_Wait" count="22379" bytes="3.4734e+07" > 1.1169e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.4818e+07" > 5.4700e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.5020e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 3.1182e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.5045e-01 </func>
+</region>
+</regions>
+<internal rank="3" log_i="1491554305.422874" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="4" mpi_size="27" stamp_init="1491554302.056393" stamp_final="1491554305.423389" username="hunold" allocationname="unknown" flags="0" pid="18655" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter6</host>
+<perf wtime="3.36700e+00" utime="2.44463e+00" stime="6.43902e-01" mtime="1.02613e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600b67f1000b77fb77fb87fa2" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.35412e+00" utime="2.43563e+00" stime="6.40902e-01" mtime="1.02613e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4992e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="24249" bytes="3.3975e+07" > 6.8169e-02 </func>
+<func name="MPI_Irecv" count="32637" bytes="4.0834e+07" > 8.5588e-03 </func>
+<func name="MPI_Wait" count="32637" bytes="4.0834e+07" > 1.4658e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.6271e+07" > 2.5954e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.0300e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.9975e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.4529e-01 </func>
+</region>
+</regions>
+<internal rank="4" log_i="1491554305.423389" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="5" mpi_size="27" stamp_init="1491554302.097246" stamp_final="1491554305.423002" username="hunold" allocationname="unknown" flags="0" pid="18182" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter7</host>
+<perf wtime="3.32576e+00" utime="2.40263e+00" stime="6.74898e-01" mtime="1.09172e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600617f1000627f627f647f26" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31289e+00" utime="2.39464e+00" stime="6.70898e-01" mtime="1.09172e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4434e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="16787" bytes="2.8441e+07" > 3.8445e-02 </func>
+<func name="MPI_Irecv" count="21447" bytes="2.9962e+07" > 5.6133e-03 </func>
+<func name="MPI_Wait" count="21447" bytes="2.9962e+07" > 1.3650e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.8635e+07" > 3.0516e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.5974e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 5.5079e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.2411e-01 </func>
+</region>
+</regions>
+<internal rank="5" log_i="1491554305.423002" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="6" mpi_size="27" stamp_init="1491554302.047523" stamp_final="1491554305.423266" username="hunold" allocationname="unknown" flags="0" pid="18092" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter8</host>
+<perf wtime="3.37574e+00" utime="2.30065e+00" stime="7.89880e-01" mtime="1.10041e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600297f10002b7f2b7f2c7fef" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.35896e+00" utime="2.29165e+00" stime="7.83881e-01" mtime="1.10041e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.2438e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="11191" bytes="1.8874e+07" > 2.9603e-02 </func>
+<func name="MPI_Irecv" count="13987" bytes="2.4168e+07" > 4.1876e-03 </func>
+<func name="MPI_Wait" count="13987" bytes="2.4168e+07" > 1.3443e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.0045e+07" > 6.8492e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.7691e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.7209e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.3507e-01 </func>
+</region>
+</regions>
+<internal rank="6" log_i="1491554305.423266" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="7" mpi_size="27" stamp_init="1491554302.089507" stamp_final="1491554305.423001" username="hunold" allocationname="unknown" flags="0" pid="19746" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter9</host>
+<perf wtime="3.33349e+00" utime="2.38864e+00" stime="6.86896e-01" mtime="9.95010e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b2716226007b7f10007c7f7c7f7d7fe2" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32417e+00" utime="2.38064e+00" stime="6.84896e-01" mtime="9.95010e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4467e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="17719" bytes="2.8918e+07" > 3.8809e-02 </func>
+<func name="MPI_Irecv" count="20515" bytes="2.9485e+07" > 5.4266e-03 </func>
+<func name="MPI_Wait" count="20515" bytes="2.9485e+07" > 1.0301e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.0543e+07" > 5.8170e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.3113e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 4.0804e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.4732e-01 </func>
+</region>
+</regions>
+<internal rank="7" log_i="1491554305.423001" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="8" mpi_size="27" stamp_init="1491554302.102117" stamp_final="1491554305.423493" username="hunold" allocationname="unknown" flags="0" pid="18123" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter10</host>
+<perf wtime="3.32138e+00" utime="2.35764e+00" stime="7.30889e-01" mtime="1.05871e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600347f1000357f357f367f0c" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31339e+00" utime="2.35164e+00" stime="7.28889e-01" mtime="1.05871e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4205e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="12123" bytes="2.3646e+07" > 4.1150e-02 </func>
+<func name="MPI_Irecv" count="13055" bytes="1.9396e+07" > 4.3712e-03 </func>
+<func name="MPI_Wait" count="13055" bytes="1.9396e+07" > 1.3139e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.3862e+07" > 6.8621e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 3.6597e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 3.3791e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.7760e-01 </func>
+</region>
+</regions>
+<internal rank="8" log_i="1491554305.423493" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="9" mpi_size="27" stamp_init="1491554302.090104" stamp_final="1491554305.422843" username="hunold" allocationname="unknown" flags="0" pid="20069" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter11</host>
+<perf wtime="3.33274e+00" utime="2.40164e+00" stime="6.63899e-01" mtime="1.08131e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600637f1000657f657f667f2d" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32069e+00" utime="2.39464e+00" stime="6.59900e-01" mtime="1.08131e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.3301e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="17719" bytes="2.4191e+07" > 4.6200e-02 </func>
+<func name="MPI_Irecv" count="20515" bytes="3.4212e+07" > 5.9896e-03 </func>
+<func name="MPI_Wait" count="20515" bytes="3.4212e+07" > 1.2037e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.4818e+07" > 5.5311e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.3828e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.5643e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.2645e-01 </func>
+</region>
+</regions>
+<internal rank="9" log_i="1491554305.422843" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="10" mpi_size="27" stamp_init="1491554302.096136" stamp_final="1491554305.423180" username="hunold" allocationname="unknown" flags="0" pid="17244" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter12</host>
+<perf wtime="3.32704e+00" utime="2.42363e+00" stime="6.65899e-01" mtime="1.00156e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600dd7f1000df7fdf7fe07ffd" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31855e+00" utime="2.41963e+00" stime="6.62899e-01" mtime="1.00156e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4002e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 1.1921e-06 </func>
+<func name="MPI_Isend" count="27045" bytes="3.4541e+07" > 7.2155e-02 </func>
+<func name="MPI_Irecv" count="29841" bytes="4.0268e+07" > 7.8135e-03 </func>
+<func name="MPI_Wait" count="29841" bytes="4.0268e+07" > 1.0343e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.6271e+07" > 3.5127e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 3.0613e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.6469e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.5487e-01 </func>
+</region>
+</regions>
+<internal rank="10" log_i="1491554305.423180" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="11" mpi_size="27" stamp_init="1491554302.087554" stamp_final="1491554305.423461" username="hunold" allocationname="unknown" flags="0" pid="17176" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter13</host>
+<perf wtime="3.33591e+00" utime="2.53462e+00" stime="5.45917e-01" mtime="8.07540e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600ff7f1000157f157f267ff7" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32524e+00" utime="2.52662e+00" stime="5.42918e-01" mtime="8.07540e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4875e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="18651" bytes="2.8963e+07" > 4.7814e-02 </func>
+<func name="MPI_Irecv" count="19583" bytes="2.9440e+07" > 5.4038e-03 </func>
+<func name="MPI_Wait" count="19583" bytes="2.9440e+07" > 1.0266e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.0544e+07" > 5.5381e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.6928e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 3.7228e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 5.5755e-01 </func>
+</region>
+</regions>
+<internal rank="11" log_i="1491554305.423461" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="12" mpi_size="27" stamp_init="1491554302.093172" stamp_final="1491554305.423315" username="hunold" allocationname="unknown" flags="0" pid="17137" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter14</host>
+<perf wtime="3.33014e+00" utime="2.51962e+00" stime="5.49917e-01" mtime="8.79766e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600b07f1000b27fb27fb37f39" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31952e+00" utime="2.51162e+00" stime="5.46917e-01" mtime="8.79766e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.3354e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="27977" bytes="3.5019e+07" > 7.6617e-02 </func>
+<func name="MPI_Irecv" count="28909" bytes="3.9790e+07" > 7.8275e-03 </func>
+<func name="MPI_Wait" count="28909" bytes="3.9790e+07" > 1.1637e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.6271e+07" > 2.3335e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.4901e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 6.6718e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 5.8742e-01 </func>
+</region>
+</regions>
+<internal rank="12" log_i="1491554305.423315" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="13" mpi_size="27" stamp_init="1491554302.096241" stamp_final="1491554305.423614" username="hunold" allocationname="unknown" flags="0" pid="17147" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter15</host>
+<perf wtime="3.32737e+00" utime="2.52662e+00" stime="5.19921e-01" mtime="8.06104e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600687f10007f7f7f7f8f7f6e" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31848e+00" utime="2.52162e+00" stime="5.16921e-01" mtime="8.06104e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.3630e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="41966" bytes="4.6174e+07" > 1.1296e-01 </func>
+<func name="MPI_Irecv" count="41966" bytes="4.6174e+07" > 1.1932e-02 </func>
+<func name="MPI_Wait" count="41966" bytes="4.6174e+07" > 9.3164e-02 </func>
+<func name="MPI_Waitall" count="2797" bytes="5.1542e+07" > 1.6717e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.5020e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.1368e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 5.4859e-01 </func>
+</region>
+</regions>
+<internal rank="13" log_i="1491554305.423614" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="14" mpi_size="27" stamp_init="1491554302.095698" stamp_final="1491554305.423453" username="hunold" allocationname="unknown" flags="0" pid="17163" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter16</host>
+<perf wtime="3.32775e+00" utime="2.51462e+00" stime="5.62914e-01" mtime="8.33072e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600f47f1000f57ff57ff67fea" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31505e+00" utime="2.50662e+00" stime="5.57915e-01" mtime="8.33072e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4243e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="28909" bytes="3.9790e+07" > 8.3796e-02 </func>
+<func name="MPI_Irecv" count="27977" bytes="3.5019e+07" > 7.3512e-03 </func>
+<func name="MPI_Wait" count="27977" bytes="3.5019e+07" > 1.2331e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="4.0089e+07" > 3.5985e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 2.4080e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.8814e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 5.5237e-01 </func>
+</region>
+</regions>
+<internal rank="14" log_i="1491554305.423453" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="15" mpi_size="27" stamp_init="1491554302.088491" stamp_final="1491554305.423065" username="hunold" allocationname="unknown" flags="0" pid="16464" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter17</host>
+<perf wtime="3.33457e+00" utime="2.49062e+00" stime="5.88910e-01" mtime="8.74710e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600807f1000817f817f827ffa" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32649e+00" utime="2.48562e+00" stime="5.86910e-01" mtime="8.74710e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4215e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="19583" bytes="2.9440e+07" > 4.2129e-02 </func>
+<func name="MPI_Irecv" count="18651" bytes="2.8963e+07" > 5.0585e-03 </func>
+<func name="MPI_Wait" count="18651" bytes="2.8963e+07" > 9.4389e-02 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.0544e+07" > 5.8202e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.2875e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 4.6627e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 6.2687e-01 </func>
+</region>
+</regions>
+<internal rank="15" log_i="1491554305.423065" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="16" mpi_size="27" stamp_init="1491554302.068520" stamp_final="1491554305.423833" username="hunold" allocationname="unknown" flags="0" pid="16709" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter18</host>
+<perf wtime="3.35531e+00" utime="2.45263e+00" stime="6.43902e-01" mtime="1.06098e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b2716226005b7f10005c7f5c7f5d7f9a" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.33908e+00" utime="2.43963e+00" stime="6.39903e-01" mtime="1.06098e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4877e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="29841" bytes="4.0268e+07" > 7.8680e-02 </func>
+<func name="MPI_Irecv" count="27045" bytes="3.4541e+07" > 8.2397e-03 </func>
+<func name="MPI_Wait" count="27045" bytes="3.4541e+07" > 1.3615e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="4.0089e+07" > 3.1107e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 8.5092e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.7903e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.7656e-01 </func>
+</region>
+</regions>
+<internal rank="16" log_i="1491554305.423833" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="17" mpi_size="27" stamp_init="1491554302.095525" stamp_final="1491554305.422902" username="hunold" allocationname="unknown" flags="0" pid="19289" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter19</host>
+<perf wtime="3.32738e+00" utime="2.39664e+00" stime="6.75897e-01" mtime="1.09112e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600337f1000347f347f357ffc" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31473e+00" utime="2.38864e+00" stime="6.72897e-01" mtime="1.09112e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4148e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 1.1921e-06 </func>
+<func name="MPI_Isend" count="20515" bytes="3.4212e+07" > 4.0213e-02 </func>
+<func name="MPI_Irecv" count="17719" bytes="2.4191e+07" > 4.9739e-03 </func>
+<func name="MPI_Wait" count="17719" bytes="2.4191e+07" > 1.4263e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.4361e+07" > 4.4254e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.7166e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 3.7932e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.1968e-01 </func>
+</region>
+</regions>
+<internal rank="17" log_i="1491554305.422902" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="18" mpi_size="27" stamp_init="1491554302.089576" stamp_final="1491554305.423205" username="hunold" allocationname="unknown" flags="0" pid="16485" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter20</host>
+<perf wtime="3.33363e+00" utime="2.29065e+00" stime="7.71882e-01" mtime="1.12712e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600e57f1000e77fe77fe87fb3" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32318e+00" utime="2.28365e+00" stime="7.67883e-01" mtime="1.12712e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4920e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="13055" bytes="1.9396e+07" > 2.6138e-02 </func>
+<func name="MPI_Irecv" count="12123" bytes="2.3646e+07" > 3.7165e-03 </func>
+<func name="MPI_Wait" count="12123" bytes="2.3646e+07" > 1.6145e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.0045e+07" > 3.7140e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 9.2983e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 4.1107e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.5598e-01 </func>
+</region>
+</regions>
+<internal rank="18" log_i="1491554305.423205" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="19" mpi_size="27" stamp_init="1491554302.096865" stamp_final="1491554305.423086" username="hunold" allocationname="unknown" flags="0" pid="16452" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter21</host>
+<perf wtime="3.32622e+00" utime="2.46963e+00" stime="6.11907e-01" mtime="1.05934e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b2716226008b7f10008c7f8c7f8d7f89" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31762e+00" utime="2.46463e+00" stime="6.08907e-01" mtime="1.05934e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.5135e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="20515" bytes="2.9485e+07" > 5.0746e-02 </func>
+<func name="MPI_Irecv" count="17719" bytes="2.8918e+07" > 4.9169e-03 </func>
+<func name="MPI_Wait" count="17719" bytes="2.8918e+07" > 1.0833e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.0544e+07" > 5.6242e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.5974e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 3.3902e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.0368e-01 </func>
+</region>
+</regions>
+<internal rank="19" log_i="1491554305.423086" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="20" mpi_size="27" stamp_init="1491554302.073713" stamp_final="1491554305.423969" username="hunold" allocationname="unknown" flags="0" pid="16448" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter22</host>
+<perf wtime="3.35026e+00" utime="2.32565e+00" stime="7.72883e-01" mtime="1.06409e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600ce7f1000cf7fcf7fd17f8a" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.33509e+00" utime="2.31765e+00" stime="7.67884e-01" mtime="1.06409e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4458e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="13987" bytes="2.4168e+07" > 3.3464e-02 </func>
+<func name="MPI_Irecv" count="11191" bytes="1.8874e+07" > 3.6199e-03 </func>
+<func name="MPI_Wait" count="11191" bytes="1.8874e+07" > 1.3978e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.5771e+07" > 7.2008e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 8.7285e-04 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.6744e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.8615e-01 </func>
+</region>
+</regions>
+<internal rank="20" log_i="1491554305.423969" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="21" mpi_size="27" stamp_init="1491554302.092578" stamp_final="1491554305.423024" username="hunold" allocationname="unknown" flags="0" pid="16433" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter23</host>
+<perf wtime="3.33045e+00" utime="2.43763e+00" stime="6.51901e-01" mtime="1.02741e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b2716226003b7f10003d7f3d7f3e7f6f" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31730e+00" utime="2.42863e+00" stime="6.48902e-01" mtime="1.02741e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4074e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 1.1921e-06 </func>
+<func name="MPI_Isend" count="21447" bytes="2.9962e+07" > 5.1404e-02 </func>
+<func name="MPI_Irecv" count="16787" bytes="2.8441e+07" > 5.2190e-03 </func>
+<func name="MPI_Wait" count="16787" bytes="2.8441e+07" > 1.2340e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.0544e+07" > 5.9136e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.5020e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.3384e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.6344e-01 </func>
+</region>
+</regions>
+<internal rank="21" log_i="1491554305.423024" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="22" mpi_size="27" stamp_init="1491554302.064175" stamp_final="1491554305.423738" username="hunold" allocationname="unknown" flags="0" pid="16439" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter24</host>
+<perf wtime="3.35956e+00" utime="2.77558e+00" stime="3.17952e-01" mtime="2.85746e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b2716226003f7f1000417f417f427f6a" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.34344e+00" utime="2.76458e+00" stime="3.12952e-01" mtime="2.85746e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.3809e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="32637" bytes="4.0834e+07" > 7.7931e-02 </func>
+<func name="MPI_Irecv" count="24249" bytes="3.3975e+07" > 6.7472e-03 </func>
+<func name="MPI_Wait" count="24249" bytes="3.3975e+07" > 1.1953e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="4.3906e+07" > 3.3692e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 2.2888e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.6751e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 1.9689e-02 </func>
+</region>
+</regions>
+<internal rank="22" log_i="1491554305.423738" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="23" mpi_size="27" stamp_init="1491554302.099073" stamp_final="1491554305.423263" username="hunold" allocationname="unknown" flags="0" pid="16416" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter25</host>
+<perf wtime="3.32419e+00" utime="2.44663e+00" stime="6.47902e-01" mtime="9.08853e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600e17f1000e37fe37fe47fe3" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31659e+00" utime="2.44163e+00" stime="6.46902e-01" mtime="9.08853e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4164e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 1.1921e-06 </func>
+<func name="MPI_Isend" count="22379" bytes="3.4734e+07" > 4.8461e-02 </func>
+<func name="MPI_Irecv" count="15855" bytes="2.3669e+07" > 4.5934e-03 </func>
+<func name="MPI_Wait" count="15855" bytes="2.3669e+07" > 7.0565e-02 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.4361e+07" > 5.4837e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.7166e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 4.0859e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 6.8810e-01 </func>
+</region>
+</regions>
+<internal rank="23" log_i="1491554305.423263" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="24" mpi_size="27" stamp_init="1491554302.093025" stamp_final="1491554305.423005" username="hunold" allocationname="unknown" flags="0" pid="7159" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter26</host>
+<perf wtime="3.32998e+00" utime="2.43763e+00" stime="6.43902e-01" mtime="9.59834e-01" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600717f1000737f737f747f49" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32274e+00" utime="2.43263e+00" stime="6.41902e-01" mtime="9.59834e-01" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4048e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="14919" bytes="2.4645e+07" > 3.2525e-02 </func>
+<func name="MPI_Irecv" count="10259" bytes="1.8397e+07" > 3.1698e-03 </func>
+<func name="MPI_Wait" count="10259" bytes="1.8397e+07" > 1.0994e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.5771e+07" > 7.1877e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 2.0027e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.4398e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 7.1650e-01 </func>
+</region>
+</regions>
+<internal rank="24" log_i="1491554305.423005" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="25" mpi_size="27" stamp_init="1491554302.088935" stamp_final="1491554305.422877" username="hunold" allocationname="unknown" flags="0" pid="18054" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter27</host>
+<perf wtime="3.33394e+00" utime="2.34764e+00" stime="7.16891e-01" mtime="1.10898e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b271622600f57f1000107f107f117f6f" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.32447e+00" utime="2.34264e+00" stime="7.11892e-01" mtime="1.10898e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4229e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 9.5367e-07 </func>
+<func name="MPI_Isend" count="23311" bytes="3.5211e+07" > 5.1972e-02 </func>
+<func name="MPI_Irecv" count="14923" bytes="2.3192e+07" > 4.3705e-03 </func>
+<func name="MPI_Wait" count="14923" bytes="2.3192e+07" > 1.1758e-01 </func>
+<func name="MPI_Waitall" count="2797" bytes="3.4361e+07" > 5.5293e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.5974e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 2.5283e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.5305e-01 </func>
+</region>
+</regions>
+<internal rank="25" log_i="1491554305.422877" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+<task ipm_version="2.0.5" cookie="nocookie" mpi_rank="26" mpi_size="27" stamp_init="1491554302.097145" stamp_final="1491554305.422809" username="hunold" allocationname="unknown" flags="0" pid="3361" >
+<job nhosts="27" ntasks="27" start="1491554302" final="1491554305" cookie="nocookie" code="unknown" >22606</job>
+<host mach_name="x86_64" mach_info="x86_64_Linux" >jupiter28</host>
+<perf wtime="3.32566e+00" utime="2.31265e+00" stime="7.60884e-01" mtime="1.11203e+00" gflop="0.00000e+00" gbyte="4.26292e-02" ></perf>
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<switch bytes_tx="0.00000e+00" bytes_rx="0.00000e+00" ></switch>
+<cmdline realpath="/home/hunold/tmp/lulesh2.0.3/lulesh2.0" md5sum="b3b2716226003a7f10003b7f3b7f3c7fdb" >/home/hunold/tmp/lulesh2.0.3/./lulesh2.0 -s 10 </cmdline>
+<regions n="1" >
+<region label="ipm_noregion" nexits="1" wtime="3.31797e+00" utime="2.30665e+00" stime="7.58885e-01" mtime="1.11203e+00" id="0" >
+<modules nmod="1">
+<module name="MPI" time="9.50594e-01" ></module>
+</modules>
+<func name="MPI_Init" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Finalize" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Comm_rank" count="8393" bytes="0.0000e+00" > 1.4696e-03 </func>
+<func name="MPI_Comm_size" count="1" bytes="0.0000e+00" > 0.0000e+00 </func>
+<func name="MPI_Isend" count="15851" bytes="2.9417e+07" > 3.7719e-02 </func>
+<func name="MPI_Irecv" count="9327" bytes="1.3625e+07" > 2.9974e-03 </func>
+<func name="MPI_Wait" count="9327" bytes="1.3625e+07" > 7.4551e-02 </func>
+<func name="MPI_Waitall" count="2797" bytes="2.9588e+07" > 6.8515e-02 </func>
+<func name="MPI_Reduce" count="1" bytes="8.0000e+00" > 1.6928e-05 </func>
+<func name="MPI_Barrier" count="1" bytes="0.0000e+00" > 4.6979e-02 </func>
+<func name="MPI_Allreduce" count="931" bytes="7.4480e+03" > 8.7978e-01 </func>
+</region>
+</regions>
+<internal rank="26" log_i="1491554305.422809" log_t="1.4916e+09" report_delta="-1.0000e+00" fname="./hunold.1491554302.ipm.xml" logrank="0" ></internal>
+</task>
+</ipm_job_profile>

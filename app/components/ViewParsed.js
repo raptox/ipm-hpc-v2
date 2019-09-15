@@ -43,10 +43,12 @@ export default class ViewParsed extends Component {
   }
 
   unZoomBalanceData() {
-    this.recalculateBalanceData(
-      0,
-      this.state.parsedContent.balanceData.labels.length
-    );
+    if (this.state.parsedContent.balanceData.labels) {
+      this.recalculateBalanceData(
+        0,
+        this.state.parsedContent.balanceData.labels.length
+      );
+    }
   }
 
   nextPageBalance() {
@@ -167,11 +169,13 @@ export default class ViewParsed extends Component {
                     content.metadata.totalWallTime) *
                   100
                 ).toFixed(2)}
-              <ReactJson
-                name="env"
-                src={content.metadata.env}
-                collapsed={true}
-              />
+              {content.metadata.env && (
+                <ReactJson
+                  name="env"
+                  src={content.metadata.env}
+                  collapsed={true}
+                />
+              )}
             </div>
             <div className={styles.pieCharts}>
               <div className={styles.floatLeft}>
@@ -188,172 +192,186 @@ export default class ViewParsed extends Component {
               </div>
             </div>
 
-            <div>
-              <h3>Communication balance by task (sorted by MPI time)</h3>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => this.toggleBalanceZoom()}
-              >
-                Toggle Zoom
-              </Button>
-              {this.state.balanceZoom && (
-                <div>
-                  <Button
-                    variant="contained"
-                    color="default"
-                    onClick={() => this.previousPageBalance()}
-                  >
-                    Previous Page
-                  </Button>{' '}
-                  <Button
-                    variant="contained"
-                    color="default"
-                    onClick={() => this.nextPageBalance()}
-                  >
-                    Next Page
-                  </Button>
+            {this.state.balanceZoomData && (
+              <div>
+                <h3>Communication balance by task (sorted by MPI time)</h3>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={() => this.toggleBalanceZoom()}
+                >
+                  Toggle Zoom
+                </Button>
+                {this.state.balanceZoom && (
+                  <div>
+                    <Button
+                      variant="contained"
+                      color="default"
+                      onClick={() => this.previousPageBalance()}
+                    >
+                      Previous Page
+                    </Button>{' '}
+                    <Button
+                      variant="contained"
+                      color="default"
+                      onClick={() => this.nextPageBalance()}
+                    >
+                      Next Page
+                    </Button>
+                  </div>
+                )}
+                <Bar
+                  data={this.state.balanceZoomData}
+                  options={{
+                    scales: {
+                      xAxes: [
+                        {
+                          stacked: true
+                        }
+                      ],
+                      yAxes: [
+                        {
+                          stacked: true
+                        }
+                      ]
+                    }
+                  }}
+                />
+              </div>
+            )}
+
+            {content.mpiData &&
+              Array.isArray(content.mpiData.mpiCalls) &&
+              content.mpiData.mpiCalls !== 0 && (
+                <div className={styles.tableInfo}>
+                  <ReactTable
+                    data={content.mpiData.mpiCalls}
+                    columns={[
+                      {
+                        Header: 'All MPI Calls',
+                        columns: [
+                          {
+                            Header: 'Call',
+                            accessor: 'call'
+                          },
+                          {
+                            Header: 'Buffer Size',
+                            accessor: 'bytes'
+                          },
+                          {
+                            Header: '# Calls',
+                            accessor: 'count'
+                          },
+                          {
+                            Header: 'Total Time',
+                            accessor: 'ttot'
+                          },
+                          {
+                            Header: 'Min Time',
+                            accessor: 'tmin'
+                          },
+                          {
+                            Header: 'Max Time',
+                            accessor: 'tmax'
+                          },
+                          {
+                            Header: '%MPI',
+                            accessor: d =>
+                              (d.ttot / content.mpiData.mpiAnalysis.totalTime) *
+                              100,
+                            id: 'percentMpi'
+                          },
+                          {
+                            Header: '%Wall',
+                            accessor: d =>
+                              (d.ttot / content.metadata.totalWallTime) * 100,
+                            id: 'percentWall'
+                          }
+                        ]
+                      }
+                    ]}
+                    pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
+                    defaultPageSize={10}
+                    className="-striped -highlight"
+                  />
                 </div>
               )}
-              <Bar
-                data={this.state.balanceZoomData}
-                options={{
-                  scales: {
-                    xAxes: [
-                      {
-                        stacked: true
-                      }
-                    ],
-                    yAxes: [
-                      {
-                        stacked: true
-                      }
-                    ]
-                  }
-                }}
-              />
-            </div>
 
-            <div className={styles.tableInfo}>
-              <ReactTable
-                data={content.mpiData.mpiCalls}
-                columns={[
-                  {
-                    Header: 'All MPI Calls',
-                    columns: [
+            {Array.isArray(content.hpmData) &&
+              content.hpmData.length !== 0 && (
+                <div className={styles.tableInfo}>
+                  <ReactTable
+                    data={content.hpmData}
+                    columns={[
                       {
-                        Header: 'Call',
-                        accessor: 'call'
-                      },
-                      {
-                        Header: 'Buffer Size',
-                        accessor: 'bytes'
-                      },
-                      {
-                        Header: '# Calls',
-                        accessor: 'count'
-                      },
-                      {
-                        Header: 'Total Time',
-                        accessor: 'ttot'
-                      },
-                      {
-                        Header: 'Min Time',
-                        accessor: 'tmin'
-                      },
-                      {
-                        Header: 'Max Time',
-                        accessor: 'tmax'
-                      },
-                      {
-                        Header: '%MPI',
-                        accessor: d =>
-                          (d.ttot / content.mpiData.mpiAnalysis.totalTime) *
-                          100,
-                        id: 'percentMpi'
-                      },
-                      {
-                        Header: '%Wall',
-                        accessor: d =>
-                          (d.ttot / content.metadata.totalWallTime) * 100,
-                        id: 'percentWall'
+                        Header: 'HPM Counter Statistics',
+                        columns: [
+                          {
+                            Header: 'Event',
+                            accessor: 'name'
+                          },
+                          {
+                            Header: 'Total Count',
+                            accessor: 'counter'
+                          },
+                          {
+                            Header: 'Avg',
+                            accessor: d => (d.counter / d.ncalls).toFixed(2),
+                            id: 'avg'
+                          },
+                          {
+                            Header: 'Min',
+                            accessor: 'min'
+                          },
+                          {
+                            Header: 'Max',
+                            accessor: 'max'
+                          }
+                        ]
                       }
-                    ]
-                  }
-                ]}
-                pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
-                defaultPageSize={10}
-                className="-striped -highlight"
-              />
-            </div>
-            <div className={styles.tableInfo}>
-              <ReactTable
-                data={content.hpmData}
-                columns={[
-                  {
-                    Header: 'HPM Counter Statistics',
-                    columns: [
+                    ]}
+                    pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
+                    defaultPageSize={10}
+                    className="-striped -highlight"
+                  />
+                </div>
+              )}
+
+            {Array.isArray(content.hosts) &&
+              content.hosts.length !== 0 && (
+                <div className={styles.tableInfo}>
+                  <ReactTable
+                    data={content.hosts}
+                    columns={[
                       {
-                        Header: 'Event',
-                        accessor: 'name'
-                      },
-                      {
-                        Header: 'Total Count',
-                        accessor: 'counter'
-                      },
-                      {
-                        Header: 'Avg',
-                        accessor: d => (d.counter / d.ncalls).toFixed(2),
-                        id: 'avg'
-                      },
-                      {
-                        Header: 'Min',
-                        accessor: 'min'
-                      },
-                      {
-                        Header: 'Max',
-                        accessor: 'max'
+                        Header: 'All Hosts',
+                        columns: [
+                          {
+                            Header: 'Name',
+                            accessor: 'name'
+                          },
+                          {
+                            Header: 'Mach Name',
+                            accessor: 'mach_name'
+                          },
+                          {
+                            Header: 'Mach Info',
+                            accessor: 'mach_info'
+                          },
+                          {
+                            Header: 'Tasks',
+                            id: 'tasks',
+                            accessor: d => d.tasks.join(', ')
+                          }
+                        ]
                       }
-                    ]
-                  }
-                ]}
-                pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
-                defaultPageSize={10}
-                className="-striped -highlight"
-              />
-            </div>
-            <div className={styles.tableInfo}>
-              <ReactTable
-                data={content.hosts}
-                columns={[
-                  {
-                    Header: 'All Hosts',
-                    columns: [
-                      {
-                        Header: 'Name',
-                        accessor: 'name'
-                      },
-                      {
-                        Header: 'Mach Name',
-                        accessor: 'mach_name'
-                      },
-                      {
-                        Header: 'Mach Info',
-                        accessor: 'mach_info'
-                      },
-                      {
-                        Header: 'Tasks',
-                        id: 'tasks',
-                        accessor: d => d.tasks.join(', ')
-                      }
-                    ]
-                  }
-                ]}
-                pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
-                defaultPageSize={10}
-                className="-striped -highlight"
-              />
-            </div>
+                    ]}
+                    pageSizeOptions={[2, 5, 10, 20, 25, 50, 100]}
+                    defaultPageSize={10}
+                    className="-striped -highlight"
+                  />
+                </div>
+              )}
           </div>
         )}
       </div>

@@ -1,0 +1,3369 @@
+{
+  "metadata": {
+    "username": "hunold",
+    "start": 1491564090.960496,
+    "stop": 1491564139.832667,
+    "walltime": "48.872171",
+    "ntasks": 27,
+    "nhosts": 27,
+    "totalWallTime": 1319.5486170000001
+  },
+  "hosts": [
+    {
+      "name": "jupiter2",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["0"]
+    },
+    {
+      "name": "jupiter3",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["1"]
+    },
+    {
+      "name": "jupiter4",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["2"]
+    },
+    {
+      "name": "jupiter5",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["3"]
+    },
+    {
+      "name": "jupiter6",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["4"]
+    },
+    {
+      "name": "jupiter7",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["5"]
+    },
+    {
+      "name": "jupiter8",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["6"]
+    },
+    {
+      "name": "jupiter9",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["7"]
+    },
+    {
+      "name": "jupiter10",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["8"]
+    },
+    {
+      "name": "jupiter11",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["9"]
+    },
+    {
+      "name": "jupiter12",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["10"]
+    },
+    {
+      "name": "jupiter13",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["11"]
+    },
+    {
+      "name": "jupiter14",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["12"]
+    },
+    {
+      "name": "jupiter15",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["13"]
+    },
+    {
+      "name": "jupiter16",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["14"]
+    },
+    {
+      "name": "jupiter17",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["15"]
+    },
+    {
+      "name": "jupiter18",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["16"]
+    },
+    {
+      "name": "jupiter19",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["17"]
+    },
+    {
+      "name": "jupiter20",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["18"]
+    },
+    {
+      "name": "jupiter21",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["19"]
+    },
+    {
+      "name": "jupiter22",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["20"]
+    },
+    {
+      "name": "jupiter23",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["21"]
+    },
+    {
+      "name": "jupiter24",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["22"]
+    },
+    {
+      "name": "jupiter25",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["23"]
+    },
+    {
+      "name": "jupiter26",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["24"]
+    },
+    {
+      "name": "jupiter27",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["25"]
+    },
+    {
+      "name": "jupiter28",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["26"]
+    }
+  ],
+  "mpiData": {
+    "mpiCalls": [
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 271.17215999999996,
+        "tmin": 0.000021935,
+        "tmax": 0.0010538,
+        "bytes": 8,
+        "count": 54810
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 4.439807999999999,
+        "tmin": 0,
+        "tmax": 0.0060241,
+        "bytes": 10240,
+        "count": 219348
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 4.02128,
+        "tmin": 0,
+        "tmax": 0.00048184,
+        "bytes": 8192,
+        "count": 219348
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 2.2796415,
+        "tmin": 0,
+        "tmax": 0.003176,
+        "bytes": 448,
+        "count": 292464
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 1.729592,
+        "tmin": 0.0000019073,
+        "tmax": 0.0003438,
+        "bytes": 65536,
+        "count": 18279
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 1.4619506,
+        "tmin": 0.0000019073,
+        "tmax": 0.0000078678,
+        "bytes": 40960,
+        "count": 60930
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 1.3537529000000008,
+        "tmin": 0.0000038147,
+        "tmax": 0.000019789,
+        "bytes": 10240,
+        "count": 219348
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 1.17613577,
+        "tmin": 0,
+        "tmax": 0.0014811,
+        "bytes": 896,
+        "count": 146232
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 1.13074415,
+        "tmin": 0,
+        "tmax": 0.006458,
+        "bytes": 20480,
+        "count": 109674
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 1.0468062000000002,
+        "tmin": 0,
+        "tmax": 0.00053406,
+        "bytes": 24,
+        "count": 129984
+      },
+      {
+        "call": "MPI_Barrier",
+        "ttot": 1.0404390000000003,
+        "tmin": 0.075002,
+        "tmax": 0.075002,
+        "bytes": 0,
+        "count": 27
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.8673151599999999,
+        "tmin": 0,
+        "tmax": 0.00033212,
+        "bytes": 48,
+        "count": 64992
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.836209,
+        "tmin": 0.0000021458,
+        "tmax": 0.0000081062,
+        "bytes": 8192,
+        "count": 219348
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.650482,
+        "tmin": 0.059154,
+        "tmax": 0.059154,
+        "bytes": 14336,
+        "count": 12
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.6012555,
+        "tmin": 0.0000059605,
+        "tmax": 0.000077009,
+        "bytes": 20480,
+        "count": 109674
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.5501582999999999,
+        "tmin": 0.0000019073,
+        "tmax": 0.0000081062,
+        "bytes": 448,
+        "count": 292464
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.532379,
+        "tmin": 0.045244,
+        "tmax": 0.045244,
+        "bytes": 10240,
+        "count": 8
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.407163,
+        "tmin": 0.000017881,
+        "tmax": 0.00019383,
+        "bytes": 20480,
+        "count": 12187
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.2914916677,
+        "tmin": 0.0000019073,
+        "tmax": 0.0000019073,
+        "bytes": 160,
+        "count": 144
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.23024389999999995,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000090599,
+        "bytes": 896,
+        "count": 146232
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.225595,
+        "tmin": 9.5367e-7,
+        "tmax": 0.000015974,
+        "bytes": 24,
+        "count": 129984
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.17619068999999998,
+        "tmin": 0.0013759,
+        "tmax": 0.0013759,
+        "bytes": 8,
+        "count": 64
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.171093,
+        "tmin": 0.026838,
+        "tmax": 0.026838,
+        "bytes": 16384,
+        "count": 6
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.16101634869999995,
+        "tmin": 0.0000050068,
+        "tmax": 0.0000050068,
+        "bytes": 3072,
+        "count": 108
+      },
+      {
+        "call": "MPI_Comm_rank",
+        "ttot": 0.14759410000000003,
+        "tmin": 0,
+        "tmax": 0.0000061989,
+        "bytes": 0,
+        "count": 493668
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.13051688000000003,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 8192,
+        "count": 219348
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.09845495,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 20480,
+        "count": 109674
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.09813502804000003,
+        "tmin": 0,
+        "tmax": 0.0000021458,
+        "bytes": 3072,
+        "count": 108
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.09696868000000003,
+        "tmin": 0,
+        "tmax": 0.0000038147,
+        "bytes": 448,
+        "count": 292464
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 0.0827505,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000069141,
+        "bytes": 48,
+        "count": 64992
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.0791601,
+        "tmin": 0.0000019073,
+        "tmax": 0.0000081062,
+        "bytes": 32768,
+        "count": 40620
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.07359847,
+        "tmin": 0,
+        "tmax": 0.000013113,
+        "bytes": 10240,
+        "count": 219348
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.06206775249,
+        "tmin": 0.0096922,
+        "tmax": 0.0096922,
+        "bytes": 8,
+        "count": 64
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.04520294000000001,
+        "tmin": 0,
+        "tmax": 0.0000038147,
+        "bytes": 24,
+        "count": 129984
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 0.04395680460999999,
+        "tmin": 0,
+        "tmax": 0.0043659,
+        "bytes": 160,
+        "count": 144
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.0394141,
+        "tmin": 0.0000019073,
+        "tmax": 0.0000081062,
+        "bytes": 49152,
+        "count": 12186
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.03620310000000001,
+        "tmin": 0,
+        "tmax": 0.000014067,
+        "bytes": 896,
+        "count": 146232
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.024781070000000002,
+        "tmin": 0.00010991,
+        "tmax": 0.00010991,
+        "bytes": 8,
+        "count": 27
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.0234223,
+        "tmin": 0,
+        "tmax": 0.0000069141,
+        "bytes": 28672,
+        "count": 16248
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.01619741,
+        "tmin": 0,
+        "tmax": 0.0000011921,
+        "bytes": 48,
+        "count": 64992
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.004680875010000003,
+        "tmin": 0.000036001,
+        "tmax": 0.000036001,
+        "bytes": 160,
+        "count": 144
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.0035985,
+        "tmin": 9.5367e-7,
+        "tmax": 0.0000069141,
+        "bytes": 57344,
+        "count": 2031
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.0031516571300000008,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 3072,
+        "count": 108
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.002076386269999999,
+        "tmin": 0.00002408,
+        "tmax": 0.00002408,
+        "bytes": 8,
+        "count": 64
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 0.0012722,
+        "tmin": 0,
+        "tmax": 0.0000071526,
+        "bytes": 0,
+        "count": 2031
+      },
+      {
+        "call": "MPI_Comm_size",
+        "ttot": 0.00001573558,
+        "tmin": 9.5367e-7,
+        "tmax": 9.5367e-7,
+        "bytes": 0,
+        "count": 27
+      },
+      {
+        "call": "MPI_Init",
+        "ttot": 0,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 0,
+        "count": 27
+      },
+      {
+        "call": "MPI_Finalize",
+        "ttot": 0,
+        "tmin": 0,
+        "tmax": 0,
+        "bytes": 0,
+        "count": 27
+      }
+    ],
+    "mpiCallsSummarized": [
+      {
+        "call": "MPI_Allreduce",
+        "ttot": 271.17215999999996,
+        "count": 54810,
+        "color": "rgb(211, 94, 96)",
+        "hoverColor": "rgb(231, 114, 116)"
+      },
+      {
+        "call": "MPI_Wait",
+        "ttot": 15.165890365140003,
+        "count": 1182358,
+        "color": "rgb(128, 133, 133)",
+        "hoverColor": "rgb(148, 153, 153)"
+      },
+      {
+        "call": "MPI_Waitall",
+        "ttot": 5.099526799999999,
+        "count": 164538,
+        "color": "rgb(146, 36, 40)",
+        "hoverColor": "rgb(166, 56, 60)"
+      },
+      {
+        "call": "MPI_Isend",
+        "ttot": 4.508663806400003,
+        "count": 1182358,
+        "color": "rgb(114, 147, 203)",
+        "hoverColor": "rgb(134, 167, 223)"
+      },
+      {
+        "call": "MPI_Barrier",
+        "ttot": 1.0404390000000003,
+        "count": 27,
+        "color": "rgb(204, 37, 41)",
+        "hoverColor": "rgb(224, 57, 61)"
+      },
+      {
+        "call": "MPI_Irecv",
+        "ttot": 0.5070513484100001,
+        "count": 1182358,
+        "color": "rgb(114, 147, 203)",
+        "hoverColor": "rgb(134, 167, 223)"
+      },
+      {
+        "call": "MPI_Comm_rank",
+        "ttot": 0.14759410000000003,
+        "count": 493668,
+        "color": "rgb(171, 104, 87)",
+        "hoverColor": "rgb(191, 124, 107)"
+      },
+      {
+        "call": "MPI_Reduce",
+        "ttot": 0.024781070000000002,
+        "count": 27,
+        "color": "rgb(148, 139, 61)",
+        "hoverColor": "rgb(168, 159, 81)"
+      },
+      {
+        "call": "MPI_Comm_size",
+        "ttot": 0.00001573558,
+        "count": 27,
+        "color": "rgb(144, 103, 167)",
+        "hoverColor": "rgb(164, 123, 187)"
+      },
+      {
+        "call": "MPI_Finalize",
+        "ttot": 0,
+        "count": 27,
+        "color": "rgb(204, 194, 16)",
+        "hoverColor": "rgb(224, 214, 36)"
+      },
+      {
+        "call": "MPI_Init",
+        "ttot": 0,
+        "count": 27,
+        "color": "rgb(57, 106, 177)",
+        "hoverColor": "rgb(77, 126, 197)"
+      }
+    ],
+    "mpiAnalysis": {
+      "totalTime": 297.6661222255295,
+      "totalCount": 4260225
+    },
+    "mpiCallsByTask": [
+      {
+        "nr": "26",
+        "ttot": 15.248368869470005,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.19420700000000002,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 14.273,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.5808134458,
+            "count": 20317,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.011084796999999997,
+            "count": 20317,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000022173,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.1363126,
+            "count": 34534,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0047829,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.048145,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "20",
+        "ttot": 14.651557119440003,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.1380985,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 13.619,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.70404814577,
+            "count": 24379,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.012825113669999999,
+            "count": 24379,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.0050871,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.12620386000000003,
+            "count": 30472,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0048954,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.041399,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "25",
+        "ttot": 14.589639873800001,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.2777645,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 13.418,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.6691787373,
+            "count": 32507,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.015859851600000002,
+            "count": 32507,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000021935,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.17615774989999997,
+            "count": 50786,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0055311,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.027126,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "5",
+        "ttot": 14.566805833570003,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.20776160000000002,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 13.42,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.69816525367,
+            "count": 46724,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.018148651099999996,
+            "count": 46724,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000022173,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.15484475579999996,
+            "count": 36569,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0060434,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.06182,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "3",
+        "ttot": 14.506121961010008,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.1478391,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 13.559,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.59926209947,
+            "count": 48755,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.017960159140000004,
+            "count": 48755,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000019073,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.1456771294,
+            "count": 34538,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0059254,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.030439,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "7",
+        "ttot": 13.97558603188,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.23284760000000002,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 12.978,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.55170046367,
+            "count": 44693,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.01727725374,
+            "count": 44693,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000019073,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.15132298779999998,
+            "count": 38600,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0060847,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.038333,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "16",
+        "ttot": 13.930543915869997,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.39668480000000006,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 12.994,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.24598427209999996,
+            "count": 58916,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.0244853001,
+            "count": 58916,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.0047328,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.22835358999999997,
+            "count": 65009,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0059152,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.030387,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "21",
+        "ttot": 13.854509146899996,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.1720324,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 12.488,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.9786605073000001,
+            "count": 36569,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.0166321895,
+            "count": 36569,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000016928,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.16189553000000004,
+            "count": 46724,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0.0000011921,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0048914,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.032379,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "17",
+        "ttot": 13.76494887497,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.2918866,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 12.575,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.68650358097,
+            "count": 38600,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.016581813000000004,
+            "count": 38600,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000020027,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.154183154,
+            "count": 44693,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0052137,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.03556,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "10",
+        "ttot": 13.743369351639984,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.0923387,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 13.001,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.35866709577,
+            "count": 65009,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.026106793769999997,
+            "count": 65009,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.001425,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.22567646999999996,
+            "count": 58916,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0.0000011921,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0059121,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.032242,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "8",
+        "ttot": 13.582856834969991,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.1426792,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 12.523,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.7275386073,
+            "count": 28441,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.015183974000000001,
+            "count": 28441,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.0038509,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.1266101,
+            "count": 26410,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0056751,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.038318,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "4",
+        "ttot": 12.827758125239997,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.0943791,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 12.017,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.44065684577,
+            "count": 71102,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.026524237999999995,
+            "count": 71102,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.0026488,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.20854108779999997,
+            "count": 52823,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0058131,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.032194,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "13",
+        "ttot": 12.801131362979998,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.08677750000000001,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 12.063,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.2753144825,
+            "count": 91421,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.03420660048,
+            "count": 91421,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000019073,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.30729010699999987,
+            "count": 91421,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0052066,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.029317,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "14",
+        "ttot": 12.720632034969995,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.3688821,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 11.839,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.2272622273,
+            "count": 60947,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.026083454000000006,
+            "count": 60947,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.0034211,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.22474620000000003,
+            "count": 62978,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.005893,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.025343,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "2",
+        "ttot": 12.372680046100005,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.137652,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 11.534,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.5343808530999999,
+            "count": 32503,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.016288331,
+            "count": 32503,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000030041,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.112812321,
+            "count": 22348,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0051675,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.032349,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "11",
+        "ttot": 12.151699387739997,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.3067682,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 10.953,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.6647474379,
+            "count": 42662,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.01820713417,
+            "count": 42662,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000021935,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.16481972699999997,
+            "count": 40631,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.005584,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.03855,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "12",
+        "ttot": 11.49715666983999,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.0683926,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 10.556,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.5396142605,
+            "count": 62978,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.02526406934,
+            "count": 62978,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.003062,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.2295658399999999,
+            "count": 60947,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0056839,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.069574,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "9",
+        "ttot": 10.706795281740003,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.138274,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 9.8864,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.4592862073,
+            "count": 44693,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.018095764439999995,
+            "count": 44693,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.00001812,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.15675609000000001,
+            "count": 38600,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0050561,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.042909,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "19",
+        "ttot": 9.672470957809994,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.32330440000000005,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 8.5974,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.52261866947,
+            "count": 38600,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.018322233670000004,
+            "count": 38600,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000021935,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.16712366599999998,
+            "count": 44693,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0052011,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.038478,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "24",
+        "ttot": 9.401756394870002,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.11820939999999999,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 8.7118,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.3942060994,
+            "count": 22348,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.0129900531,
+            "count": 22348,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000034094,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.1283033947,
+            "count": 32503,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0049894,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.031223,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "6",
+        "ttot": 8.003854788369994,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.13815739999999999,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 6.9678,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.7287278846699999,
+            "count": 30472,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.013821218,
+            "count": 30472,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000030041,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.11598084469999999,
+            "count": 24379,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0053544,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.033983,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "15",
+        "ttot": 6.550368703509996,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.1714841,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 5.4057,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.7384874530700001,
+            "count": 40631,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.017837041769999992,
+            "count": 40631,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000018835,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.16525572000000002,
+            "count": 42662,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0048356,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.046749,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "23",
+        "ttot": 6.472593294509999,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.18390450000000003,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 5.6426,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.42953785677,
+            "count": 34538,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.01647158707,
+            "count": 34538,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000021935,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.157760562,
+            "count": 48755,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0056469,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.036649,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "18",
+        "ttot": 6.095587840640001,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.1240791,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 5.1513,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.6504628609700001,
+            "count": 26410,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.013931938000000001,
+            "count": 26410,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000031948,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.11778433999999999,
+            "count": 28441,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0056617,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.032335,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "22",
+        "ttot": 4.479264336080002,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.3439561,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 3.6309,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.21757257210000003,
+            "count": 52823,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.02205851611,
+            "count": 52823,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000035048,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.2343309462,
+            "count": 71102,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0052032,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.025207,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "1",
+        "ttot": 4.0616447230400015,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.1458505,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 2.9826,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.7342081994,
+            "count": 50786,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.018561431640000004,
+            "count": 50786,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.000019073,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.14044211899999998,
+            "count": 32507,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0055344,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.034429,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      },
+      {
+        "nr": "0",
+        "ttot": 1.4364204645699998,
+        "mpiCalls": [
+          {
+            "call": "MPI_Waitall",
+            "ttot": 0.0553158,
+            "count": 6094,
+            "color": "rgb(146, 36, 40)",
+            "hoverColor": "rgb(166, 56, 60)"
+          },
+          {
+            "call": "MPI_Allreduce",
+            "ttot": 0.38566,
+            "count": 2030,
+            "color": "rgb(211, 94, 96)",
+            "hoverColor": "rgb(231, 114, 116)"
+          },
+          {
+            "call": "MPI_Wait",
+            "ttot": 0.8082842458,
+            "count": 34534,
+            "color": "rgb(128, 133, 133)",
+            "hoverColor": "rgb(148, 153, 153)"
+          },
+          {
+            "call": "MPI_Irecv",
+            "ttot": 0.016241841,
+            "count": 34534,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Reduce",
+            "ttot": 0.00010991,
+            "count": 1,
+            "color": "rgb(148, 139, 61)",
+            "hoverColor": "rgb(168, 159, 81)"
+          },
+          {
+            "call": "MPI_Isend",
+            "ttot": 0.0899129141,
+            "count": 20317,
+            "color": "rgb(114, 147, 203)",
+            "hoverColor": "rgb(134, 167, 223)"
+          },
+          {
+            "call": "MPI_Comm_size",
+            "ttot": 9.5367e-7,
+            "count": 1,
+            "color": "rgb(144, 103, 167)",
+            "hoverColor": "rgb(164, 123, 187)"
+          },
+          {
+            "call": "MPI_Comm_rank",
+            "ttot": 0.0058928,
+            "count": 18284,
+            "color": "rgb(171, 104, 87)",
+            "hoverColor": "rgb(191, 124, 107)"
+          },
+          {
+            "call": "MPI_Finalize",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(204, 194, 16)",
+            "hoverColor": "rgb(224, 214, 36)"
+          },
+          {
+            "call": "MPI_Init",
+            "ttot": 0,
+            "count": 1,
+            "color": "rgb(57, 106, 177)",
+            "hoverColor": "rgb(77, 126, 197)"
+          },
+          {
+            "call": "MPI_Barrier",
+            "ttot": 0.075002,
+            "count": 1,
+            "color": "rgb(204, 37, 41)",
+            "hoverColor": "rgb(224, 57, 61)"
+          }
+        ]
+      }
+    ]
+  },
+  "mpiPies": {
+    "mpiPercent": {
+      "datasets": [
+        {
+          "data": ["91.10", "5.09", "1.71", "1.51", "0.58"],
+          "backgroundColor": [
+            "rgb(211, 94, 96)",
+            "rgb(128, 133, 133)",
+            "rgb(146, 36, 40)",
+            "rgb(114, 147, 203)",
+            "rgb(83, 81, 84)"
+          ],
+          "hoverBackgroundColor": [
+            "rgb(231, 114, 116)",
+            "rgb(148, 153, 153)",
+            "rgb(166, 56, 60)",
+            "rgb(134, 167, 223)",
+            "rgb(103, 101, 104)"
+          ]
+        }
+      ],
+      "labels": [
+        "MPI_Allreduce",
+        "MPI_Wait",
+        "MPI_Waitall",
+        "MPI_Isend",
+        "others"
+      ]
+    },
+    "mpiWall": {
+      "datasets": [
+        {
+          "data": ["20.55", "1.15", "0.86", "77.44"],
+          "backgroundColor": [
+            "rgb(211, 94, 96)",
+            "rgb(128, 133, 133)",
+            "rgb(83, 81, 84)",
+            "rgb(107, 76, 154)"
+          ],
+          "hoverBackgroundColor": [
+            "rgb(231, 114, 116)",
+            "rgb(148, 153, 153)",
+            "rgb(103, 101, 104)",
+            "rgb(127, 96, 174)"
+          ]
+        }
+      ],
+      "labels": ["MPI_Allreduce", "MPI_Wait", "others", "Apllication"]
+    }
+  },
+  "hpmData": [],
+  "balanceData": {
+    "labels": [
+      "26",
+      "20",
+      "25",
+      "5",
+      "3",
+      "7",
+      "16",
+      "21",
+      "17",
+      "10",
+      "8",
+      "4",
+      "13",
+      "14",
+      "2",
+      "11",
+      "12",
+      "9",
+      "19",
+      "24",
+      "6",
+      "15",
+      "23",
+      "18",
+      "22",
+      "1",
+      "0"
+    ],
+    "datasets": [
+      {
+        "label": "MPI_Waitall",
+        "fill": false,
+        "backgroundColor": "rgb(146, 36, 40)",
+        "borderColor": "rgb(146, 36, 40)",
+        "pointHoverBackgroundColor": "rgb(166, 56, 60)",
+        "data": [
+          0.19420700000000002,
+          0.1380985,
+          0.2777645,
+          0.20776160000000002,
+          0.1478391,
+          0.23284760000000002,
+          0.39668480000000006,
+          0.1720324,
+          0.2918866,
+          0.0923387,
+          0.1426792,
+          0.0943791,
+          0.08677750000000001,
+          0.3688821,
+          0.137652,
+          0.3067682,
+          0.0683926,
+          0.138274,
+          0.32330440000000005,
+          0.11820939999999999,
+          0.13815739999999999,
+          0.1714841,
+          0.18390450000000003,
+          0.1240791,
+          0.3439561,
+          0.1458505,
+          0.0553158
+        ]
+      },
+      {
+        "label": "MPI_Allreduce",
+        "fill": false,
+        "backgroundColor": "rgb(211, 94, 96)",
+        "borderColor": "rgb(211, 94, 96)",
+        "pointHoverBackgroundColor": "rgb(231, 114, 116)",
+        "data": [
+          14.273,
+          13.619,
+          13.418,
+          13.42,
+          13.559,
+          12.978,
+          12.994,
+          12.488,
+          12.575,
+          13.001,
+          12.523,
+          12.017,
+          12.063,
+          11.839,
+          11.534,
+          10.953,
+          10.556,
+          9.8864,
+          8.5974,
+          8.7118,
+          6.9678,
+          5.4057,
+          5.6426,
+          5.1513,
+          3.6309,
+          2.9826,
+          0.38566
+        ]
+      },
+      {
+        "label": "MPI_Wait",
+        "fill": false,
+        "backgroundColor": "rgb(128, 133, 133)",
+        "borderColor": "rgb(128, 133, 133)",
+        "pointHoverBackgroundColor": "rgb(148, 153, 153)",
+        "data": [
+          0.5808134458,
+          0.70404814577,
+          0.6691787373,
+          0.69816525367,
+          0.59926209947,
+          0.55170046367,
+          0.24598427209999996,
+          0.9786605073000001,
+          0.68650358097,
+          0.35866709577,
+          0.7275386073,
+          0.44065684577,
+          0.2753144825,
+          0.2272622273,
+          0.5343808530999999,
+          0.6647474379,
+          0.5396142605,
+          0.4592862073,
+          0.52261866947,
+          0.3942060994,
+          0.7287278846699999,
+          0.7384874530700001,
+          0.42953785677,
+          0.6504628609700001,
+          0.21757257210000003,
+          0.7342081994,
+          0.8082842458
+        ]
+      },
+      {
+        "label": "MPI_Irecv",
+        "fill": false,
+        "backgroundColor": "rgb(114, 147, 203)",
+        "borderColor": "rgb(114, 147, 203)",
+        "pointHoverBackgroundColor": "rgb(134, 167, 223)",
+        "data": [
+          0.011084796999999997,
+          0.012825113669999999,
+          0.015859851600000002,
+          0.018148651099999996,
+          0.017960159140000004,
+          0.01727725374,
+          0.0244853001,
+          0.0166321895,
+          0.016581813000000004,
+          0.026106793769999997,
+          0.015183974000000001,
+          0.026524237999999995,
+          0.03420660048,
+          0.026083454000000006,
+          0.016288331,
+          0.01820713417,
+          0.02526406934,
+          0.018095764439999995,
+          0.018322233670000004,
+          0.0129900531,
+          0.013821218,
+          0.017837041769999992,
+          0.01647158707,
+          0.013931938000000001,
+          0.02205851611,
+          0.018561431640000004,
+          0.016241841
+        ]
+      },
+      {
+        "label": "MPI_Reduce",
+        "fill": false,
+        "backgroundColor": "rgb(148, 139, 61)",
+        "borderColor": "rgb(148, 139, 61)",
+        "pointHoverBackgroundColor": "rgb(168, 159, 81)",
+        "data": [
+          0.000022173,
+          0.0050871,
+          0.000021935,
+          0.000022173,
+          0.000019073,
+          0.000019073,
+          0.0047328,
+          0.000016928,
+          0.000020027,
+          0.001425,
+          0.0038509,
+          0.0026488,
+          0.000019073,
+          0.0034211,
+          0.000030041,
+          0.000021935,
+          0.003062,
+          0.00001812,
+          0.000021935,
+          0.000034094,
+          0.000030041,
+          0.000018835,
+          0.000021935,
+          0.000031948,
+          0.000035048,
+          0.000019073,
+          0.00010991
+        ]
+      },
+      {
+        "label": "MPI_Isend",
+        "fill": false,
+        "backgroundColor": "rgb(114, 147, 203)",
+        "borderColor": "rgb(114, 147, 203)",
+        "pointHoverBackgroundColor": "rgb(134, 167, 223)",
+        "data": [
+          0.1363126,
+          0.12620386000000003,
+          0.17615774989999997,
+          0.15484475579999996,
+          0.1456771294,
+          0.15132298779999998,
+          0.22835358999999997,
+          0.16189553000000004,
+          0.154183154,
+          0.22567646999999996,
+          0.1266101,
+          0.20854108779999997,
+          0.30729010699999987,
+          0.22474620000000003,
+          0.112812321,
+          0.16481972699999997,
+          0.2295658399999999,
+          0.15675609000000001,
+          0.16712366599999998,
+          0.1283033947,
+          0.11598084469999999,
+          0.16525572000000002,
+          0.157760562,
+          0.11778433999999999,
+          0.2343309462,
+          0.14044211899999998,
+          0.0899129141
+        ]
+      },
+      {
+        "label": "MPI_Comm_size",
+        "fill": false,
+        "backgroundColor": "rgb(144, 103, 167)",
+        "borderColor": "rgb(144, 103, 167)",
+        "pointHoverBackgroundColor": "rgb(164, 123, 187)",
+        "data": [
+          9.5367e-7,
+          0,
+          0,
+          0,
+          0,
+          9.5367e-7,
+          9.5367e-7,
+          0.0000011921,
+          0,
+          0.0000011921,
+          9.5367e-7,
+          9.5367e-7,
+          0,
+          9.5367e-7,
+          0,
+          9.5367e-7,
+          0,
+          0,
+          9.5367e-7,
+          9.5367e-7,
+          0,
+          9.5367e-7,
+          9.5367e-7,
+          9.5367e-7,
+          9.5367e-7,
+          0,
+          9.5367e-7
+        ]
+      },
+      {
+        "label": "MPI_Comm_rank",
+        "fill": false,
+        "backgroundColor": "rgb(171, 104, 87)",
+        "borderColor": "rgb(171, 104, 87)",
+        "pointHoverBackgroundColor": "rgb(191, 124, 107)",
+        "data": [
+          0.0047829,
+          0.0048954,
+          0.0055311,
+          0.0060434,
+          0.0059254,
+          0.0060847,
+          0.0059152,
+          0.0048914,
+          0.0052137,
+          0.0059121,
+          0.0056751,
+          0.0058131,
+          0.0052066,
+          0.005893,
+          0.0051675,
+          0.005584,
+          0.0056839,
+          0.0050561,
+          0.0052011,
+          0.0049894,
+          0.0053544,
+          0.0048356,
+          0.0056469,
+          0.0056617,
+          0.0052032,
+          0.0055344,
+          0.0058928
+        ]
+      },
+      {
+        "label": "MPI_Finalize",
+        "fill": false,
+        "backgroundColor": "rgb(204, 194, 16)",
+        "borderColor": "rgb(204, 194, 16)",
+        "pointHoverBackgroundColor": "rgb(224, 214, 36)",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": "MPI_Init",
+        "fill": false,
+        "backgroundColor": "rgb(57, 106, 177)",
+        "borderColor": "rgb(57, 106, 177)",
+        "pointHoverBackgroundColor": "rgb(77, 126, 197)",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": "MPI_Barrier",
+        "fill": false,
+        "backgroundColor": "rgb(204, 37, 41)",
+        "borderColor": "rgb(204, 37, 41)",
+        "pointHoverBackgroundColor": "rgb(224, 57, 61)",
+        "data": [
+          0.048145,
+          0.041399,
+          0.027126,
+          0.06182,
+          0.030439,
+          0.038333,
+          0.030387,
+          0.032379,
+          0.03556,
+          0.032242,
+          0.038318,
+          0.032194,
+          0.029317,
+          0.025343,
+          0.032349,
+          0.03855,
+          0.069574,
+          0.042909,
+          0.038478,
+          0.031223,
+          0.033983,
+          0.046749,
+          0.036649,
+          0.032335,
+          0.025207,
+          0.034429,
+          0.075002
+        ]
+      }
+    ]
+  }
+}

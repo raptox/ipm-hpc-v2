@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "username": "hunold",
+    "start": 1491554347.793302,
+    "stop": 1491554351.414015,
+    "walltime": "3.620713",
+    "ntasks": 27,
+    "nhosts": 27,
+    "totalWallTime": 97.75925099999999
+  },
+  "hosts": [
+    {
+      "name": "jupiter2",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["0"]
+    },
+    {
+      "name": "jupiter3",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["1"]
+    },
+    {
+      "name": "jupiter4",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["2"]
+    },
+    {
+      "name": "jupiter5",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["3"]
+    },
+    {
+      "name": "jupiter6",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["4"]
+    },
+    {
+      "name": "jupiter7",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["5"]
+    },
+    {
+      "name": "jupiter8",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["6"]
+    },
+    {
+      "name": "jupiter9",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["7"]
+    },
+    {
+      "name": "jupiter10",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["8"]
+    },
+    {
+      "name": "jupiter11",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["9"]
+    },
+    {
+      "name": "jupiter12",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["10"]
+    },
+    {
+      "name": "jupiter13",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["11"]
+    },
+    {
+      "name": "jupiter14",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["12"]
+    },
+    {
+      "name": "jupiter15",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["13"]
+    },
+    {
+      "name": "jupiter16",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["14"]
+    },
+    {
+      "name": "jupiter17",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["15"]
+    },
+    {
+      "name": "jupiter18",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["16"]
+    },
+    {
+      "name": "jupiter19",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["17"]
+    },
+    {
+      "name": "jupiter20",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["18"]
+    },
+    {
+      "name": "jupiter21",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["19"]
+    },
+    {
+      "name": "jupiter22",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["20"]
+    },
+    {
+      "name": "jupiter23",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["21"]
+    },
+    {
+      "name": "jupiter24",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["22"]
+    },
+    {
+      "name": "jupiter25",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["23"]
+    },
+    {
+      "name": "jupiter26",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["24"]
+    },
+    {
+      "name": "jupiter27",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["25"]
+    },
+    {
+      "name": "jupiter28",
+      "mach_name": "x86_64",
+      "mach_info": "x86_64_Linux",
+      "tasks": ["26"]
+    }
+  ],
+  "mpiData": {
+    "mpiCalls": [],
+    "mpiCallsSummarized": [],
+    "mpiAnalysis": {
+      "totalTime": 0,
+      "totalCount": 0
+    },
+    "mpiCallsByTask": []
+  },
+  "mpiPies": {
+    "mpiPercent": {
+      "datasets": [
+        {
+          "data": [],
+          "backgroundColor": [],
+          "hoverBackgroundColor": []
+        }
+      ],
+      "labels": []
+    },
+    "mpiWall": {
+      "datasets": [
+        {
+          "data": ["100.00"],
+          "backgroundColor": ["rgb(225, 151, 76)"],
+          "hoverBackgroundColor": ["rgb(245, 171, 96)"]
+        }
+      ],
+      "labels": ["Apllication"]
+    }
+  },
+  "hpmData": [],
+  "balanceData": {}
+}
