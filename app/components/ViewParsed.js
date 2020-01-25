@@ -19,6 +19,7 @@ export default class ViewParsed extends Component {
     this.state = {
       parsedContent: '',
       balanceZoom: false,
+      balanceSort: false,
       balanceZoomIndex: 0,
       balanceZoomPageSize: 30,
       balanceZoomData: {},
@@ -39,6 +40,26 @@ export default class ViewParsed extends Component {
       balanceZoomIndex: 1,
       balanceZoomStart: true,
       balanceZoomEnd: false
+    });
+  }
+
+  toggleBalanceSort() {
+    this.setState({ balanceSort: !this.state.balanceSort }, () => {
+      if (this.state.balanceSort) {
+        this.setState({
+          balanceZoomData: this.state.parsedContent.balanceDataSorted
+        });
+      } else {
+        this.setState({
+          balanceZoomData: this.state.parsedContent.balanceData
+        });
+      }
+      this.setState({
+        balanceZoom: false,
+        balanceZoomIndex: 1,
+        balanceZoomStart: true,
+        balanceZoomEnd: false
+      });
     });
   }
 
@@ -94,17 +115,30 @@ export default class ViewParsed extends Component {
 
   recalculateBalanceData(start, end) {
     let newBalanceData = {
-      labels: this.state.parsedContent.balanceData.labels.slice(start, end),
-      datasets: this.state.parsedContent.balanceData.datasets.map(dataset => {
-        return {
-          label: dataset.label,
-          fill: dataset.fill,
-          backgroundColor: dataset.backgroundColor,
-          borderColor: dataset.borderColor,
-          pointHoverBackgroundColor: dataset.pointHoverBackgroundColor,
-          data: dataset.data.slice(start, end)
-        };
-      })
+      labels: this.state.balanceSort
+        ? this.state.parsedContent.balanceDataSorted.labels.slice(start, end)
+        : this.state.parsedContent.balanceData.labels.slice(start, end),
+      datasets: this.state.balanceSort
+        ? this.state.parsedContent.balanceDataSorted.datasets.map(dataset => {
+            return {
+              label: dataset.label,
+              fill: dataset.fill,
+              backgroundColor: dataset.backgroundColor,
+              borderColor: dataset.borderColor,
+              pointHoverBackgroundColor: dataset.pointHoverBackgroundColor,
+              data: dataset.data.slice(start, end)
+            };
+          })
+        : this.state.parsedContent.balanceData.datasets.map(dataset => {
+            return {
+              label: dataset.label,
+              fill: dataset.fill,
+              backgroundColor: dataset.backgroundColor,
+              borderColor: dataset.borderColor,
+              pointHoverBackgroundColor: dataset.pointHoverBackgroundColor,
+              data: dataset.data.slice(start, end)
+            };
+          })
     };
     this.setState({ balanceZoomData: newBalanceData });
   }
@@ -143,6 +177,7 @@ export default class ViewParsed extends Component {
             <h3>Metadata</h3>
             <div>
               <strong>user:</strong> {content.metadata.username} <br />
+              <strong>cmdline:</strong> {content.metadata.cmdline} <br />
               <strong>start:</strong>{' '}
               {moment
                 .unix(content.metadata.start)
@@ -194,13 +229,20 @@ export default class ViewParsed extends Component {
 
             {this.state.balanceZoomData && (
               <div>
-                <h3>Communication balance by task (sorted by MPI time)</h3>
+                <h3>Communication balance by task</h3>
                 <Button
                   variant="contained"
                   color="primary"
                   onClick={() => this.toggleBalanceZoom()}
                 >
                   Toggle Zoom
+                </Button>{' '}
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={() => this.toggleBalanceSort()}
+                >
+                  Toggle Sort
                 </Button>
                 {this.state.balanceZoom && (
                   <div>

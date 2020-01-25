@@ -45,6 +45,9 @@ export const parseData = (filename, callback) => {
     data.mpiPies = getMpiPieCharts(data.mpiData, data.metadata.totalWallTime);
     data.hpmData = getHpmData(taskdata);
     data.balanceData = generateBalanceChartData(data.mpiData.mpiCallsByTask);
+    data.balanceDataSorted = generateBalanceChartData(
+      data.mpiData.mpiCallsByTaskSorted
+    );
     // save raw parsed JSON to file
     //
     // fs.writeFile('log.json', JSON.stringify(result, null, 2), err => {
@@ -65,17 +68,23 @@ const generateBalanceChartData = mpiCallsByTask => {
     };
 
     for (let mpiCallKey in mpiCallsByTask[0].mpiCalls) {
-      let mpiCall = mpiCallsByTask[0].mpiCalls[mpiCallKey];
-      let dataset = mpiCallsByTask.map(task => task.mpiCalls[mpiCallKey].ttot);
-      //.sort((callA, callB) => callB - callA);
-      balanceData.datasets.push({
-        label: mpiCall.call,
-        fill: false,
-        backgroundColor: mpiCall.color,
-        borderColor: mpiCall.color,
-        pointHoverBackgroundColor: mpiCall.hoverColor,
-        data: dataset
-      });
+      try {
+        let mpiCall = mpiCallsByTask[0].mpiCalls[mpiCallKey];
+        let dataset = mpiCallsByTask.map(
+          task => task.mpiCalls[mpiCallKey].ttot
+        );
+        //.sort((callA, callB) => callB - callA);
+        balanceData.datasets.push({
+          label: mpiCall.call,
+          fill: false,
+          backgroundColor: mpiCall.color,
+          borderColor: mpiCall.color,
+          pointHoverBackgroundColor: mpiCall.hoverColor,
+          data: dataset
+        });
+      } catch (e) {
+        console.log(e);
+      }
     }
 
     return balanceData;
@@ -241,6 +250,7 @@ const getMpiData = taskdata => {
   };
   let mpiCallsSummarized = [];
   let mpiCallsByTask = [];
+  let mpiCallsByTaskSorted = [];
 
   try {
     for (let taskKey in taskdata) {
@@ -327,7 +337,9 @@ const getMpiData = taskdata => {
     // sort descending after total time
     mpiCalls.sort((callA, callB) => callB.ttot - callA.ttot);
     mpiCallsSummarized.sort((callA, callB) => callB.ttot - callA.ttot);
-    mpiCallsByTask.sort((taskA, taskB) => taskB.ttot - taskA.ttot);
+    mpiCallsByTaskSorted = JSON.parse(JSON.stringify(mpiCallsByTask)).sort(
+      (taskA, taskB) => taskB.ttot - taskA.ttot
+    );
   } catch (e) {
     console.log(e);
   }
@@ -336,7 +348,8 @@ const getMpiData = taskdata => {
     mpiCalls,
     mpiCallsSummarized,
     mpiAnalysis,
-    mpiCallsByTask
+    mpiCallsByTask,
+    mpiCallsByTaskSorted
   };
 };
 
@@ -371,6 +384,7 @@ const getMetadata = firstTask => {
   metadata.ntasks = parseInt(firstTask.job[0].$.ntasks);
   metadata.nhosts = parseInt(firstTask.job[0].$.nhosts);
   metadata.totalWallTime = metadata.walltime * metadata.ntasks;
+  metadata.cmdline = firstTask.cmdline[0]._;
   metadata.env = firstTask.env;
   return metadata;
 };
