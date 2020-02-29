@@ -24,7 +24,8 @@ export default class ViewParsed extends Component {
       balanceZoomPageSize: 30,
       balanceZoomData: {},
       balanceZoomEnd: false,
-      balanceZoomStart: true
+      balanceZoomStart: true,
+      balanceZoomMaxValue: 0
     };
   }
 
@@ -273,7 +274,10 @@ export default class ViewParsed extends Component {
                       ],
                       yAxes: [
                         {
-                          stacked: true
+                          stacked: true,
+                          ticks: {
+                            suggestedMax: this.state.balanceZoomMaxValue
+                          }
                         }
                       ]
                     }
@@ -431,6 +435,26 @@ export default class ViewParsed extends Component {
     if (file) {
       fs.readFile(file[0], (err, data) => {
         this.setState({ parsedContent: JSON.parse(data) });
+
+        // calculate max value for graph scaling
+        if (this.state.parsedContent.balanceData.datasets.length) {
+          let maxValues = [];
+          this.state.parsedContent.balanceData.datasets[0].data.forEach(
+            (data, index) => {
+              let tempMaxValue = data;
+              this.state.parsedContent.balanceData.datasets.forEach(
+                (dataset, yindex) => {
+                  if (yindex === 0) return;
+                  tempMaxValue += dataset.data[index];
+                }
+              );
+              maxValues.push(tempMaxValue);
+            }
+          );
+          console.log(Math.max(...maxValues));
+          this.setState({ balanceZoomMaxValue: Math.max(...maxValues) });
+        }
+
         this.unZoomBalanceData();
       });
     }
