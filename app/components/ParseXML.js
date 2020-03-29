@@ -68,6 +68,16 @@ export default class ParseXML extends Component {
             Save Parsed Data
           </Button>
         )}
+        {data && (
+          <Button
+            variant="contained"
+            color="info"
+            onClick={() => this.openFile(this.state.selectedFile)}
+            style={buttonStyle}
+          >
+            Parse Again
+          </Button>
+        )}
         <div>
           {this.state.selectedFile && (
             <h3>Selected File: {this.state.selectedFile}</h3>
@@ -78,6 +88,9 @@ export default class ParseXML extends Component {
         </div>
         {data && (
           <div>
+            <div>
+              Parsing Time: {JSON.parse(data).parseTimeMs.toFixed(2)} ms
+            </div>
             View Parsed Data: <br />
             <ReactJson
               src={data ? JSON.parse(data) : { empty: true }}
@@ -89,18 +102,30 @@ export default class ParseXML extends Component {
     );
   }
 
-  openFile() {
-    let file = dialog.showOpenDialog({
-      properties: ['openFile'],
-      filters: [
-        { name: 'XML Files', extensions: ['xml'] },
-        { name: 'All Files', extensions: ['*'] }
-      ]
-    });
-    if (file) {
+  openFile(selectedFile) {
+    if (!selectedFile) {
+      let file = dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+          { name: 'XML Files', extensions: ['xml'] },
+          { name: 'All Files', extensions: ['*'] }
+        ]
+      });
+      if (file) {
+        this.setState({});
+        this.setState({ parsing: true, selectedFile: file, parseLog: '' });
+        parseData(file[0], data => {
+          this.setState({ parseLog: data, parsing: false });
+        });
+      }
+    } else {
       this.setState({});
-      this.setState({ parsing: true, selectedFile: file, parseLog: '' });
-      parseData(file[0], data => {
+      this.setState({
+        parsing: true,
+        selectedFile: selectedFile,
+        parseLog: ''
+      });
+      parseData(selectedFile[0], data => {
         this.setState({ parseLog: data, parsing: false });
       });
     }

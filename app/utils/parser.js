@@ -29,6 +29,7 @@ let applicationColor;
 
 export const parseData = (filename, callback) => {
   parseXml(filename, result => {
+    const startTime = performance.now();
     let colorsIndex = 0;
     //console.log(`${filename}:`);
     let taskdata = result[ROOT_ITEM].task;
@@ -56,6 +57,8 @@ export const parseData = (filename, callback) => {
     //     process.exit(1);
     //   }
     // });
+    const endTime = performance.now();
+    data.parseTimeMs = endTime - startTime;
     callback(JSON.stringify(data, null, 2));
   });
 };
