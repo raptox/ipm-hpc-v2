@@ -1,6 +1,10 @@
 # ipm-hpc-v2
 
-Interactive Visualization of MPI Performance Data (Bachelor Thesis)
+Interactive Visualization of MPI Performance Data (Bachelor Thesis).
+
+This project contains the standalone multiplatform desktop app, which can parse and display parsed data.
+
+If you just need the standalone web viewer for displaying already parsed data, then have a look at this project: [Standalone WebViewer](https://github.com/raptox/ipm-hpc-v2-webviewer).
 
 ## Developer Information
 
