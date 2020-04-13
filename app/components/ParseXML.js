@@ -71,7 +71,7 @@ export default class ParseXML extends Component {
         {data && (
           <Button
             variant="contained"
-            color="info"
+            color="default"
             onClick={() => this.openFile(this.state.selectedFile)}
             style={buttonStyle}
           >
